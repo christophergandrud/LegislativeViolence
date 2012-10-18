@@ -1,7 +1,7 @@
 #######################
 # Legislative Violence Expected Value Graphs
 # Christopher Gandrud
-# Updated 21 April 2012
+# Updated 18 October 2012
 #######################
 
 ##require(ggplot2)
@@ -35,8 +35,7 @@ library(gridExtra)
                         scale_x_continuous(breaks = c(0, 21, 51, 85), labels = c("0", "20", "50", "85")) +
                         scale_y_continuous(breaks = c(0, 0.02, 0.05, 0.1, 0.15), limits = c(0, 0.15)) +
                         xlab("\nAge of Democracy") + ylab("") +
-                        opts(axis.title.x = theme_text(size = 12, vjust = 0)) +
-                        theme_bw()
+                        theme_bw(base_size = 12)
 
 ## Disporportionality < 5 Dummy
     ## Set fitted values
@@ -60,8 +59,7 @@ library(gridExtra)
                         scale_x_reverse(breaks = c(1, 2), labels = c("Higher", "Very Low")) +
                         scale_y_continuous(breaks = c(0, 0.02, 0.05, 0.1, 0.15), labels = c("", "", "", "", ""), limits = c(0, 0.15)) +
                         xlab("\nDisproportionality") + ylab("") +
-                        opts(axis.title.x = theme_text(size = 12, vjust = 0)) +
-                        theme_bw()
+                        theme_bw(base_size = 12)
 ## Majority
     # Set fitted values
     D15.maj1 <-setx(D15, maj = maj.r)

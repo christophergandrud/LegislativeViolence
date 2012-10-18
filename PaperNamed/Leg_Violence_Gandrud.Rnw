@@ -343,11 +343,13 @@ If our goal is to actively prevent legislative violence--keep legislators two sw
 
 <<ScatterDem, warning=FALSE, echo=FALSE, message=FALSE, fig.width=7, fig.height=4, out.width='0.8\\linewidth'>>=
 
-    library(foreign)
+    library(RCurl)
     library(ggplot2)
     
     ## Load Data (one observation per country-year)
-    leg.cumulative <- read.dta("/Users/christophergandrud/Dropbox/Leg_Violence/leg_violence_descriptives.dta")
+    URLDescript <- "https://raw.github.com/christophergandrud/LegislativeViolence/master/Data/LegViolenceDescriptives.csv"
+    Descript <- getURL(URLDescript)
+    leg.cumulative <- read.csv(textConnection(Descript))
 
     leg.cumulative$violence <- factor(leg.cumulative$violence, label = c("No Violence", "Violence"))
     leg.cumulative <- subset(leg.cumulative, violence != "NA")
@@ -359,9 +361,8 @@ If our goal is to actively prevent legislative violence--keep legislators two sw
                 facet_grid(.~violence) +
                 xlab("\n Age of Democracy") +
                 ylab("Unified Democracy Score") +
-                theme_bw() +
-                scale_colour_manual(values = cols, name = "Brawl/Year") +          
-                opts(axis.title.x = theme_text(size = 12, vjust = 0))
+                theme_bw(base_size = 12) +
+                scale_colour_manual(values = cols, name = "Brawl/Year")
 
     print(age.dem.scatter)
 
@@ -414,8 +415,10 @@ If our goal is to actively prevent legislative violence--keep legislators two sw
 %%%%%%%%%%%%%%%% Run Analyses %%%%%%%%%%%%%%%%%%%%%%%%
 <<models, warning=FALSE, echo=FALSE, message=FALSE, results='hide'>>=
     
-        ## Load data
-    leg.raw <- read.dta("/Users/christophergandrud/Dropbox/Leg_Violence/leg_violence_main.dta") 
+    ## Load data
+    URLMain <- "https://raw.github.com/christophergandrud/LegislativeViolence/master/Data/LegViolenceMain.csv"
+    Main <- getURL(URLMain)
+    leg.raw <- read.csv(textConnection(Main))
     
     ## Keep variables of interest
     vars <- c("country", "year", "violence", "system", "DemAge", "maj", "MajCat", "govfrac", "singleParty", "pr", "tenshort", "UDS", "polity2", "ethnicAlesina", "CWtrust", "higherTrust", "CWsurvSelfExpr", "legislature", "elect_legislature", "disproportionality", "gini", "GDPperCapita", "enps", "enpv", "federal", "immunity")
@@ -445,7 +448,11 @@ If our goal is to actively prevent legislative violence--keep legislators two sw
     
     ## Analyses
     ## Run the main analyses used for predicting quantities of interest and estimating regression coefficients.
-    source("leg.main.analyses2.R") 
+    # Load package
+    library(devtools)
+
+    # Run analysis
+    source_url("https://raw.github.com/christophergandrud/LegislativeViolence/master/Analysis/leg.main.analyses2.R") 
 
 @
 
@@ -459,7 +466,7 @@ If our goal is to actively prevent legislative violence--keep legislators two sw
     %\includegraphics[width = \textwidth]{leg_violence_paper-PredProb}
 
 <<predProb, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=7, fig.height=4, out.width='0.8\\linewidth'>>=    
-    source("expectedValueGraphs2.R")
+    source_url("https://raw.github.com/christophergandrud/LegislativeViolence/master/Analysis/expectedValueGraphs2.R")
   
 @
     \end{center}
@@ -476,7 +483,7 @@ If our goal is to actively prevent legislative violence--keep legislators two sw
 
 <<boxplot, warning=FALSE, echo=FALSE, message=FALSE, fig.width=7, fig.height=4, out.width='0.8\\linewidth'>>=
     
-    source("boxPlots.R")
+    source_url("https://raw.github.com/christophergandrud/LegislativeViolence/master/Analysis/boxPlots.R")
     
 @
     \end{center}
@@ -492,7 +499,7 @@ If our goal is to actively prevent legislative violence--keep legislators two sw
     \begin{center}
 
 <<FrameworkEmpirical, warning=FALSE, echo=FALSE, message=FALSE, fig.width=7, fig.height=7, out.width='0.8\\linewidth'>>=
-    source("FrameworkEmpirical.R")    
+    source_url("https://raw.github.com/christophergandrud/LegislativeViolence/master/Analysis/FrameworkEmpirical.R")    
 
 @
     \end{center}
@@ -584,7 +591,7 @@ If our goal is to actively prevent legislative violence--keep legislators two sw
     {\tiny{
     \begin{center}
 <<OutTable2, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
-        source("/Users/christophergandrud/Dropbox/Leg_Violence/paper/relogitTable.r") # From Thomas Jensen (http://polstat.org/blog/2012/1/creating-latex-tables-zelig-and-statnet-objects/)
+        source_url("https://raw.github.com/christophergandrud/LegislativeViolence/master/Analysis/relogitTable.r") # From Thomas Jensen (http://polstat.org/blog/2012/1/creating-latex-tables-zelig-and-statnet-objects/)
         relogitTable(D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12, D13, D14, D15, D16)
    
 @

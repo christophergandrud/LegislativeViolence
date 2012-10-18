@@ -2,7 +2,7 @@
 # Legislative Violence
 # Combined scatter plots to illustrate how framework relates to findings
 # Christopher Gandrud
-# Updated 22 April 2012
+# Updated 18 October 2012
 ############
 
 
@@ -13,9 +13,8 @@
                         scale_x_continuous(breaks = c(0, 50, 100, 150, 200), labels = c("", "", "", "", "")) +
                         xlab(" ") +
                         ylab("Disproportionality (log)\n") +
-                        theme_bw() +
-                        scale_colour_manual(values = cols, name = "Brawl/Year") +          
-                        opts(axis.title.x = theme_text(size = 12, vjust = 0))
+                        theme_bw(base_size = 12) +
+                        scale_colour_manual(values = cols, name = "Brawl/Year")         
 
 ## Create scatterplot of DemAge, Government Majority, and Violence
     age.maj.scatter <- qplot(dem_age, maj, position = position_jitter(w = 10), color = factor(violence_y_cum), data = leg.cumulative) +
@@ -23,9 +22,8 @@
                         scale_y_reverse() +
                         xlab("\n Age of Democracy") +
                         ylab("Government Majoritty\n") +
-                        theme_bw() +
-                        scale_colour_manual(values = cols, name = "Brawl/Year") +          
-                        opts(axis.title.x = theme_text(size = 12, vjust = 0))
+                        theme_bw(base_size = 12) +
+                        scale_colour_manual(values = cols, name = "Brawl/Year")        
 
     frame.emp <- grid.arrange(age.disp.scatter, age.maj.scatter)
 
