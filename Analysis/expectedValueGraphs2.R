@@ -7,6 +7,7 @@
 ##require(ggplot2)
 require(reshape2)
 library(gridExtra)
+library(plyr)
 
 ## Ranges of fitted values
     HighProp.r <- c(0, 1)
@@ -27,13 +28,26 @@ library(gridExtra)
     
     # Remove "X" from variable
     D15.demAge.e$variable <- as.numeric(gsub("X", "", D15.demAge.e$variable))
+
+    # Remove values outside of the 2.5% and 97.5% quantiles
+    # Find 2.5% and 97.5% quantiles for HRCC
+    D15.demAge.ePer <- ddply(D15.demAge.e, .(variable), transform, 
+                             Lower = value < quantile(value, c(0.025)))
+
+    D15.demAge.ePer <- ddply(D15.demAge.ePer, .(variable), transform, 
+                             Upper = value > quantile(value, c(0.975)))
+
+    # Remove variables outside of the middle 95%
+    D15.demAge.ePer <- subset(D15.demAge.ePer, Lower == FALSE & Upper == FALSE)
     
     # Plot
-    D15.demAge.p <- ggplot(D15.demAge.e, aes(variable, value)) +
+    D15.demAge.p <- ggplot(D15.demAge.ePer, aes(variable, value)) +
                         geom_point(shape = 21, color = "gray30", alpha = I(0.05)) +
                         stat_smooth() +
-                        scale_x_continuous(breaks = c(0, 21, 51, 85), labels = c("0", "20", "50", "85")) +
-                        scale_y_continuous(breaks = c(0, 0.02, 0.05, 0.1, 0.15), limits = c(0, 0.15)) +
+                        scale_x_continuous(breaks = c(0, 21, 51, 85), 
+                                           labels = c("0", "20", "50", "85")) +
+                        scale_y_continuous(breaks = c(0, 0.02, 0.05, 0.1, 0.15), 
+                                           limits = c(0, 0.15)) +
                         xlab("\nAge of Democracy") + ylab("") +
                         theme_bw(base_size = 12)
 
@@ -52,12 +66,24 @@ library(gridExtra)
     # Remove "X" from variable
     D15.HighProp.e$variable <- as.numeric(gsub("X", "", D15.HighProp.e$variable))
 
+    # Remove values outside of the 2.5% and 97.5% quantiles
+    # Find 2.5% and 97.5% quantiles for HRCC
+    D15.HighProp.ePer <- ddply(D15.HighProp.e, .(variable), transform, 
+                         Lower = value < quantile(value, c(0.025)))
+
+    D15.HighProp.ePer <- ddply(D15.HighProp.ePer, .(variable), transform, 
+                         Upper = value > quantile(value, c(0.975)))
+
+    # Remove variables outside of the middle 95%
+    D15.HighProp.ePer <- subset(D15.HighProp.ePer, Lower == FALSE & Upper == FALSE)
+
     # Plot
-    D15.HighProp.p <- ggplot(D15.HighProp.e, aes(variable, value)) +
+    D15.HighProp.p <- ggplot(D15.HighProp.ePer, aes(variable, value)) +
                         geom_point(shape = 21, color = "gray30", alpha = I(0.05)) +
                         stat_smooth(method = "lm", se = FALSE) +
                         scale_x_reverse(breaks = c(1, 2), labels = c("Higher", "Very Low")) +
-                        scale_y_continuous(breaks = c(0, 0.02, 0.05, 0.1, 0.15), labels = c("", "", "", "", ""), limits = c(0, 0.15)) +
+                        scale_y_continuous(breaks = c(0, 0.02, 0.05, 0.1, 0.15), 
+                                           labels = c("", "", "", "", ""), limits = c(0, 0.15)) +
                         xlab("\nDisproportionality") + ylab("") +
                         theme_bw(base_size = 12)
 ## Majority
@@ -77,12 +103,25 @@ library(gridExtra)
     
     # Put in terms of the original variable percentage
     D15.maj.e$variable = D15.maj.e$variable + 19
+
+    # Remove values outside of the 2.5% and 97.5% quantiles
+    # Find 2.5% and 97.5% quantiles for HRCC
+    D15.maj.ePer <- ddply(D15.maj.e, .(variable), transform, 
+                         Lower = value < quantile(value, c(0.025)))
+
+    D15.maj.ePer <- ddply(D15.maj.ePer, .(variable), transform, 
+                         Upper = value > quantile(value, c(0.975)))
+
+    # Remove variables outside of the middle 95%
+    D15.maj.ePer <- subset(D15.maj.ePer, Lower == FALSE & Upper == FALSE)
     
     # Plot
-    D15.maj.p <- ggplot(D15.maj.e, aes(variable, value)) +
+    D15.maj.p <- ggplot(D15.maj.ePer, aes(variable, value)) +
                         geom_point(shape = 21, color = "gray30", alpha = I(0.05)) +
                         stat_smooth(method = "lm", se = FALSE) +
-                        scale_y_continuous(breaks = c(0, 0.02, 0.05, 0.1, 0.15), labels = c("", "", "", "", ""), limits = c(0, 0.15)) +
+                        scale_y_continuous(breaks = c(0, 0.02, 0.05, 0.1, 0.15), 
+                                           labels = c("", "", "", "", ""), 
+                                           limits = c(0, 0.15)) +
                         xlab("\nGovernment Majority") + ylab("") +
                         theme_bw()
     

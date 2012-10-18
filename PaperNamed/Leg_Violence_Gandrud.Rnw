@@ -471,7 +471,7 @@ If our goal is to actively prevent legislative violence--keep legislators two sw
 @
     \end{center}
     \begin{singlespace}
-      {\scriptsize{The graphs show all of the 1000 simulations at each fitted value of the variables. The simulations use Model 15 with the sample constricted to observations from 1990. See Table \ref{outputTable.demNew}.}}
+      {\scriptsize{The graphs show the middle 950 of 1000 simulations at each fitted value of the variables. The simulations use Model 15 with the sample constricted to observations from 1990. See Table \ref{outputTable.demNew}.}}
     \end{singlespace}
 \end{figure}
 
