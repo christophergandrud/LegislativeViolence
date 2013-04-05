@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Leg_Violence_Gandrud.aux
+The style file: apsr.bst
+Database file #1: /Users/christophergandrud/Dropbox/Ireland_Korea_Research/PhD_Thesis-1.bib
+Warning--entry type for "Marshall2009" isn't style-file defined
+--line 5221 of file /Users/christophergandrud/Dropbox/Ireland_Korea_Research/PhD_Thesis-1.bib
+Warning--entry type for "WorldBank2011" isn't style-file defined
+--line 7381 of file /Users/christophergandrud/Dropbox/Ireland_Korea_Research/PhD_Thesis-1.bib
+Warning--entry type for "USSenateCanning" isn't style-file defined
+--line 7519 of file /Users/christophergandrud/Dropbox/Ireland_Korea_Research/PhD_Thesis-1.bib
+Warning--entry type for "ParliamentUKSword" isn't style-file defined
+--line 7526 of file /Users/christophergandrud/Dropbox/Ireland_Korea_Research/PhD_Thesis-1.bib
+Warning--entry type for "ByrneViolence" isn't style-file defined
+--line 7533 of file /Users/christophergandrud/Dropbox/Ireland_Korea_Research/PhD_Thesis-1.bib
+Warning--entry type for "WVS2009" isn't style-file defined
+--line 7541 of file /Users/christophergandrud/Dropbox/Ireland_Korea_Research/PhD_Thesis-1.bib
+Warning--there's a number but no volume in DPI2001
+Warning--there's a number but no volume in Laakso1979
+Warning--empty title in Mainwaring2007
+Warning--empty chapter and pages in Norris1999
+Warning--empty booktitle in Tyler1998
+You've used 73 entries,
+            2874 wiz_defined-function locations,
+            1089 strings with 15232 characters,
+and the built_in function-call counts, 269290 in all, are:
+= -- 43987
+> -- 2945
+< -- 2
++ -- 20322
+- -- 1072
+* -- 22643
+:= -- 54613
+add.period$ -- 298
+call.type$ -- 73
+change.case$ -- 949
+chr.to.int$ -- 71
+cite$ -- 78
+duplicate$ -- 1095
+empty$ -- 2383
+format.name$ -- 1158
+if$ -- 48295
+int.to.chr$ -- 7
+int.to.str$ -- 0
+missing$ -- 81
+newline$ -- 320
+num.names$ -- 815
+pop$ -- 337
+preamble$ -- 1
+purify$ -- 1095
+quote$ -- 0
+skip$ -- 882
+stack$ -- 0
+substring$ -- 61627
+swap$ -- 139
+text.length$ -- 1024
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 258
+warning$ -- 5
+while$ -- 1693
+width$ -- 0
+write$ -- 1022
+(There were 11 warnings)

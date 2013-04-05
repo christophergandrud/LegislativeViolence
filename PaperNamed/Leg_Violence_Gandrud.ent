@@ -1,27 +1,4 @@
 \@doanenote {1}
-macro:->Note:
-this
-paper
-was
-written
-with
-{\tt
-{knitr}}
-\citep
-{knitr2012}
-and
-is
-fully
-reproducible.
-Please
-see
-section
-3
-for
-details.
-
-\@endanenote 
-\@doanenote {2}
 macro:->The
 Guardian
 newspaper,
@@ -52,7 +29,7 @@ See
 {\url
 {http://en.wikipedia.org/wiki/Legislative_violence}}.
 \@endanenote 
-\@doanenote {3}
+\@doanenote {2}
 macro:->In
 Ukraine
 the
@@ -72,7 +49,7 @@ media
 ownership
 laws.
 \@endanenote 
-\@doanenote {4}
+\@doanenote {3}
 macro:->I
 define
 {\emph
@@ -137,12 +114,12 @@ player"
 \citep
 [see][]{Tsebelis2002}.
 \@endanenote 
-\@doanenote {5}
+\@doanenote {4}
 macro:->See
 {\url
 {http://news.google.com/archivesearch}}.
 \@endanenote 
-\@doanenote {6}
+\@doanenote {5}
 macro:->The
 Google
 News
@@ -166,7 +143,7 @@ and
 search
 terms.
 \@endanenote 
-\@doanenote {7}
+\@doanenote {6}
 macro:->The
 scores
 were
@@ -234,7 +211,7 @@ indicating
 more
 democracy.
 \@endanenote 
-\@doanenote {8}
+\@doanenote {7}
 macro:->Five
 is
 the
@@ -297,7 +274,7 @@ democratic
 or
 not.
 \@endanenote 
-\@doanenote {9}
+\@doanenote {8}
 macro:->The
 `winner-loser
 gap'
@@ -314,7 +291,7 @@ also
 \cite
 {Blais2007}.
 \@endanenote 
-\@doanenote {10}
+\@doanenote {9}
 macro:->\cite
 {Anderson2005}
 and
@@ -356,7 +333,7 @@ and
 power
 gaps.
 \@endanenote 
-\@doanenote {11}
+\@doanenote {10}
 macro:->See
 also
 \cite
@@ -381,7 +358,7 @@ satisfaction
 with
 democracy.
 \@endanenote 
-\@doanenote {12}
+\@doanenote {11}
 macro:->\cite
 {Lijphart2004}
 refers
@@ -404,7 +381,7 @@ also
 \cite
 {Diamond1999}.
 \@endanenote 
-\@doanenote {13}
+\@doanenote {12}
 macro:->If
 the
 ratio
@@ -427,7 +404,7 @@ proportion
 of
 votes.
 \@endanenote 
-\@doanenote {14}
+\@doanenote {13}
 macro:->How
 proportional
 an
@@ -453,7 +430,7 @@ country,
 for
 example.
 \@endanenote 
-\@doanenote {15}
+\@doanenote {14}
 macro:->To
 use
 Tsebelis'
@@ -488,7 +465,7 @@ increases
 \citeyearpar
 [][24]{Tsebelis2002}.
 \@endanenote 
-\@doanenote {16}
+\@doanenote {15}
 macro:->These
 examples
 assume
@@ -526,7 +503,7 @@ the
 majoritarian
 example.
 \@endanenote 
-\@doanenote {17}
+\@doanenote {16}
 macro:->South
 Korea's
 average
@@ -566,7 +543,7 @@ with
 democratic
 legislatures.
 \@endanenote 
-\@doanenote {18}
+\@doanenote {17}
 macro:->Though
 provincial
 and
@@ -588,7 +565,7 @@ the
 central
 government.
 \@endanenote 
-\@doanenote {19}
+\@doanenote {18}
 macro:->South
 Africa's
 average
@@ -609,7 +586,7 @@ in
 the
 sample.
 \@endanenote 
-\@doanenote {20}
+\@doanenote {19}
 macro:->More
 inclusive
 parties
@@ -635,7 +612,7 @@ winner-loser
 preference
 gap.
 \@endanenote 
-\@doanenote {21}
+\@doanenote {20}
 macro:->It
 had
 an
@@ -648,7 +625,7 @@ from
 to
 2011
 \@endanenote 
-\@doanenote {22}
+\@doanenote {21}
 macro:->\cite
 {Tyler1998}
 makes
@@ -674,7 +651,7 @@ than
 the
 latter.
 \@endanenote 
-\@doanenote {23}
+\@doanenote {22}
 macro:->These
 are
 often
@@ -687,7 +664,7 @@ cultures
 {Inglehart2005,
 Inglehart2010}.
 \@endanenote 
-\@doanenote {24}
+\@doanenote {23}
 macro:->The
 main
 data
@@ -713,7 +690,7 @@ at
 {\url
 {https://www.dropbox.com/sh/vuu9si2188255sw/AoxQL19Z9k}}.
 \@endanenote 
-\@doanenote {25}
+\@doanenote {24}
 macro:->Carey
 and
 Hix
@@ -771,7 +748,7 @@ $i$'s
 seat
 share.
 \@endanenote 
-\@doanenote {26}
+\@doanenote {25}
 macro:->Full
 details
 can
@@ -781,7 +758,7 @@ at
 {\url
 {http://christophergandrud.github.com/Disproportionality_Data/}}.
 \@endanenote 
-\@doanenote {27}
+\@doanenote {26}
 macro:->Their
 data
 is
@@ -797,7 +774,7 @@ for
 further
 details.
 \@endanenote 
-\@doanenote {28}
+\@doanenote {27}
 macro:->Their
 data
 is
@@ -813,7 +790,7 @@ for
 further
 details.
 \@endanenote 
-\@doanenote {29}
+\@doanenote {28}
 macro:->I
 also
 considered
@@ -850,7 +827,7 @@ constitutionally
 mandated
 immunity.
 \@endanenote 
-\@doanenote {30}
+\@doanenote {29}
 macro:->Higher
 values
 on
@@ -861,7 +838,7 @@ indicate
 less
 trust.
 \@endanenote 
-\@doanenote {31}
+\@doanenote {30}
 macro:->The
 surveys
 were
@@ -883,7 +860,7 @@ Wave
 5:
 2005--2007
 \@endanenote 
-\@doanenote {32}
+\@doanenote {31}
 macro:->Note,
 for
 country-years
@@ -927,7 +904,7 @@ treated
 as
 missing.
 \@endanenote 
-\@doanenote {33}
+\@doanenote {32}
 macro:->Legislatures
 with
 multiple
@@ -945,7 +922,7 @@ for
 that
 year.
 \@endanenote 
-\@doanenote {34}
+\@doanenote {33}
 macro:->I
 assume
 that
@@ -966,7 +943,7 @@ no
 violence
 occurred.
 \@endanenote 
-\@doanenote {35}
+\@doanenote {34}
 macro:->The
 probability
 of
@@ -979,7 +956,7 @@ $1
 \pi
 _{i}$
 \@endanenote 
-\@doanenote {36}
+\@doanenote {35}
 macro:->The
 results
 were
@@ -1006,7 +983,7 @@ paper's
 markup
 file.
 \@endanenote 
-\@doanenote {37}
+\@doanenote {36}
 macro:->1.7
 percent
 of
@@ -1023,7 +1000,7 @@ violence
 =
 0.017$).
 \@endanenote 
-\@doanenote {38}
+\@doanenote {37}
 macro:->There
 were
 only
@@ -1033,7 +1010,7 @@ incidence
 before
 1990.
 \@endanenote 
-\@doanenote {39}
+\@doanenote {38}
 macro:->There
 were
 64
@@ -1059,7 +1036,7 @@ $\tau
 =
 0.023$.
 \@endanenote 
-\@doanenote {40}
+\@doanenote {39}
 macro:->Also,
 using
 WEAVE
@@ -1114,7 +1091,7 @@ sets
 of
 results.
 \@endanenote 
-\@doanenote {41}
+\@doanenote {40}
 macro:->To
 estimate
 these
@@ -1144,7 +1121,7 @@ at
 their
 means.
 \@endanenote 
-\@doanenote {42}
+\@doanenote {41}
 macro:->Approximately
 42
 percent
@@ -1155,7 +1132,7 @@ in
 this
 group.
 \@endanenote 
-\@doanenote {43}
+\@doanenote {42}
 macro:->The
 variable
 equals
@@ -1174,7 +1151,7 @@ and
 0
 otherwise.
 \@endanenote 
-\@doanenote {44}
+\@doanenote {43}
 macro:->i.e.
 it
 is
@@ -1188,7 +1165,7 @@ the
 significance
 level.
 \@endanenote 
-\@doanenote {45}
+\@doanenote {44}
 macro:->The
 coefficient
 estimates
@@ -1231,7 +1208,7 @@ is
 largely
 nonsensical.
 \@endanenote 
-\@doanenote {46}
+\@doanenote {45}
 macro:->This
 is
 not
@@ -1276,7 +1253,7 @@ See
 {\url
 {http://www.guardian.co.uk/politics/2012/mar/12/eric-joyce-labour-membership}}
 \@endanenote 
-\@doanenote {47}
+\@doanenote {46}
 macro:->Namibia's
 average
 disproportionality
@@ -1306,7 +1283,7 @@ in
 the
 sample.
 \@endanenote 
-\@doanenote {48}
+\@doanenote {47}
 macro:->South
 Africa
 and

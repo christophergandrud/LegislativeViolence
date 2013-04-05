@@ -22,8 +22,7 @@ library(plyr)
     D15.DemSim <- sim(D15, x = D15.DemAge)
     
     # Extract expected values from simulations
-    D15.demAge.e <- (D15.DemSim$qi)
-    D15.demAge.e <- data.frame(D15.demAge.e$ev)
+    D15.demAge.e <- data.frame(simulation.matrix(D15.DemSim, "Expected Values: E(Y|X)"))
     D15.demAge.e <- melt(D15.demAge.e, measure = 1:86)
     
     # Remove "X" from variable
@@ -59,8 +58,7 @@ library(plyr)
     D15.HighPropSim <- sim(D15, x = D15.HighProp)
 
     # Extract expected values from simulations
-    D15.HighProp.e <- (D15.HighPropSim$qi)
-    D15.HighProp.e <- data.frame(D15.HighProp.e$ev)
+    D15.HighProp.e <- data.frame(simulation.matrix(D15.HighPropSim, "Expected Values: E(Y|X)"))
     D15.HighProp.e <- melt(D15.HighProp.e, measure = 1:2)
 
     # Remove "X" from variable
@@ -94,8 +92,7 @@ library(plyr)
     D15.majSim <- sim(D15, x = D15.maj1)
     
     # Extract expected values from simulations
-    D15.maj.e <- (D15.majSim$qi)
-    D15.maj.e <- data.frame(D15.maj.e$ev)
+    D15.maj.e <- data.frame(simulation.matrix(D15.majSim, "Expected Values: E(Y|X)"))
     D15.maj.e <- melt(D15.maj.e, measure = 1:81)
     
     # Remove "X" from variable
@@ -126,5 +123,5 @@ library(plyr)
                         theme_bw()
     
 #### Combibine plots
-    predicted.combine <- grid.arrange(D15.demAge.p, D15.HighProp.p, D15.maj.p, ncol = 3, left = "Predicted Probability of Violence")
+    predicted.combine <- grid.arrange(D15.demAge.p, D15.HighProp.p, D15.maj.p, ncol = 3, left = "Predicted Probability of Violence in a Year")
     print(predicted.combine)

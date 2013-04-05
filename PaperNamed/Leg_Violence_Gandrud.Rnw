@@ -1,8 +1,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% When Legislators Attack
+% Two Sword Lengths
 % Christopher Gandrud
+% 5 April 2013
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % !Rnw weave = knitr
+
 \documentclass[a4paper]{article}
 \usepackage{fullpage}
 \usepackage{lscape}
@@ -31,18 +34,17 @@
 %%%%%%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Two Sword Lengths: Losers' Consent and Violence in National Legislatures}
 
-\author{Christopher Gandrud\thanks{Lecture in International Relations at Yonsei University (\href{mailto:gandrud@yonsei.ac.kr}{gandrud@yonsei.ac.kr}). Thank you to Simon Hix for very helpful comments, Hortense Badarani for research assistance, seminar participants at Yonsei University, and my GV101 students at the LSE for inspiration. Note: the paper was written with {\tt{knitr}} \citep{knitr2012} and is fully reproducible. Please see section 3 for details.
+\author{Christopher Gandrud\thanks{Lecture in International Relations at Yonsei University (\href{mailto:gandrud@yonsei.ac.kr}{gandrud@yonsei.ac.kr}). Thank you to Simon Hix for very helpful comments, Hortense Badarani for research assistance, seminar participants at Yonsei University, and my GV101 students at the LSE for inspiration.
 }}
 \date{}
 
 \begin{document}
-\SweaveOpts{concordance=TRUE}
+
 \maketitle
 
 %%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-National legislative chambers should be venues for peacefully resolving conflicts between opposing groups. However, they can sometimes become the scenes of physical violence between legislators. Legislative violence is an indication that a country's democratic institutions are functioning far from perfectly as legislative losers are deciding to drop out of the `game', rather than consent to the winners' decisions. In order to better understand these situations I use a new data set to examine what features are associated with violence in national legislative chambers. My main findings are that established democracies, democracies with highly proportional electoral outcomes and with large governing majorities are less likely to have legislative brawls. \endnote{Note: this paper was written with {\tt{knitr}} \citep{knitr2012} and is fully reproducible. Please see section 3 for details.
-}
+National legislative chambers should be venues for peacefully resolving conflicts between opposing groups. However, they can sometimes become the scenes of physical violence between legislators. Legislative violence is an indication that a country's democratic institutions are functioning far from perfectly as legislative losers are deciding to drop out of the `game', rather than consent to the winners' decisions. In order to better understand these situations I use a new data set to examine what features are associated with violence in national legislative chambers. My main findings are that established democracies, democracies with highly proportional electoral outcomes and with large governing majorities are less likely to have legislative brawls.
 
 \end{abstract}
 
@@ -343,13 +345,13 @@ If our goal is to actively prevent legislative violence--keep legislators two sw
 
 <<ScatterDem, warning=FALSE, echo=FALSE, message=FALSE, fig.width=7, fig.height=4, out.width='0.8\\linewidth'>>=
 
-    library(RCurl)
+    ## Load packages
+    library(repmis)
     library(ggplot2)
     
     ## Load Data (one observation per country-year)
     URLDescript <- "https://raw.github.com/christophergandrud/LegislativeViolence/master/Data/LegViolenceDescriptives.csv"
-    Descript <- getURL(URLDescript)
-    leg.cumulative <- read.csv(textConnection(Descript))
+    leg.cumulative <- source_GitHubData(URLDescript)
 
     leg.cumulative$violence <- factor(leg.cumulative$violence, label = c("No Violence", "Violence"))
     leg.cumulative <- subset(leg.cumulative, violence != "NA")
@@ -414,11 +416,9 @@ If our goal is to actively prevent legislative violence--keep legislators two sw
 
 %%%%%%%%%%%%%%%% Run Analyses %%%%%%%%%%%%%%%%%%%%%%%%
 <<models, warning=FALSE, echo=FALSE, message=FALSE, results='hide'>>=
-    
     ## Load data
     URLMain <- "https://raw.github.com/christophergandrud/LegislativeViolence/master/Data/LegViolenceMain.csv"
-    Main <- getURL(URLMain)
-    leg.raw <- read.csv(textConnection(Main))
+    leg.raw <- source_GitHubData(URLMain)
     
     ## Keep variables of interest
     vars <- c("country", "year", "violence", "system", "DemAge", "maj", "MajCat", "govfrac", "singleParty", "pr", "tenshort", "UDS", "polity2", "ethnicAlesina", "CWtrust", "higherTrust", "CWsurvSelfExpr", "legislature", "elect_legislature", "disproportionality", "gini", "GDPperCapita", "enps", "enpv", "federal", "immunity")
@@ -592,7 +592,8 @@ If our goal is to actively prevent legislative violence--keep legislators two sw
     \begin{center}
 <<OutTable2, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
         source_url("https://raw.github.com/christophergandrud/LegislativeViolence/master/Analysis/relogitTable.r") # From Thomas Jensen (http://polstat.org/blog/2012/1/creating-latex-tables-zelig-and-statnet-objects/)
-        relogitTable(D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12, D13, D14, D15, D16)
+        library(texreg)
+        texreg(list(D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12, D13, D14, D15, D16))
    
 @
     \end{center}

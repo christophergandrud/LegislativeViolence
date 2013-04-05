@@ -405,11 +405,4 @@ Wagner, Alexander~F., Friedrich Schneider \harvardand\ Martin Halla. 2009.
 \newblock ``WORLD VALUES SURVEY 1981-2008 OFFICIAL AGGREGATE v.20090901.''.
 \newblock \url{http://www.wvsevsdb.com/wvs/WVSData.jsp}.
 
-\harvarditem{Xie}{2012}{knitr2012}
-Xie, Yihui. 2012.
-\newblock {\em knitr: A general-purpose package for dynamic report generation
-  in R}.
-\newblock R package version 0.5.
-\newline\harvardurl{\url{http://CRAN.R-project.org/package=knitr}}
-
 \end{thebibliography}
