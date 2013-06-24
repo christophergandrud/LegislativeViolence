@@ -1,0 +1,29 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Two Sword Lengths
+% Christopher Gandrud
+% 24 June 2013
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% !Rnw weave = knitr
+
+\documentclass[a4paper]{article}
+\usepackage{fullpage}
+\usepackage{lscape}
+\usepackage[authoryear]{natbib}
+\usepackage{setspace}
+    \doublespacing
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=cyan,
+    urlcolor=cyan
+}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{url}
+\usepackage{tikz}
+\usepackage{todonotes}
+\usepackage{verbatim}
+\usepackage{endnotes}
