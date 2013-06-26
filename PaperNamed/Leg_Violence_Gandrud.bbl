@@ -1,10 +1,5 @@
 \begin{thebibliography}{xx}
 
-\harvarditem{Aarts \harvardand\ Thomassen}{2008}{Aarts2008}
-Aarts, Kees \harvardand\ Jacques Thomassen. 2008.
-\newblock ``{Satisfaction with Democracy: Do Institutions Matter?}'' {\em
-  Electoral Studies} 27(1):5--18.
-
 \harvarditem{Achen}{2002}{Achen2002}
 Achen, Christopher~H. 2002.
 \newblock ``Toward a New Political Methodology: Microfoundations and ART.''
@@ -35,11 +30,6 @@ Alvarez, Mike, Jos{\'e}~Antonio Cheibub, Fernando Limongi \harvardand\ Adam
 \newblock ``{Classifying Political Regimes}.'' {\em Studies in Comparative
   International Development} 31(2):3--36.
 
-\harvarditem{Anderson \harvardand\ Tverdova}{2001}{Anderson2001}
-Anderson, Chrisotpher~J. \harvardand\ Yuliya~V. Tverdova. 2001.
-\newblock ``{Winners, Losers, and Attitudes about Government in Contemporary
-  Democracies}.'' {\em International Political Science Review} 22(4):321--338.
-
 \harvarditem[Anderson et~al.]{Anderson, Blais, Bowler, Donovan \harvardand\
   Listhaug}{2005}{Anderson2005}
 Anderson, Christopher~J, Andr{\'e} Blais, Shaun Bowler, Todd Donovan
@@ -47,30 +37,12 @@ Anderson, Christopher~J, Andr{\'e} Blais, Shaun Bowler, Todd Donovan
 \newblock {\em Losers' Consent}.
 \newblock Oxford:  Oxford University Press.
 
-\harvarditem{Anderson \harvardand\ Guillory}{1997}{Anderson1997}
-Anderson, Christopher~J \harvardand\ Christine~A Guillory. 1997.
-\newblock ``{Poltical Institutions and Satisfaction with Democracy: A Cross
-  Nationa Analysis of Consensus and Majoritarian Systems}.'' {\em American
-  Political Science Review} 91(1):66--81.
-
 \harvarditem[Beck et~al.]{Beck, Clarke, Groff, Keefer,  \harvardand\
   Walsh}{2001}{DPI2001}
 Beck, Thorsten, George Clarke, Alberto Groff, Philip Keefer,  \harvardand\
   Patrick Walsh. 2001.
 \newblock ``New Tools in Comparative Political Economy: The Database of
   Political Institutions.'' {\em World Bank Economic Review} (1).
-
-\harvarditem{Bernauer \harvardand\ Vatter}{2011}{Bernauer2011}
-Bernauer, Julian \harvardand\ Adrian Vatter. 2011.
-\newblock ``{Can't get no satisfaction with the Westminster model? Winners,
-  losers and the effects of consensual and direct democratic institutions on
-  satisfaction with democracy}.'' {\em European Journal of Political Research}
-  .
-
-\harvarditem{Blais \harvardand\ G{\'e}lineau}{2007}{Blais2007}
-Blais, Andr{\'e} \harvardand\ Fran{\c c}ois G{\'e}lineau. 2007.
-\newblock ``{Winning, Losing and Satisfaction with Democracy}.'' {\em Political
-  Studies} 55:425--441.
 
 \harvarditem[Brambor, Clark \harvardand\ Golder]{Brambor, Clark \harvardand\
   Golder}{2006}{Brambor2006}
@@ -104,16 +76,8 @@ Dalton, Russell~J \harvardand\ Nhu-Ngoc~T Ong. 2005.
   `Asian Values' Hypothesis}.'' {\em Japanese Journal of Political Science}
   6(2):211--231.
 
-\harvarditem{Diamond}{1999}{Diamond1999}
-Diamond, Larry. 1999.
-\newblock {\em Developing Democracy: Towards Consolidation}.
-\newblock Baltimore:  Johns Hopkins University Press.
-
-\harvarditem{Duverger}{1954}{Duverger1954}
-Duverger, Maurice. 1954.
-\newblock {\em Political Parties. Their Organization and Activity in the Modern
-  State}.
-\newblock New York:  Wiley.
+\harvarditem{{\em Democratization}}{2013}{Democratization2013}
+{\em Democratization}. 2013.
 
 \harvarditem[Elkins, Ginsburg \harvardand\ Melton]{Elkins, Ginsburg
   \harvardand\ Melton}{2010}{ElkinsCCP2010}
@@ -160,11 +124,6 @@ Golder, Matt. 2006.
 Horowitz, Donald~L. 1990.
 \newblock ``{Comparing Democratic Systems}.'' {\em Journal of Democracy}
   1(4):73--79.
-
-\harvarditem{Inglehart}{1988}{Inglehart1988}
-Inglehart, Ronald. 1988.
-\newblock ``{The Renaissance of Political Culture}.'' {\em The American
-  Political Science Review} 82(4):1203--1230.
 
 \harvarditem{Inglehart \harvardand\ Welzel}{2003}{Inglehart2003}
 Inglehart, Ronald \harvardand\ Christian Welzel. 2003.
@@ -225,20 +184,10 @@ Laakso, Markku \harvardand\ Rein Taagepera. 1979.
 \newblock ``{"Effective" Number of Parties: A measure with Application to West
   Europe}.'' {\em Comparative Political Studies} (12):1.
 
-\harvarditem{Lijphart}{1977}{Lijphart1977}
-Lijphart, Arend. 1977.
-\newblock {\em Democracy in Plural Societies}.
-\newblock New Haven:  Yale University Press.
-
 \harvarditem{Lijphart}{1984}{Lijphart1984}
 Lijphart, Arend. 1984.
 \newblock {\em Democracies: Patterns of Majoritarian and Consensus Government}.
 \newblock New Haven:  Yale University Press.
-
-\harvarditem{Lijphart}{1991}{Lijphart1991}
-Lijphart, Arend. 1991.
-\newblock ``{Constitutional Choices for New Democracies}.'' {\em Journal of
-  Democracy} 2(1):72--84.
 
 \harvarditem{Lijphart}{1994}{Lijphart1994}
 Lijphart, Arend. 1994.
@@ -246,32 +195,11 @@ Lijphart, Arend. 1994.
   Democracies}.
 \newblock Oxford:  Oxford University Press.
 
-\harvarditem{Lijphart}{1999}{lijphart1999}
-Lijphart, Arend. 1999.
-\newblock {\em Patterns of Democracy: Government Forms and Performance in
-  Thirty-Six Countries}.
-\newblock New Haven:  Yale University Press.
-
 \harvarditem{Lijphart}{2003}{Lijphart2003}
 Lijphart, Arend. 2003.
 \newblock ``{DEBATE: Measurement Validity and Institutional
   Endineering--Reflections on Rein Taagepera's Meta-Study}.'' {\em Political
   Studies} 51:20--25.
-
-\harvarditem{Lijphart}{2004}{Lijphart2004}
-Lijphart, Arend. 2004.
-\newblock ``{Constitutional Design for Divided Societies}.'' {\em Journal of
-  Democracy} 15(2):96--109.
-
-\harvarditem{Linz}{1990{\em a}}{LinzPres1990}
-Linz, Juan~J. 1990{\em a}.
-\newblock ``{The Perils of Presidentialism}.'' {\em Journal of Democracy}
-  1(1):51--69.
-
-\harvarditem{Linz}{1990{\em b}}{LinzParl1990}
-Linz, Juan~J. 1990{\em b}.
-\newblock ``{The Virtues of Parliamentarism}.'' {\em The Journal of Democracy}
-  1(4):84--91.
 
 \harvarditem{Lumley \harvardand\ Heagerty}{1999}{Lumley1999}
 Lumley, Thomas \harvardand\ Patrick Heagerty. 1999.
@@ -311,15 +239,10 @@ Neto, Octavio~Amorim \harvardand\ Gary~W Cox. 1997.
 \newblock ``{Electoral Institutions, Cleavage Structures, and the Number of
   Parties}.'' {\em American Journal of Political Science} 41(1):149--174.
 
-\harvarditem{Norris}{1999}{Norris1999}
-Norris, Pippa. 1999.
-\newblock {\em Institutional Explanations for Political Support:}.
-\newblock Oxford:  Oxford University Press.
-
-\harvarditem{North}{1990}{North1990}
-North, Douglas~C. 1990.
-\newblock {\em Institutions, Institutional Change, and Economic Performance}.
-\newblock Cambridge:  Cambridge Univiversity Press.
+\harvarditem{Ostrow}{1996}{Ostrow1996}
+Ostrow, Joel~M. 1996.
+\newblock ``{Institutional Design and Legislative Conflict}.'' {\em Communist
+  and Post-Communist Studies} 29(4):413--433.
 
 \harvarditem[Pemstein, Meserve \harvardand\ Melton]{Pemstein, Meserve
   \harvardand\ Melton}{2010}{Pemstein2010}
@@ -349,10 +272,10 @@ Seghetti, Michael~R. 1984.
   While Cutting Costs of Congressional Immunity}.'' {\em Notre Dame Law Review}
   60:589--620.
 
-\harvarditem{Stepan \harvardand\ Linz}{1996}{Stepan1996}
-Stepan, Alfred~C \harvardand\ Juan~J. Linz. 1996.
-\newblock ``{Toward Consolidated Democracies}.'' {\em Journal of Democracy}
-  7(2):14--33.
+\harvarditem{Spary}{2013}{Spary2013}
+Spary, Carole. 2013.
+\newblock ``{Legislative protest as disruptive democratic practice}.'' {\em
+  Democratization} 20(3):392--416.
 
 \harvarditem{Taagepera \harvardand\ Shugart}{1989}{Taagepera1989}
 Taagepera, Rein \harvardand\ Matthew~Soberg Shugart. 1989.
@@ -364,12 +287,6 @@ Taagepera, Rein \harvardand\ Matthew~Soberg Shugart. 1989.
 Tsebelis, George. 2002.
 \newblock {\em Veto Players: How Political Institutions Work}.
 \newblock Princeton:  Princeton University Press.
-
-\harvarditem{Tyler}{1998}{Tyler1998}
-Tyler, Tom~R. 1998.
-\newblock Trust and Governance.
-\newblock New York:  Russell Sage Foundation chapter Trust and Democratic
-  Government, pp.~269--291.
 
 \harvarditem{{UK Parliament}}{2011}{ParliamentUKSword}
 {UK Parliament}. 2011.
@@ -388,12 +305,11 @@ Tyler, Tom~R. 1998.
 \newblock ``World Income Inequality Database.''
   \url{http://www.wider.unu.edu/research/Database/en_GB/database/}.
 
-\harvarditem[Wagner, Schneider \harvardand\ Halla]{Wagner, Schneider
-  \harvardand\ Halla}{2009}{Wagner2009}
-Wagner, Alexander~F., Friedrich Schneider \harvardand\ Martin Halla. 2009.
-\newblock ``{The Quality of Institutions and Satisfaction with Democracy in
-  Western Europe --- a Panel Analysis}.'' {\em European Journal of Political
-  Economy} 25:30--41.
+\harvarditem{Wolfe}{2004}{Wolfe2004}
+Wolfe, Eugene~L. 2004.
+\newblock ``{Creating Democracy's Good Losers: The Rise, Fall and Return of
+  Parliamentary Disorder in Post-war Japan}.'' {\em Government and Opposition}
+  39(1):55--79.
 
 \harvarditem{{World Bank}}{2011}{WorldBank2011}
 {World Bank}. 2011.
@@ -404,5 +320,10 @@ Wagner, Alexander~F., Friedrich Schneider \harvardand\ Martin Halla. 2009.
 {World Values Survey Association}. 2009.
 \newblock ``WORLD VALUES SURVEY 1981-2008 OFFICIAL AGGREGATE v.20090901.''.
 \newblock \url{http://www.wvsevsdb.com/wvs/WVSData.jsp}.
+
+\harvarditem{Young}{2002}{Young2002}
+Young, Iris~Marion. 2002.
+\newblock {\em Inclusoin and Democracy}.
+\newblock Oxford:  Oxford University Press.
 
 \end{thebibliography}

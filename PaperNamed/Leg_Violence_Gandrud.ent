@@ -1,4 +1,44 @@
 \@doanenote {1}
+macro:->Research
+Associate.
+Friedrichstra{\ss
+}er
+180.
+10117
+Berlin,
+Germany.
+Email:
+\href
+{mailto:christopher.gandrud@gmail.com}{christopher.gandrud@gmail.com}.
+Thank
+you
+to
+Simon
+Hix
+for
+very
+helpful
+comments,
+Hortense
+Badarani
+for
+research
+assistance,
+seminar
+participants
+at
+Yonsei
+University,
+and
+my
+students
+at
+the
+LSE
+for
+inspiration.
+\@endanenote 
+\@doanenote {2}
 macro:->The
 Guardian
 newspaper,
@@ -29,7 +69,7 @@ See
 {\url
 {http://en.wikipedia.org/wiki/Legislative_violence}}.
 \@endanenote 
-\@doanenote {2}
+\@doanenote {3}
 macro:->In
 Ukraine
 the
@@ -49,7 +89,7 @@ media
 ownership
 laws.
 \@endanenote 
-\@doanenote {3}
+\@doanenote {4}
 macro:->I
 define
 {\emph
@@ -114,274 +154,63 @@ player"
 \citep
 [see][]{Tsebelis2002}.
 \@endanenote 
-\@doanenote {4}
-macro:->See
-{\url
-{http://news.google.com/archivesearch}}.
-\@endanenote 
 \@doanenote {5}
-macro:->The
-Google
-News
-Archive
-search
-was
-conducted
-in
-Spring
-2011.
-Please
-contact
-me
-for
+macro:->This
+is
+far
+from
 a
 complete
-list
+account
 of
-sources
-and
-search
-terms.
+all
+of
+the
+factors
+that
+may
+influence
+legitimacy.
+\cite
+{Wolfe2004}
+for
+example
+focuses
+on
+informal
+ways
+that
+opposition
+parties
+can
+access
+power.
+Given
+the
+global
+scale
+of
+this
+paper
+they
+are
+nonetheless
+the
+most
+easily
+observed.
+Further
+case
+study
+research
+is
+needed
+to
+understand
+other
+facets.
 \@endanenote 
 \@doanenote {6}
-macro:->The
-scores
-were
-found
-through
-Bayesian
-latent
-variable
-analysis
-using
-10
-measures
-of
-democracy,
-including
-Freedom
-House,
-Polity,
-and
-so
-on.
-I
-only
-use
-posterior
-mean
-UDS
-scores
-in
-this
-paper.
-See
-\cite
-{Pemstein2010}
-for
-a
-discussion
-of
-UDS'
-advantages
-over
-individual
-measures
-of
-democracy.
-Though
-there
-is
-no
-direct
-substantive
-meaning
-to
-individual
-values,
-higher
-positive
-values
-can
-be
-thought
-of
-as
-indicating
-more
-democracy.
-\@endanenote 
-\@doanenote {7}
-macro:->Five
-is
-the
-qualitative
-point
-the
-creators
-of
-the
-data
-set
-choose
-for
-determining
-if
-a
-country
-is
-democratic
-or
-not
-\citep
-{Marshall2009}.
-I
-did
-not
-use
-UDS
-to
-determine
-democratic
-age
-because,
-unlike
-the
-Polity
-measure,
-UDS
-scores
-do
-not
-have
-a
-clear
-substantively
-meaningful
-cutoff
-point
-which
-we
-can
-use
-to
-code
-a
-country
-as
-being
-democratic
-or
-not.
-\@endanenote 
-\@doanenote {8}
-macro:->The
-`winner-loser
-gap'
-concept
-is
-from
-Anderson
-et
-al.
-\citeyearpar
-[10]{Anderson2005}.
-See
-also
-\cite
-{Blais2007}.
-\@endanenote 
-\@doanenote {9}
-macro:->\cite
-{Anderson2005}
-and
-\cite
-{Blais2007}
-were
-generally
-more
-concerned
-with
-citizens,
-than
-decision-makers
-so
-they
-focused
-on
-gaps
-of
-experience
-and
-preference.
-Since
-I
-am
-concerned
-with
-legislative
-decision-makers,
-I
-expand
-the
-concept
-to
-also
-include
-representation
-and
-power
-gaps.
-\@endanenote 
-\@doanenote {10}
-macro:->See
-also
-\cite
-{Bernauer2011}
-for
-an
-examination
-of
-how
-consensual
-institutions,
-particularly
-consensual
-cabinets
-and
-direct
-democracy
-improve
-citizen-level
-losers'
-satisfaction
-with
-democracy.
-\@endanenote 
-\@doanenote {11}
-macro:->\cite
-{Lijphart2004}
-refers
-to
-electoral
-system
-design
-as
-``the
-most
-important
-choice"
-for
-a
-democracy
-to
-make.
-See
-also
-\cite
-{Diamond1999}.
-\@endanenote 
-\@doanenote {12}
 macro:->If
 the
 ratio
@@ -404,7 +233,7 @@ proportion
 of
 votes.
 \@endanenote 
-\@doanenote {13}
+\@doanenote {7}
 macro:->How
 proportional
 an
@@ -430,7 +259,7 @@ country,
 for
 example.
 \@endanenote 
-\@doanenote {14}
+\@doanenote {8}
 macro:->To
 use
 Tsebelis'
@@ -465,7 +294,7 @@ increases
 \citeyearpar
 [][24]{Tsebelis2002}.
 \@endanenote 
-\@doanenote {15}
+\@doanenote {9}
 macro:->These
 examples
 assume
@@ -489,169 +318,9 @@ be
 closer
 to
 $L$'s
-preferences--the
-winner-loser
-gap
-would
-be
-smaller--in
-the
-consensual
-compared
-to
-the
-majoritarian
-example.
+preferences.
 \@endanenote 
-\@doanenote {16}
-macro:->South
-Korea's
-average
-disproportionality
-as
-measured
-by
-the
-Gallagher
-Index
-\citep
-[][see
-the
-discussion
-below
-for
-further
-details]{Gallagher1991,
-Gallagher2012}
-from
-2000
-until
-2011
-was
-12.7.
-This
-places
-it
-in
-the
-upper
-25
-percent
-of
-observations
-with
-democratic
-legislatures.
-\@endanenote 
-\@doanenote {17}
-macro:->Though
-provincial
-and
-local
-governments
-are
-elected,
-deputy
-executives
-who
-have
-detailed
-administrative
-powers
-are
-appointed
-by
-the
-central
-government.
-\@endanenote 
-\@doanenote {18}
-macro:->South
-Africa's
-average
-Gallagher
-disproportionality
-was
-0.29
-from
-2000
-until
-2011,
-one
-of
-the
-lowest
-observed
-in
-the
-sample.
-\@endanenote 
-\@doanenote {19}
-macro:->More
-inclusive
-parties
-may
-be
-similar
-to
-multiparty
-coalition
-in
-that
-they
-have
-a
-wide
-range
-of
-preferences
-thereby
-decreasing
-the
-winner-loser
-preference
-gap.
-\@endanenote 
-\@doanenote {20}
-macro:->It
-had
-an
-average
-disproportionality
-of
-16.5
-from
-2000
-to
-2011
-\@endanenote 
-\@doanenote {21}
-macro:->\cite
-{Tyler1998}
-makes
-a
-distinction
-between
-trust
-in
-others
-and
-trust
-in
-authority.
-The
-former
-is
-much
-more
-conducive
-to
-democracy
-than
-the
-latter.
-\@endanenote 
-\@doanenote {22}
+\@doanenote {10}
 macro:->These
 are
 often
@@ -664,33 +333,200 @@ cultures
 {Inglehart2005,
 Inglehart2010}.
 \@endanenote 
-\@doanenote {23}
-macro:->The
-main
-data
-file
-is
-in
-Stata
-format
-and
-can
-be
-found
-at:
+\@doanenote {11}
+macro:->See
 {\url
-{https://www.dropbox.com/s/9kn73p98bb7lynh/leg_violence_main.dta}}.
-\\
-Markup
+{http://news.google.com/archivesearch}}.
+\@endanenote 
+\@doanenote {12}
+macro:->The
+Google
+News
+Archive
+search
+was
+conducted
+in
+Spring
+2011.
+Please
+contact
+me
+for
+a
+complete
+list
+of
+sources
+and
+search
+terms.
+\@endanenote 
+\@doanenote {13}
+macro:->Democratic
+age
+is
+determined
+by
+how
+many
+years
+a
+country
+had
+Polity
+scores
+greater
+than
+5.
+Five
+is
+the
+qualitative
+point
+the
+creators
+of
+the
+data
+set
+choose
+for
+determining
+if
+a
+country
+is
+democratic
+or
+not
+\citep
+{Marshall2009}.
+\@endanenote 
+\@doanenote {14}
+macro:->This
+is
+not
+to
+say
+that
+physical
+fights
+between
+legislators
+never
+happen
+in
+these
+countries.
+For
+example,
+during
+the
+writing
+of
+this
+paper
+a
+member
+of
+the
+United
+Kingdom
+Parliament
+assaulted
+a
+number
+of
+people
+at
+Palace
+of
+Westminster
+pub.
+See
+{\url
+{http://www.guardian.co.uk/politics/2012/mar/12/eric-joyce-labour-membership}}
+\@endanenote 
+\@doanenote {15}
+macro:->Disproportionality
+is
+measured
+with
+the
+Gallagher
+disproportionality
+score
+\citep
+{Gallagher1991}.
+See
+below
+for
+details.
+\@endanenote 
+\@doanenote {16}
+macro:->Data
+on
+government
+majorities
+is
+from
+the
+Database
+of
+Political
+Institutions
+\citep
+[updated
+to
+2010]{DPI2001}.
+\@endanenote 
+\@doanenote {17}
+macro:->Estimates
+from
+a
+number
+of
+them
+are
+not
+shown
+for
+simplicity.
+In
+general,
+these
+variables
+did
+not
+generate
+statistically
+significant
+results
+and
+it
+was
+theoretically
+unclear
+how
+they
+would
+influence
+legislative
+violence.
+\@endanenote 
+\@doanenote {18}
+macro:->Full
+replication
 files
 can
 be
 found
 at
-{\url
-{https://www.dropbox.com/sh/vuu9si2188255sw/AoxQL19Z9k}}.
+\url
+{https://github.com/christophergandrud/LegislativeViolence}.
 \@endanenote 
-\@doanenote {24}
+\@doanenote {19}
 macro:->Carey
 and
 Hix
@@ -748,7 +584,7 @@ $i$'s
 seat
 share.
 \@endanenote 
-\@doanenote {25}
+\@doanenote {20}
 macro:->Full
 details
 can
@@ -758,7 +594,7 @@ at
 {\url
 {http://christophergandrud.github.com/Disproportionality_Data/}}.
 \@endanenote 
-\@doanenote {26}
+\@doanenote {21}
 macro:->Their
 data
 is
@@ -774,7 +610,7 @@ for
 further
 details.
 \@endanenote 
-\@doanenote {27}
+\@doanenote {22}
 macro:->Their
 data
 is
@@ -790,7 +626,7 @@ for
 further
 details.
 \@endanenote 
-\@doanenote {28}
+\@doanenote {23}
 macro:->I
 also
 considered
@@ -827,7 +663,7 @@ constitutionally
 mandated
 immunity.
 \@endanenote 
-\@doanenote {29}
+\@doanenote {24}
 macro:->Higher
 values
 on
@@ -838,7 +674,7 @@ indicate
 less
 trust.
 \@endanenote 
-\@doanenote {30}
+\@doanenote {25}
 macro:->The
 surveys
 were
@@ -860,7 +696,7 @@ Wave
 5:
 2005--2007
 \@endanenote 
-\@doanenote {31}
+\@doanenote {26}
 macro:->Note,
 for
 country-years
@@ -904,59 +740,46 @@ treated
 as
 missing.
 \@endanenote 
-\@doanenote {32}
-macro:->Legislatures
-with
-multiple
-incidences
-of
-violence
-in
-a
-single
-year
-have
-multiple
-observations
-for
-that
-year.
-\@endanenote 
-\@doanenote {33}
-macro:->I
-assume
-that
-if
-no
-brawl
-was
-observe
-using
-the
-data
-gathering
-procedures
-discussed
-above
-that
-no
-violence
-occurred.
-\@endanenote 
-\@doanenote {34}
-macro:->The
-probability
-of
-$(Y_{i}
-=
-0)$
+\@doanenote {27}
+macro:->If
+there
 is
-$1
--
-\pi
-_{i}$
+no
+rare
+event
+bias,
+rare
+events
+logistic
+regression
+will
+produce
+results
+similar
+to
+a
+standard
+logit
+analysis.
+Please
+see
+King
+and
+Zeng
+\citep
+[147--148]{KingRareEventsPA2001}
+for
+a
+more
+detailed
+discussion
+of
+$\mathrm
+{Bias}(\hat
+\beta
+)$.
 \@endanenote 
-\@doanenote {35}
+\@doanenote {28}
 macro:->The
 results
 were
@@ -983,7 +806,7 @@ paper's
 markup
 file.
 \@endanenote 
-\@doanenote {36}
+\@doanenote {29}
 macro:->1.7
 percent
 of
@@ -1000,7 +823,7 @@ violence
 =
 0.017$).
 \@endanenote 
-\@doanenote {37}
+\@doanenote {30}
 macro:->There
 were
 only
@@ -1010,7 +833,7 @@ incidence
 before
 1990.
 \@endanenote 
-\@doanenote {38}
+\@doanenote {31}
 macro:->There
 were
 64
@@ -1036,7 +859,7 @@ $\tau
 =
 0.023$.
 \@endanenote 
-\@doanenote {39}
+\@doanenote {32}
 macro:->Also,
 using
 WEAVE
@@ -1091,7 +914,7 @@ sets
 of
 results.
 \@endanenote 
-\@doanenote {40}
+\@doanenote {33}
 macro:->To
 estimate
 these
@@ -1121,7 +944,7 @@ at
 their
 means.
 \@endanenote 
-\@doanenote {41}
+\@doanenote {34}
 macro:->Approximately
 42
 percent
@@ -1132,7 +955,7 @@ in
 this
 group.
 \@endanenote 
-\@doanenote {42}
+\@doanenote {35}
 macro:->The
 variable
 equals
@@ -1151,7 +974,7 @@ and
 0
 otherwise.
 \@endanenote 
-\@doanenote {43}
+\@doanenote {36}
 macro:->i.e.
 it
 is
@@ -1165,7 +988,7 @@ the
 significance
 level.
 \@endanenote 
-\@doanenote {44}
+\@doanenote {37}
 macro:->The
 coefficient
 estimates
@@ -1208,52 +1031,7 @@ is
 largely
 nonsensical.
 \@endanenote 
-\@doanenote {45}
-macro:->This
-is
-not
-to
-say
-that
-physical
-fights
-between
-legislators
-never
-happen
-in
-these
-countries.
-For
-example,
-during
-the
-writing
-of
-this
-paper
-a
-member
-of
-the
-United
-Kingdom
-Parliament
-assaulted
-a
-number
-of
-people
-at
-Palace
-of
-Westminster
-pub.
-See
-{\url
-{http://www.guardian.co.uk/politics/2012/mar/12/eric-joyce-labour-membership}}
-\@endanenote 
-\@doanenote {46}
+\@doanenote {38}
 macro:->Namibia's
 average
 disproportionality
@@ -1283,7 +1061,7 @@ in
 the
 sample.
 \@endanenote 
-\@doanenote {47}
+\@doanenote {39}
 macro:->South
 Africa
 and
