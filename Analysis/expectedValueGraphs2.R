@@ -1,7 +1,7 @@
 #######################
 # Legislative Violence Expected Value Graphs
 # Christopher Gandrud
-# Updated 18 October 2012
+# Updated 26 June 2013
 #######################
 
 ##require(ggplot2)
@@ -11,8 +11,8 @@ library(plyr)
 
 ## Ranges of fitted values
     HighProp.r <- c(0, 1)
-    dem.r <- 0:85
-    maj.r <- c(20:100)
+    dem.r <- seq(from = 0, to = 85, by = 2)
+    maj.r <- seq(from = 20, to = 100, by = 2)
 
 ## Age of Democracy
     # Set fitted values  
@@ -23,7 +23,7 @@ library(plyr)
     
     # Extract expected values from simulations
     D15.demAge.e <- data.frame(simulation.matrix(D15.DemSim, "Expected Values: E(Y|X)"))
-    D15.demAge.e <- melt(D15.demAge.e, measure = 1:86)
+    D15.demAge.e <- melt(D15.demAge.e, measure = 1:43)
     
     # Remove "X" from variable
     D15.demAge.e$variable <- as.numeric(gsub("X", "", D15.demAge.e$variable))
@@ -45,8 +45,8 @@ library(plyr)
                         stat_smooth() +
                         scale_x_continuous(breaks = c(0, 21, 51, 85), 
                                            labels = c("0", "20", "50", "85")) +
-                        scale_y_continuous(breaks = c(0, 0.02, 0.05, 0.1, 0.15), 
-                                           limits = c(0, 0.15)) +
+                        scale_y_continuous(breaks = c(0, 0.02, 0.05, 0.08), 
+                                           limits = c(0, 0.08)) +
                         xlab("\nAge of Democracy") + ylab("") +
                         theme_bw(base_size = 12)
 
@@ -80,8 +80,8 @@ library(plyr)
                         geom_point(shape = 21, color = "gray30", alpha = I(0.05)) +
                         stat_smooth(method = "lm", se = FALSE) +
                         scale_x_reverse(breaks = c(1, 2), labels = c("Higher", "Very Low")) +
-                        scale_y_continuous(breaks = c(0, 0.02, 0.05, 0.1, 0.15), 
-                                           labels = c("", "", "", "", ""), limits = c(0, 0.15)) +
+                        scale_y_continuous(breaks = c(0, 0.02, 0.05, 0.08), 
+                                           labels = c("", "", "", ""), limits = c(0, 0.08)) +
                         xlab("\nDisproportionality") + ylab("") +
                         theme_bw(base_size = 12)
 ## Majority
@@ -93,7 +93,7 @@ library(plyr)
     
     # Extract expected values from simulations
     D15.maj.e <- data.frame(simulation.matrix(D15.majSim, "Expected Values: E(Y|X)"))
-    D15.maj.e <- melt(D15.maj.e, measure = 1:81)
+    D15.maj.e <- melt(D15.maj.e, measure = 1:41)
     
     # Remove "X" from variable
     D15.maj.e$variable <- as.numeric(gsub("X", "", D15.maj.e$variable))
@@ -116,9 +116,9 @@ library(plyr)
     D15.maj.p <- ggplot(D15.maj.ePer, aes(variable, value)) +
                         geom_point(shape = 21, color = "gray30", alpha = I(0.05)) +
                         stat_smooth(method = "lm", se = FALSE) +
-                        scale_y_continuous(breaks = c(0, 0.02, 0.05, 0.1, 0.15), 
-                                           labels = c("", "", "", "", ""), 
-                                           limits = c(0, 0.15)) +
+                        scale_y_continuous(breaks = c(0, 0.02, 0.05, 0.08), 
+                                           labels = c("", "", "", ""), 
+                                           limits = c(0, 0.08)) +
                         xlab("\nGovernment Majority") + ylab("") +
                         theme_bw()
     

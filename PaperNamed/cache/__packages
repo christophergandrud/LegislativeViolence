@@ -1,0 +1,15 @@
+base
+boot
+devtools
+digest
+ggplot2
+gridExtra
+knitr
+MASS
+mgcv
+plyr
+repmis
+reshape2
+sandwich
+Zelig
+zoo

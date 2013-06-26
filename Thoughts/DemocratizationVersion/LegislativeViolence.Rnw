@@ -1,0 +1,79 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Two Sword Lengths
+% Christopher Gandrud
+% 24 June 2013
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% !Rnw weave = knitr
+
+\documentclass[a4paper]{article}
+\usepackage{fullpage}
+\usepackage{lscape}
+\usepackage[authoryear]{natbib}
+\usepackage{setspace}
+    \doublespacing
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=cyan,
+    urlcolor=cyan
+}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{url}
+\usepackage{tikz}
+\usepackage{todonotes}
+\usepackage{verbatim}
+\usepackage{endnotes}
+
+% Set knitr global options
+<<ParentGlobalOpts, echo=FALSE>>=
+    opts_chunk$set(concordance=TRUE)
+    opts_chunk$set(fig.align='center')
+@
+
+%%%%%%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Two Sword Lengths: Legislative Violence and Democratic Institutions}
+
+\author{Christopher Gandrud \\
+                {\emph{Hertie School of Governance}}\footnote{Research Associate. Friedrichstra{\ss}er 180. 10117 Berlin, Germany. Email: \href{mailto:christopher.gandrud@gmail.com}{christopher.gandrud@gmail.com}. Thank you to Simon Hix for very helpful comments, Hortense Badarani for research assistance, seminar participants at Yonsei University, and my students at the LSE for inspiration.}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+%%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+National legislative chambers should be venues for peacefully resolving conflicts between opposing groups. However, they can sometimes become the scenes of physical violence between legislators. 
+
+\end{abstract}
+
+
+%%%%%%%%%%% Body
+
+Legislators are often described as `battling' or `fighting'. However, we generally expect these battles to be in terms of rhetoric and procedural maneuvers culminating in votes. However, metaphorical battles sometimes become physical fights between members of legislatures. Physical conflicts have a history of breaking out in lawmaking chambers between members. The history of many legislative chambers contains incidences of violence. In 1856 Preston Brooks, a member of the United States House of Representatives, canned Senator Charles Sumner unconscious in the Senate chamber in a dispute over slavery \citep{USSenateCanning}. It has even been suggested that the United Kingdom's House of Commons is physically designed to prevent violence between members. The Government and Opposition benches are said to be ``two sword lengths apart" \citep{ParliamentUKSword} so that duels will be fought with words rather than swords. Actual, sword fights do not seem to have taken place in the Commons chamber, but violent incidences did occur. For example, in 1893 a fight broke out between Irish nationalist and Unionist members of parliament \citep{ByrneViolence}. 
+
+Violence in legislatures continues to occur, with incidences being regularly reported on by the media.\footnote{The Guardian newspaper, for example, sporadically compiles stories of physical fights in legislative chambers. See \url{http://www.guardian.co.uk/politics/gallery/2010/dec/17/1\#/?picture=369861052\&index=0}. Legislative violence has also has its own Wikipedia page. See \url{http://en.wikipedia.org/wiki/Legislative_violence}.} Recent incidences of violence between legislators include multiple brawls in Ukraine in 2010 and in South Korea in 2009. In both instances opposition legislators, facing impending legislative defeats, tried to obstruct the governments' attempts to pass controversial legislation.\footnote{In Ukraine the fight was over Russian military bases and in South Korea it concerned media ownership laws.} Even more recently, a large confrontation occurred in the Venezuelan National Assembly in 2013 when the Assembly President withheld speaking time from legislators who did not recognized the victory of the new president in a very highly contested election.
+
+Physical fights between legislators are an extreme example of legislative disruption that
+
+\begin{quote}
+	\emph{strikes at the heart of the Speaker's, and thus parliamentary, authority, by suggesting the failure of institutionalized ritual to shape the behaviour of its most immediate participants through a shared acceptance of the symbolic significance of orderly debate.} \citep[387]{Rai2013}
+\end{quote}
+
+\noindent Until recently, legislative disruption of which violence is an extreme example had been largely ignored by scholars of politics. However, a recent special of \emph{Democratization} \citeyearpar{Democratization2013} entitled \emph{Disruptive Democracy: Analysing Legislative Protest} has made a persuasive case that it deserves scholarly attention. As Spary argues ``disruptive protests are manifestations of democratic practice within legislative settings which are worthy of sustained and rigorous academic analysis'' \citeyearpar[393]{Spary2013}. Indeed, these acts either reflect ``or directly [symbolize] moments of political conflict as well as systemic issues in democratic and democratizing institutional contexts'' \citep[394-395]{Spary2013}.
+
+This paper aims to complement the detailed case study work on--often milder forms of--disruption in the \emph{Democratization} special issue \citep{Armitage2013,Johnson2013,Ilie2013} with a global look at the institutional characteristics that increase the probability of one of the most extreme type of legislative disruption: violence between legislators. This is the first global description of such incidences and first attempt to understand how institutional contexts shape them.\footnote{One reason I focus on legislative violence because these incidences are often widely reported in the media and it is therefore possible to try to gather an exhaustive data set of such events.}
+
+FILL IN
+
+Before moving on to the investigation of legislative violence, it is emphasize the fact that this paper does not take the view that legislative violence is always `bad' and the lack of it always `good'. Legislators may view violence as the only means they have to protest express dissent and may use it to bring attention to what Young \cite[49]{Young2002} described as ``the unreasonableness of others''. A legislature may lack violence because real opposition is not allowed at all \citep[for a discussion in the Russian context see][]{Ostrow1996}. The paper does start from the assumption that legislative violence is itself unreasonable behavior \cite[see][404]{Spary2013} and that legislatures that experience periodic violence are generally not fulfilling their    The purpose of this paper is to understand what types of institutional settings enable the possibility of legislative violence or not.
+
+%%%%%%%%%%% Bibliography
+\bibliographystyle{apsr}
+\bibliography{LegViolence}
+
+\end{document}
