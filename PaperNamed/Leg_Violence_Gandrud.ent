@@ -234,6 +234,30 @@ of
 votes.
 \@endanenote 
 \@doanenote {7}
+macro:->The
+most
+trusting
+societies
+had
+Gallagher
+disproportionality
+scores
+of
+close
+to
+1.
+See
+the
+discussion
+below
+for
+further
+details
+about
+this
+measure.
+\@endanenote 
+\@doanenote {8}
 macro:->How
 proportional
 an
@@ -259,68 +283,48 @@ country,
 for
 example.
 \@endanenote 
-\@doanenote {8}
-macro:->To
-use
-Tsebelis'
-terminology,
-the
-winset--the
-set
-of
-policy
-changes
-that
-could
-be
-accepted
-by
-the
-veto
-players--decreases
-or
-at
-least
-stays
-the
-same
-as
-the
-number
-of
-veto
-players
-increases
-\citeyearpar
-[][24]{Tsebelis2002}.
-\@endanenote 
 \@doanenote {9}
-macro:->These
-examples
-assume
-equal
-agenda
-setting
-power.
-Even
-if
-$W_{2}$
-was
-the
-sole
-agenda
-setter
-the
-new
-policy
-would
-be
-closer
+macro:->It
+had
+an
+average
+Gallagher
+disproportionality
+of
+16.5
+from
+2000
 to
-$L$'s
-preferences.
+2011.
+See
+below
+for
+more
+details
+on
+data.
 \@endanenote 
 \@doanenote {10}
+macro:->South
+Africa’s
+average
+disproportionality
+was
+0.29
+from
+2000
+until
+2011,
+one
+of
+the
+lowest
+observed
+in
+the
+sample.
+\@endanenote 
+\@doanenote {11}
 macro:->These
 are
 often
@@ -333,12 +337,12 @@ cultures
 {Inglehart2005,
 Inglehart2010}.
 \@endanenote 
-\@doanenote {11}
+\@doanenote {12}
 macro:->See
 {\url
 {http://news.google.com/archivesearch}}.
 \@endanenote 
-\@doanenote {12}
+\@doanenote {13}
 macro:->The
 Google
 News
@@ -362,7 +366,7 @@ and
 search
 terms.
 \@endanenote 
-\@doanenote {13}
+\@doanenote {14}
 macro:->Democratic
 age
 is
@@ -403,7 +407,7 @@ not
 \citep
 {Marshall2009}.
 \@endanenote 
-\@doanenote {14}
+\@doanenote {15}
 macro:->This
 is
 not
@@ -448,7 +452,7 @@ See
 {\url
 {http://www.guardian.co.uk/politics/2012/mar/12/eric-joyce-labour-membership}}
 \@endanenote 
-\@doanenote {15}
+\@doanenote {16}
 macro:->Disproportionality
 is
 measured
@@ -464,7 +468,7 @@ below
 for
 details.
 \@endanenote 
-\@doanenote {16}
+\@doanenote {17}
 macro:->Data
 on
 government
@@ -481,7 +485,7 @@ Institutions
 to
 2010]{DPI2001}.
 \@endanenote 
-\@doanenote {17}
+\@doanenote {18}
 macro:->Estimates
 from
 a
@@ -515,7 +519,7 @@ influence
 legislative
 violence.
 \@endanenote 
-\@doanenote {18}
+\@doanenote {19}
 macro:->Full
 replication
 files
@@ -526,7 +530,7 @@ at
 \url
 {https://github.com/christophergandrud/LegislativeViolence}.
 \@endanenote 
-\@doanenote {19}
+\@doanenote {20}
 macro:->Carey
 and
 Hix
@@ -584,7 +588,7 @@ $i$'s
 seat
 share.
 \@endanenote 
-\@doanenote {20}
+\@doanenote {21}
 macro:->Full
 details
 can
@@ -594,7 +598,45 @@ at
 {\url
 {http://christophergandrud.github.com/Disproportionality_Data/}}.
 \@endanenote 
-\@doanenote {21}
+\@doanenote {22}
+macro:->Though
+the
+observed
+range
+of
+disproportionality
+scores
+goes
+from
+almost
+0
+to
+30,
+countries
+with
+scores
+less
+than
+2.5
+are
+not
+outliers.
+About
+42
+percent
+of
+county-years
+in
+the
+sample
+had
+scores
+of
+2.5
+or
+smaller.
+\@endanenote 
+\@doanenote {23}
 macro:->Models
 were
 estimated
@@ -611,7 +653,7 @@ not
 statistically
 significant.
 \@endanenote 
-\@doanenote {22}
+\@doanenote {24}
 macro:->I
 also
 considered
@@ -648,7 +690,7 @@ constitutionally
 mandated
 immunity.
 \@endanenote 
-\@doanenote {23}
+\@doanenote {25}
 macro:->Higher
 values
 on
@@ -659,7 +701,7 @@ indicate
 less
 trust.
 \@endanenote 
-\@doanenote {24}
+\@doanenote {26}
 macro:->The
 surveys
 were
@@ -681,7 +723,7 @@ Wave
 5:
 2005--2007
 \@endanenote 
-\@doanenote {25}
+\@doanenote {27}
 macro:->Their
 data
 is
@@ -697,7 +739,7 @@ for
 further
 details.
 \@endanenote 
-\@doanenote {26}
+\@doanenote {28}
 macro:->Their
 data
 is
@@ -713,7 +755,7 @@ for
 further
 details.
 \@endanenote 
-\@doanenote {27}
+\@doanenote {29}
 macro:->Note,
 for
 country-years
@@ -757,7 +799,7 @@ treated
 as
 missing.
 \@endanenote 
-\@doanenote {28}
+\@doanenote {30}
 macro:->If
 there
 is
@@ -796,7 +838,7 @@ $\mathrm
 \beta
 )$.
 \@endanenote 
-\@doanenote {29}
+\@doanenote {31}
 macro:->The
 results
 were
@@ -823,7 +865,7 @@ paper's
 markup
 file.
 \@endanenote 
-\@doanenote {30}
+\@doanenote {32}
 macro:->1.7
 percent
 of
@@ -840,7 +882,7 @@ violence
 =
 0.017$).
 \@endanenote 
-\@doanenote {31}
+\@doanenote {33}
 macro:->There
 were
 only
@@ -850,7 +892,7 @@ incidence
 before
 1990.
 \@endanenote 
-\@doanenote {32}
+\@doanenote {34}
 macro:->There
 were
 64
@@ -876,7 +918,7 @@ $\tau
 =
 0.023$.
 \@endanenote 
-\@doanenote {33}
+\@doanenote {35}
 macro:->Also,
 using
 WEAVE
@@ -931,7 +973,7 @@ sets
 of
 results.
 \@endanenote 
-\@doanenote {34}
+\@doanenote {36}
 macro:->To
 estimate
 these
@@ -961,7 +1003,7 @@ at
 their
 means.
 \@endanenote 
-\@doanenote {35}
+\@doanenote {37}
 macro:->i.e.
 it
 is
@@ -975,7 +1017,7 @@ the
 significance
 level.
 \@endanenote 
-\@doanenote {36}
+\@doanenote {38}
 macro:->The
 coefficient
 estimates
@@ -1018,7 +1060,7 @@ is
 largely
 nonsensical.
 \@endanenote 
-\@doanenote {37}
+\@doanenote {39}
 macro:->Namibia's
 average
 disproportionality
@@ -1048,7 +1090,7 @@ in
 the
 sample.
 \@endanenote 
-\@doanenote {38}
+\@doanenote {40}
 macro:->South
 Africa
 and
