@@ -1,7 +1,7 @@
 #######################
 # Legislative Violence Expected Value Graphs
 # Christopher Gandrud
-# Updated 26 June 2013
+# Updated 27 June 2013
 #######################
 
 ##require(ggplot2)
@@ -12,7 +12,6 @@ library(plyr)
 ## Ranges of fitted values
     HighProp.r <- c(0, 1)
     dem.r <- seq(from = 0, to = 85, by = 2)
-    maj.r <- seq(from = 20, to = 100, by = 2)
 
 ## Age of Democracy
     # Set fitted values  
@@ -48,12 +47,12 @@ library(plyr)
                         stat_smooth() +
                         scale_x_continuous(breaks = c(0, 21, 51, 85), 
                                            labels = c("0", "20", "50", "85")) +
-                        scale_y_continuous(breaks = c(0, 0.02, 0.05, 0.08), 
-                                           limits = c(0, 0.08)) +
+                        scale_y_continuous(breaks = c(0, 0.02, 0.05), 
+                                           limits = c(0, 0.05)) +
                         xlab("\nAge of Democracy") + ylab("") +
                         theme_bw(base_size = 12)
 
-## Disporportionality < 5 Dummy
+## Disporportionality < 6 Dummy
     ## Set fitted values
     DN2.HighProp <- setx(DN2, HighProp = HighProp.r)
 
@@ -83,48 +82,11 @@ library(plyr)
                         geom_point(shape = 21, color = "gray30", alpha = I(0.05)) +
                         stat_smooth(method = "lm", se = FALSE) +
                         scale_x_reverse(breaks = c(1, 2), labels = c("Higher", "Very Low")) +
-                        scale_y_continuous(breaks = c(0, 0.02, 0.05, 0.08), 
-                                           labels = c("", "", "", ""), limits = c(0, 0.08)) +
+                        scale_y_continuous(breaks = c(0, 0.02, 0.05), 
+                                           labels = c("", "", ""), limits = c(0, 0.05)) +
                         xlab("\nDisproportionality") + ylab("") +
                         theme_bw(base_size = 12)
-## Majority
-    # Set fitted values
-    DN2.maj1 <-setx(DN2, maj = maj.r)
-
-    # Simulate quantities of interest
-    DN2.majSim <- sim(DN2, x = DN2.maj1)
-    
-    # Extract expected values from simulations
-    DN2.maj.e <- data.frame(simulation.matrix(DN2.majSim, "Expected Values: E(Y|X)"))
-    DN2.maj.e <- melt(DN2.maj.e, measure = 1:41)
-    
-    # Remove "X" from variable
-    DN2.maj.e$variable <- as.numeric(gsub("X", "", DN2.maj.e$variable))
-    
-    # Put in terms of the original variable percentage
-    DN2.maj.e$variable = (DN2.maj.e$variable + 20) 
-
-    # Remove values outside of the 2.5% and 97.5% quantiles
-    # Find 2.5% and 97.5% quantiles for HRCC
-    DN2.maj.ePer <- ddply(DN2.maj.e, .(variable), transform, 
-                         Lower = value < quantile(value, c(0.025)))
-
-    DN2.maj.ePer <- ddply(DN2.maj.ePer, .(variable), transform, 
-                         Upper = value > quantile(value, c(0.975)))
-
-    # Remove variables outside of the middle 95%
-    DN2.maj.ePer <- subset(DN2.maj.ePer, Lower == FALSE & Upper == FALSE)
-    
-    # Plot
-    DN2.maj.p <- ggplot(DN2.maj.ePer, aes(variable, value)) +
-                        geom_point(shape = 21, color = "gray30", alpha = I(0.05)) +
-                        stat_smooth(se = FALSE) +
-                        scale_y_continuous(breaks = c(0, 0.02, 0.05, 0.08), 
-                                           labels = c("", "", "", ""), 
-                                           limits = c(0, 0.08)) +
-                        xlab("\nGovernment Majority") + ylab("") +
-                        theme_bw()
     
 #### Combibine plots
-    predicted.combine <- grid.arrange(DN2.demAge.p, DN2.HighProp.p, DN2.maj.p, ncol = 3, left = "Predicted Probability of Violence in a Year")
+    predicted.combine <- grid.arrange(DN2.demAge.p, DN2.HighProp.p, ncol = 2, left = "Predicted Probability of Violence in a Year")
     print(predicted.combine)
