@@ -595,38 +595,23 @@ at
 {http://christophergandrud.github.com/Disproportionality_Data/}}.
 \@endanenote 
 \@doanenote {21}
-macro:->Their
-data
-is
-mostly
-from
-\cite
-{Golder2005}.
-Please
-see
-their
-notes
-for
-further
-details.
+macro:->Models
+were
+estimated
+with
+the
+continuous
+disproportionality
+measure.
+The
+parameter
+estimates
+were
+not
+statistically
+significant.
 \@endanenote 
 \@doanenote {22}
-macro:->Their
-data
-is
-mostly
-from
-\cite
-{Adsera2003}.
-Please
-see
-their
-notes
-for
-further
-details.
-\@endanenote 
-\@doanenote {23}
 macro:->I
 also
 considered
@@ -663,7 +648,7 @@ constitutionally
 mandated
 immunity.
 \@endanenote 
-\@doanenote {24}
+\@doanenote {23}
 macro:->Higher
 values
 on
@@ -674,7 +659,7 @@ indicate
 less
 trust.
 \@endanenote 
-\@doanenote {25}
+\@doanenote {24}
 macro:->The
 surveys
 were
@@ -696,7 +681,39 @@ Wave
 5:
 2005--2007
 \@endanenote 
+\@doanenote {25}
+macro:->Their
+data
+is
+mostly
+from
+\cite
+{Golder2005}.
+Please
+see
+their
+notes
+for
+further
+details.
+\@endanenote 
 \@doanenote {26}
+macro:->Their
+data
+is
+mostly
+from
+\cite
+{Adsera2003}.
+Please
+see
+their
+notes
+for
+further
+details.
+\@endanenote 
+\@doanenote {27}
 macro:->Note,
 for
 country-years
@@ -740,7 +757,7 @@ treated
 as
 missing.
 \@endanenote 
-\@doanenote {27}
+\@doanenote {28}
 macro:->If
 there
 is
@@ -779,7 +796,7 @@ $\mathrm
 \beta
 )$.
 \@endanenote 
-\@doanenote {28}
+\@doanenote {29}
 macro:->The
 results
 were
@@ -806,7 +823,7 @@ paper's
 markup
 file.
 \@endanenote 
-\@doanenote {29}
+\@doanenote {30}
 macro:->1.7
 percent
 of
@@ -823,7 +840,7 @@ violence
 =
 0.017$).
 \@endanenote 
-\@doanenote {30}
+\@doanenote {31}
 macro:->There
 were
 only
@@ -833,7 +850,7 @@ incidence
 before
 1990.
 \@endanenote 
-\@doanenote {31}
+\@doanenote {32}
 macro:->There
 were
 64
@@ -859,7 +876,7 @@ $\tau
 =
 0.023$.
 \@endanenote 
-\@doanenote {32}
+\@doanenote {33}
 macro:->Also,
 using
 WEAVE
@@ -914,7 +931,7 @@ sets
 of
 results.
 \@endanenote 
-\@doanenote {33}
+\@doanenote {34}
 macro:->To
 estimate
 these
@@ -944,37 +961,7 @@ at
 their
 means.
 \@endanenote 
-\@doanenote {34}
-macro:->Approximately
-42
-percent
-of
-country-years
-were
-in
-this
-group.
-\@endanenote 
 \@doanenote {35}
-macro:->The
-variable
-equals
-one
-when
-there
-is
-a
-disproportionality
-score
-of
-less
-than
-five
-and
-0
-otherwise.
-\@endanenote 
-\@doanenote {36}
 macro:->i.e.
 it
 is
@@ -984,11 +971,11 @@ at
 least
 at
 the
-10\%
+5\%
 significance
 level.
 \@endanenote 
-\@doanenote {37}
+\@doanenote {36}
 macro:->The
 coefficient
 estimates
@@ -1031,7 +1018,7 @@ is
 largely
 nonsensical.
 \@endanenote 
-\@doanenote {38}
+\@doanenote {37}
 macro:->Namibia's
 average
 disproportionality
@@ -1061,7 +1048,7 @@ in
 the
 sample.
 \@endanenote 
-\@doanenote {39}
+\@doanenote {38}
 macro:->South
 Africa
 and

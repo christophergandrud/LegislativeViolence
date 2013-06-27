@@ -9,3 +9,5 @@
 *.log
 *.gz
 *.pdf
+PaperNamed/cache/*
+PaperNamed/figure/*
