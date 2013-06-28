@@ -88,5 +88,5 @@ library(plyr)
                         theme_bw(base_size = 12)
     
 #### Combibine plots
-    predicted.combine <- grid.arrange(DN2.demAge.p, DN2.HighProp.p, ncol = 2, left = "Predicted Probability of Violence in a Year")
+    predicted.combine <- grid.arrange(DN2.HighProp.p, DN2.demAge.p, ncol = 2, left = "Predicted Probability of Violence in a Year")
     print(predicted.combine)

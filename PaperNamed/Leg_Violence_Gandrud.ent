@@ -13,6 +13,9 @@ Email:
 Thank
 you
 to
+Emily
+Beaulieu
+and
 Simon
 Hix
 for
@@ -90,69 +93,51 @@ ownership
 laws.
 \@endanenote 
 \@doanenote {4}
-macro:->I
-define
-{\emph
-{legislative
-losers}}
-as
-actors
-who
-are
-unable
-to
-use
-legislative
-procedures
-to
-at
-least
-block
-policy
-changes
-that
-they
-prefer
-less
-than
-the
-status
-quo.
-{\emph
-{Winners}}
-are
-actors
-that
-can
-use
-legislative
-procedures
-to
-at
-least
-block
+macro:->A
+recent
+special
+issue
+of
+\emph
+{Democratization}
+\citeyearpar
+{Democratization2013}
+entitled
+\emph
+{Disruptive
+Democracy:
+Analysing
+Legislative
+Protest}
+has
+made
 a
-change
+persuasive
+case
 that
-they
-prefer
-less
-than
-the
-status
-quo.
-The
-winner
-concept
-is
-the
-same
+it
+deserves
+scholarly
+attention.
+Indeed,
+these
+acts
+reflect
+``political
+conflict
 as
-a
-``veto
-player"
+well
+as
+systemic
+issues
+in
+democratic
+and
+democratizing
+institutional
+contexts''
 \citep
-[see][]{Tsebelis2002}.
+[394-395]{Spary2013}.
 \@endanenote 
 \@doanenote {5}
 macro:->If
@@ -202,6 +187,30 @@ this
 measure.
 \@endanenote 
 \@doanenote {7}
+macro:->Outcomes
+in
+the
+middle
+may
+be
+a
+``bastard-producing
+hybrid''
+\citep
+[74]{Sartori1994}
+that
+combines
+the
+defects
+of
+both
+highly
+proportional
+and
+disproportional
+outcomes.
+\@endanenote 
+\@doanenote {8}
 macro:->How
 proportional
 an
@@ -227,48 +236,7 @@ country,
 for
 example.
 \@endanenote 
-\@doanenote {8}
-macro:->It
-had
-an
-average
-Gallagher
-disproportionality
-of
-16.5
-from
-2000
-to
-2011.
-See
-below
-for
-more
-details
-on
-data.
-\@endanenote 
 \@doanenote {9}
-macro:->South
-Africa’s
-average
-disproportionality
-was
-0.29
-from
-2000
-until
-2011,
-one
-of
-the
-lowest
-observed
-in
-the
-sample.
-\@endanenote 
-\@doanenote {10}
 macro:->These
 are
 often
@@ -281,12 +249,12 @@ cultures
 {Inglehart2005,
 Inglehart2010}.
 \@endanenote 
-\@doanenote {11}
+\@doanenote {10}
 macro:->See
 {\url
 {http://news.google.com/archivesearch}}.
 \@endanenote 
-\@doanenote {12}
+\@doanenote {11}
 macro:->The
 Google
 News
@@ -309,6 +277,24 @@ sources
 and
 search
 terms.
+\@endanenote 
+\@doanenote {12}
+macro:->Disproportionality
+is
+measured
+with
+the
+Gallagher
+disproportionality
+score
+\citep
+[][see
+the
+discussion
+below
+for
+further
+details]{Gallagher1991,Gallagher2012}.
 \@endanenote 
 \@doanenote {13}
 macro:->Democratic
@@ -336,6 +322,7 @@ the
 creators
 of
 the
+Polity
 data
 set
 choose
@@ -394,42 +381,74 @@ Westminster
 pub.
 See
 {\url
-{http://www.guardian.co.uk/politics/2012/mar/12/eric-joyce-labour-membership}}
+{http://www.guardian.co.uk/politics/2012/mar/12/eric-joyce-labour-membership}}.
 \@endanenote 
 \@doanenote {15}
-macro:->Disproportionality
-is
+macro:->South
+Korea’s
+average
+disproportionality
+as
 measured
-with
+by
 the
 Gallagher
-disproportionality
-score
-\citep
-{Gallagher1991}.
-See
-below
-for
-details.
+Index
+from
+2000
+until
+2011
+was
+12.7.
+This
+places
+it
+in
+the
+upper
+25
+percent
+of
+observations
+with
+democratic
+legislatures.
 \@endanenote 
 \@doanenote {16}
-macro:->Data
-on
-government
-majorities
-is
-from
-the
-Database
+macro:->It
+had
+an
+average
+Gallagher
+disproportionality
 of
-Political
-Institutions
-\citep
-[updated
+16.5
+from
+2000
 to
-2010]{DPI2001}.
+2011.
 \@endanenote 
 \@doanenote {17}
+macro:->South
+Africa’s
+average
+disproportionality
+was
+0.29
+from
+2000
+until
+2011,
+one
+of
+the
+lowest
+observed
+in
+the
+sample.
+\@endanenote 
+\@doanenote {18}
 macro:->Full
 replication
 files
@@ -440,7 +459,7 @@ at
 \url
 {https://github.com/christophergandrud/LegislativeViolence}.
 \@endanenote 
-\@doanenote {18}
+\@doanenote {19}
 macro:->Estimates
 from
 a
@@ -474,7 +493,7 @@ influence
 legislative
 violence.
 \@endanenote 
-\@doanenote {19}
+\@doanenote {20}
 macro:->Carey
 and
 Hix
@@ -532,7 +551,7 @@ $i$'s
 seat
 share.
 \@endanenote 
-\@doanenote {20}
+\@doanenote {21}
 macro:->Full
 details
 can
@@ -542,7 +561,7 @@ at
 {\url
 {http://christophergandrud.github.com/Disproportionality_Data/}}.
 \@endanenote 
-\@doanenote {21}
+\@doanenote {22}
 macro:->Though
 the
 observed
@@ -580,7 +599,7 @@ of
 or
 smaller.
 \@endanenote 
-\@doanenote {22}
+\@doanenote {23}
 macro:->Models
 were
 estimated
@@ -597,7 +616,7 @@ not
 statistically
 significant.
 \@endanenote 
-\@doanenote {23}
+\@doanenote {24}
 macro:->I
 also
 considered
@@ -634,7 +653,7 @@ constitutionally
 mandated
 immunity.
 \@endanenote 
-\@doanenote {24}
+\@doanenote {25}
 macro:->Higher
 values
 on
@@ -645,7 +664,7 @@ indicate
 less
 trust.
 \@endanenote 
-\@doanenote {25}
+\@doanenote {26}
 macro:->The
 surveys
 were
@@ -667,7 +686,7 @@ Wave
 5:
 2005--2007
 \@endanenote 
-\@doanenote {26}
+\@doanenote {27}
 macro:->Their
 data
 is
@@ -683,7 +702,7 @@ for
 further
 details.
 \@endanenote 
-\@doanenote {27}
+\@doanenote {28}
 macro:->Their
 data
 is
@@ -699,7 +718,7 @@ for
 further
 details.
 \@endanenote 
-\@doanenote {28}
+\@doanenote {29}
 macro:->Note,
 for
 country-years
@@ -743,7 +762,7 @@ treated
 as
 missing.
 \@endanenote 
-\@doanenote {29}
+\@doanenote {30}
 macro:->If
 there
 is
@@ -782,7 +801,7 @@ $\mathrm
 \beta
 )$.
 \@endanenote 
-\@doanenote {30}
+\@doanenote {31}
 macro:->I
 used
 the
@@ -826,7 +845,7 @@ regressions
 \citep
 [see][]{KingRareEventsPA2001}.
 \@endanenote 
-\@doanenote {31}
+\@doanenote {32}
 macro:->There
 were
 only
@@ -836,7 +855,7 @@ incidence
 before
 1990.
 \@endanenote 
-\@doanenote {32}
+\@doanenote {33}
 macro:->For
 prior
 correction
@@ -875,7 +894,7 @@ $\tau
 =
 0.023$.
 \@endanenote 
-\@doanenote {33}
+\@doanenote {34}
 macro:->Also,
 using
 WEAVE
@@ -930,7 +949,7 @@ sets
 of
 results.
 \@endanenote 
-\@doanenote {34}
+\@doanenote {35}
 macro:->To
 estimate
 these
@@ -960,7 +979,7 @@ at
 their
 means.
 \@endanenote 
-\@doanenote {35}
+\@doanenote {36}
 macro:->i.e.
 it
 is
@@ -974,7 +993,7 @@ the
 significance
 level.
 \@endanenote 
-\@doanenote {36}
+\@doanenote {37}
 macro:->Please
 contact
 the
@@ -984,7 +1003,7 @@ these
 results
 tables.
 \@endanenote 
-\@doanenote {37}
+\@doanenote {38}
 macro:->The
 coefficient
 estimates
@@ -1027,7 +1046,7 @@ is
 largely
 nonsensical.
 \@endanenote 
-\@doanenote {38}
+\@doanenote {39}
 macro:->Namibia's
 average
 disproportionality
@@ -1056,19 +1075,4 @@ systems
 in
 the
 sample.
-\@endanenote 
-\@doanenote {39}
-macro:->South
-Africa
-and
-Namibia
-are
-also
-generally
-governed
-by
-very
-large
-legislative
-majorities.
 \@endanenote 
