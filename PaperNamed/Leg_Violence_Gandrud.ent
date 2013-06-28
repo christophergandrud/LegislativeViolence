@@ -413,6 +413,15 @@ observations
 with
 democratic
 legislatures.
+It
+became
+a
+democracy
+within
+the
+past
+20
+years.
 \@endanenote 
 \@doanenote {16}
 macro:->It
@@ -475,6 +484,15 @@ In
 general,
 these
 variables
+that
+are
+not
+shown
+in
+the
+following
+results
+tables
 did
 not
 generate
@@ -492,6 +510,14 @@ would
 influence
 legislative
 violence.
+Nonetheless,
+please
+contact
+me
+for
+these
+results
+tables.
 \@endanenote 
 \@doanenote {20}
 macro:->Carey
@@ -654,15 +680,32 @@ mandated
 immunity.
 \@endanenote 
 \@doanenote {25}
-macro:->Higher
-values
-on
+macro:->In
+earlier
+versions
+of
 the
-trust
-variable
-indicate
-less
-trust.
+models
+I
+also
+included
+components
+of
+this
+variable.
+However,
+they
+were
+either
+never
+statistically
+significant
+or
+produced
+unintelligible
+and
+unstable
+results.
 \@endanenote 
 \@doanenote {26}
 macro:->The
@@ -950,6 +993,20 @@ of
 results.
 \@endanenote 
 \@doanenote {35}
+macro:->i.e.
+it
+is
+statistically
+significant
+at
+least
+at
+the
+5\%
+significance
+level.
+\@endanenote 
+\@doanenote {36}
 macro:->To
 estimate
 these
@@ -978,20 +1035,6 @@ held
 at
 their
 means.
-\@endanenote 
-\@doanenote {36}
-macro:->i.e.
-it
-is
-statistically
-significant
-at
-least
-at
-the
-5\%
-significance
-level.
 \@endanenote 
 \@doanenote {37}
 macro:->Please

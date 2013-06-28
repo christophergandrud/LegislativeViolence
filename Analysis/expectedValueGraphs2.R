@@ -100,9 +100,6 @@ library(plyr)
     
     # Remove "X" from variable
     DN2.maj.e$variable <- as.numeric(gsub("X", "", DN2.maj.e$variable))
-    
-    # Put in terms of the original variable percentage
-    DN2.maj.e$variable = (DN2.maj.e$variable + 20) 
 
     # Remove values outside of the 2.5% and 97.5% quantiles
     # Find 2.5% and 97.5% quantiles for HRCC
@@ -119,6 +116,8 @@ library(plyr)
     DN2.maj.p <- ggplot(DN2.maj.ePer, aes(variable, value)) +
                         geom_point(shape = 21, color = "gray30", alpha = I(0.05)) +
                         stat_smooth(se = FALSE) +
+                        scale_x_continuous(breaks = c(1, 11, 21, 31, 41),
+                                           labels = c(20, 40, 60, 80, 100)) +
                         scale_y_continuous(breaks = c(0, 0.02, 0.05, 0.08), 
                                            labels = c("", "", "", ""), 
                                            limits = c(0, 0.08)) +
@@ -126,5 +125,5 @@ library(plyr)
                         theme_bw()
     
 #### Combibine plots
-    predicted.combine <- grid.arrange(DN2.demAge.p, DN2.HighProp.p, DN2.maj.p, ncol = 3, left = "Predicted Probability of Violence in a Year")
+    predicted.combine <- grid.arrange(DN2.HighProp.p, DN2.demAge.p, DN2.maj.p, ncol = 3, left = "Predicted Probability of Violence in a Year")
     print(predicted.combine)
