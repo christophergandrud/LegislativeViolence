@@ -309,6 +309,7 @@ a
 country
 had
 Polity
+IV
 scores
 greater
 than
@@ -458,14 +459,48 @@ the
 sample.
 \@endanenote 
 \@doanenote {18}
+macro:->Country-years
+with
+more
+than
+one
+act
+of
+violence
+are
+given
+multiple
+records.
+See
+below
+for
+a
+discussion
+of
+how
+the
+standard
+errors
+were
+adjusted
+to
+address
+statistical
+issues
+related
+to
+this.
+\@endanenote 
+\@doanenote {19}
 macro:->Specifically,
 I
 kept
 only
+elected
 legislatures
 that
-they
-code
+DPI
+codes
 as
 having
 elections
@@ -473,9 +508,17 @@ where
 multiple
 parties
 won
-seats.
+seats,
+i.e.
+an
+LIEC
+score
+of
+6
+or
+7.
 \@endanenote 
-\@doanenote {19}
+\@doanenote {20}
 macro:->Full
 replication
 files
@@ -486,7 +529,7 @@ at
 \url
 {https://github.com/christophergandrud/LegislativeViolence}.
 \@endanenote 
-\@doanenote {20}
+\@doanenote {21}
 macro:->Estimates
 from
 a
@@ -537,7 +580,7 @@ these
 results
 tables.
 \@endanenote 
-\@doanenote {21}
+\@doanenote {22}
 macro:->Carey
 and
 Hix
@@ -595,7 +638,7 @@ $i$'s
 seat
 share.
 \@endanenote 
-\@doanenote {22}
+\@doanenote {23}
 macro:->Full
 details
 can
@@ -605,7 +648,7 @@ at
 {\url
 {http://christophergandrud.github.com/Disproportionality_Data/}}.
 \@endanenote 
-\@doanenote {23}
+\@doanenote {24}
 macro:->Though
 the
 observed
@@ -643,7 +686,7 @@ of
 or
 smaller.
 \@endanenote 
-\@doanenote {24}
+\@doanenote {25}
 macro:->Models
 were
 estimated
@@ -660,7 +703,7 @@ not
 statistically
 significant.
 \@endanenote 
-\@doanenote {25}
+\@doanenote {26}
 macro:->I
 also
 considered
@@ -697,7 +740,7 @@ constitutionally
 mandated
 immunity.
 \@endanenote 
-\@doanenote {26}
+\@doanenote {27}
 macro:->In
 earlier
 versions
@@ -725,7 +768,7 @@ and
 unstable
 results.
 \@endanenote 
-\@doanenote {27}
+\@doanenote {28}
 macro:->The
 surveys
 were
@@ -747,7 +790,7 @@ Wave
 5:
 2005--2007
 \@endanenote 
-\@doanenote {28}
+\@doanenote {29}
 macro:->Their
 data
 is
@@ -763,7 +806,7 @@ for
 further
 details.
 \@endanenote 
-\@doanenote {29}
+\@doanenote {30}
 macro:->Their
 data
 is
@@ -779,7 +822,7 @@ for
 further
 details.
 \@endanenote 
-\@doanenote {30}
+\@doanenote {31}
 macro:->Note,
 for
 country-years
@@ -823,7 +866,7 @@ treated
 as
 missing.
 \@endanenote 
-\@doanenote {31}
+\@doanenote {32}
 macro:->If
 there
 is
@@ -862,7 +905,7 @@ $\mathrm
 \beta
 )$.
 \@endanenote 
-\@doanenote {32}
+\@doanenote {33}
 macro:->There
 were
 only
@@ -872,7 +915,7 @@ incidence
 before
 1990.
 \@endanenote 
-\@doanenote {33}
+\@doanenote {34}
 macro:->For
 prior
 correction
@@ -961,7 +1004,7 @@ $\tau
 =
 0.023$.
 \@endanenote 
-\@doanenote {34}
+\@doanenote {35}
 macro:->Also,
 using
 WEAVE
@@ -1016,9 +1059,8 @@ sets
 of
 results.
 \@endanenote 
-\@doanenote {35}
-macro:->i.e.
-it
+\@doanenote {36}
+macro:->It
 is
 statistically
 significant
@@ -1030,7 +1072,7 @@ the
 significance
 level.
 \@endanenote 
-\@doanenote {36}
+\@doanenote {37}
 macro:->To
 estimate
 these
@@ -1044,14 +1086,9 @@ each
 value
 of
 the
-democratic
-age
-variable
-between
-age
-0
-and
-85.
+low
+disproprtionality
+variable.
 Other
 covariates
 were
@@ -1060,7 +1097,7 @@ at
 their
 means.
 \@endanenote 
-\@doanenote {37}
+\@doanenote {38}
 macro:->Please
 contact
 the
@@ -1069,49 +1106,6 @@ for
 these
 results
 tables.
-\@endanenote 
-\@doanenote {38}
-macro:->The
-coefficient
-estimates
-are
-statistically
-significant
-in
-the
-garbage
-can
-model,
-but
-this
-result
-is
-likely
-an
-artifact
-of
-the
-system
-variable
-being
-highly
-correlated
-with
-other
-variables.
-The
-estimate
-for
-mixed
-systems
-in
-particular
-changes
-dramatically
-and
-is
-largely
-nonsensical.
 \@endanenote 
 \@doanenote {39}
 macro:->Namibia's
