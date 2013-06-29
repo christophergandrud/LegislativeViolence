@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths
 % Christopher Gandrud
-% 28 June 2013
+% 29 June 2013
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -86,7 +86,7 @@
 \setlength{\belowcaptionskip}{0.5cm}
 
 %%%%%%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{Two Sword Lengths: Violence in Elected National Legislatures}
+\title{Two Sword Lengths: Violence in Competitively Elected National Legislatures}
 
 \author{Christopher Gandrud \\
                 {\emph{Hertie School of Governance}}\endnote{Research Associate. Friedrichstra{\ss}er 180. 10117 Berlin, Germany. Email: \href{mailto:christopher.gandrud@gmail.com}{christopher.gandrud@gmail.com}. Thank you to Emily Beaulieu and Simon Hix for very helpful comments, Hortense Badarani for research assistance, seminar participants at Yonsei University, and my students at the LSE for inspiration.}}
@@ -115,7 +115,7 @@ The history of many legislative chambers contains incidents of violence between 
 
 Until recently legislative disruption, of which violence is an extreme example, has been largely ignored by political scientists.\endnote{A recent special issue of \emph{Democratization} \citeyearpar{Democratization2013} entitled \emph{Disruptive Democracy: Analysing Legislative Protest} has made a persuasive case that it deserves scholarly attention. Indeed, these acts reflect ``political conflict as well as systemic issues in democratic and democratizing institutional contexts'' \citep[394-395]{Spary2013}.} Though legislative disruption in general is not necessarily `good' or `bad' \citep[see][for discussions of how disruption may be a `safety valve' in contexts where dissent is strongly curtailed]{Ostrow1996,Young2002}, legislative violence does symbolize a dramatic break from scholars' assumption that compliance with legislative rules of the `game' is a given \cite{Wolfe2004}. Some single-country case study work has been done on--mostly nonviolent--legislative disruption \cite[see][]{Armitage2013,Johnson2013,Ilie2013,Wolfe2004} and other work has examined the strategic choices politicians make when they choose to not participate in the democratic rules of the game \citep[e.g.][on election boycotts]{Beaulieu2008}. In this paper I am interested in expanding this work to understand legislative violence in elected national assemblies on a global scale. Indeed, this paper includes the first global description of violence between legislators. 
 
-In this paper I first develop a framework for understanding when legislative violence in elected legislatures is more likely. I propose that when members of parliament view legislative procedures to be unfair and therefore illegitimate the probability of violence is higher. I argue that at least two factors are very important for determining legislators' perceptions of fairness and legitimacy: the \emph{proportionality of a country's electoral outcomes} and the \emph{age of its democracy}. Legislators in countries with very proportional outcomes and older democracies will be more likely to view legislative rules as fair, legitimate, and therefore worth adhering to, at least to the extent that they don't use the most extreme form of legislative disruption--violence. 
+In this paper I first develop a framework for understanding when legislative violence in competitively elected legislatures is more likely. I propose that when members of parliament view legislative procedures to be unfair and therefore illegitimate the probability of violence is higher. I argue that at least two factors are very important for determining legislators' perceptions of fairness and legitimacy: the \emph{proportionality of a country's electoral outcomes} and the \emph{age of its democracy}. Legislators in countries with very proportional outcomes and older democracies will be more likely to view legislative rules as fair, legitimate, and therefore worth adhering to, at least to the extent that they don't use the most extreme form of legislative disruption--violence. 
 
 In this paper, after developing my framework and a number of key alternative explanations, I describe violence in national legislatures around the world with a new data set of from 1980 through Winter 2011. In this section I also demonstrate simple association between my key framework variables and violence. I then undertake a further investigation by discussing the variables and rare event logistic regression models \citep{KingRareEvents2001, KingRareEventsPA2001} I use to study these (thankfully) rare events. Finally, I lay out my finding that there is robust evidence that legislative violence is more prevalent in countries with disproportionate electoral outcomes and in new democracies. 
 
@@ -159,7 +159,7 @@ The use of legislative procedures may be viewed as more fair and legitimate simp
 
 On the one hand is the proposition that, though far from the only way of thinking about democracy and democratic legitimacy \cite[see][for a discussion]{Follesdal2006}, majority rule is a foundational concept of democracy \cite{Dahl1989} and an important component of democratic legitimacy. We may not necessarily expect that any decision made by a simple majority will be perceived as legitimate as those made by a broader majority. An extensive literature led by Arend Lijphart makes the argument that perceptions of democratic legitimacy are larger as the proportion of actors involved in decision-making increases \citep{Lijphart2007}. The more legislators that are involved in parliamentary decision-making, the more likely it is that legislators will view procedures as fair and legitimate. 
 
-On the other hand another causal mechanism may be at work when it comes to a lack of violence in legislatures with very large majorities. Perhaps these majorities are simply so powerful that they can quickly quash legislative disruption or even prevent serious opposition politicians becoming legislators to begin with. Think for example of the Chinese People's Party Congress. Because this paper is focusing only on freely elected legislatures these sorts of actions may be less likely, though certainly not impossible. 
+On the other hand another causal mechanism may be at work when it comes to a lack of violence in legislatures with very large majorities. Perhaps these majorities are simply so powerful that they can quickly quash legislative disruption or even prevent serious opposition politicians becoming legislators to begin with. Think for example of the Chinese People's Party Congress. Because this paper is focusing only on competitively elected legislatures these sorts of actions may be less likely, though certainly not impossible. 
 
 We also have good reasons to suspect that very large legislative majorities may actually increase the incidences of violence in democratic legislatures. If a parliament has a large hegemonic party, minority politicians may feel that the rules are unfair and that they have no other viable strategy for influencing policy-making other than to use extreme acts of legislative disruption, like violence.
 
@@ -188,7 +188,7 @@ This and any piece of research examining the effect of institutions on political
 
 To systematically study legislative violence at a global scale I used the Google News Archive\endnote{See {\url{http://news.google.com/archivesearch}}.} to create a data set of {\emph{physical fights between legislators in national legislative chambers}}.\endnote{The Google News Archive search was conducted in Spring 2011. Please contact me for a complete list of sources and search terms.} This resulted in a data set of 88 incidences of legislative violence in 30 countries between 1981 and Winter 2011. We can see in Figure \ref{leg_map} that these events have occurred in many countries around the world. They do not appear to be confined to any one cultural group or region as a simple regional culture explanation would predict. Violence is nonetheless not evenly distributed across countries. I observed 30 countries having incidences of legislative violence, but over 60 percent of these fights occurred in eight countries with four or more total legislative brawls. These countries include Ukraine, Mexico, South Korea and Taiwan. 
 
-Before moving on to the regression analysis it is useful to first examine the simple associations between proportional outcomes, democratic age, and violence. In Figure \ref{framework_empirical} I plot two variables measuring these concepts with the entire sample of countries--in the following parametric analysis we will only look at elected legislatures. Each point represents a country-year. It's notable that all of the observed incidences of violence took place in legislatures with disproportional seat distributions.\endnote{Disproportionality is measured with the Gallagher disproportionality score \citep[][see the discussion below for further details]{Gallagher1991,Gallagher2012}.} Similarly, older democracies (approximately 55 years or more old)\endnote{Democratic age is determined by how many years a country had Polity scores greater than 5. Five is the qualitative point the creators of the Polity data set choose for determining if a country is democratic or not \citep{Marshall2009}.} were never observed having legislative brawls.\endnote{This is not to say that physical fights between legislators never happen in these countries. For example, during the writing of this paper a member of the United Kingdom Parliament assaulted a number of people at Palace of Westminster pub. See {\url{http://www.guardian.co.uk/politics/2012/mar/12/eric-joyce-labour-membership}}.} While it appears that having disproportional electoral outcomes \emph{or} a new democracy is not necessary for legislative violence, based on the data, having \emph{both} of them might make violence much more likely. South Korea is an example of a country with such a `perfect storm'. It has both a new democracy and a fairly disproportional electoral outcomes.\endnote{South Korea’s average disproportionality as measured by the Gallagher Index from 2000 until 2011 was 12.7. This places it in the upper 25 percent of observations with democratic legislatures. It became a democracy within the past 20 years.} South Korea had eight observed incidence of legislative violence in the full sample. Countries that have \emph{either} proportional outcomes \emph{or} democracy appear to compensate for an absence of the of another. The United Kingdom has a fairly disproportionate electoral system,\endnote{It had an average Gallagher disproportionality of 16.5 from 2000 to 2011.} but no violence. One reason for this might be that it has a very old democracy both left-leaning Labour and right-leaning Conservative parties have had experience in government and can expect to be in government in the future. They can therefore more easily view parliamentary procedures as fair and legitimate. Conversely, no incidences of violence were observed in South Africa's new democracy. However, they have very proportional electoral outcomes.\endnote{South Africa’s average disproportionality was 0.29 from 2000 until 2011, one of the lowest observed in the sample.} So it may be easier for opposition legislators to view parliamentary rules and decisions as fair and legitimate.
+Before moving on to the regression analysis it is useful to first examine the simple associations between proportional outcomes, democratic age, and violence. In Figure \ref{framework_empirical} I plot two variables measuring these concepts with the entire sample of countries--in the following parametric analysis we will only look at competitively elected legislatures. Each point represents a country-year. It's notable that all of the observed incidences of violence took place in legislatures with disproportional seat distributions.\endnote{Disproportionality is measured with the Gallagher disproportionality score \citep[][see the discussion below for further details]{Gallagher1991,Gallagher2012}.} Similarly, older democracies (approximately 55 years or more old)\endnote{Democratic age is determined by how many years a country had Polity scores greater than 5. Five is the qualitative point the creators of the Polity data set choose for determining if a country is democratic or not \citep{Marshall2009}.} were never observed having legislative brawls.\endnote{This is not to say that physical fights between legislators never happen in these countries. For example, during the writing of this paper a member of the United Kingdom Parliament assaulted a number of people at Palace of Westminster pub. See {\url{http://www.guardian.co.uk/politics/2012/mar/12/eric-joyce-labour-membership}}.} While it appears that having disproportional electoral outcomes \emph{or} a new democracy is not necessary for legislative violence, based on the data, having \emph{both} of them might make violence much more likely. South Korea is an example of a country with such a `perfect storm'. It has both a new democracy and a fairly disproportional electoral outcomes.\endnote{South Korea’s average disproportionality as measured by the Gallagher Index from 2000 until 2011 was 12.7. This places it in the upper 25 percent of observations with democratic legislatures. It became a democracy within the past 20 years.} South Korea had eight observed incidence of legislative violence in the full sample. Countries that have \emph{either} proportional outcomes \emph{or} democracy appear to compensate for an absence of the of another. The United Kingdom has a fairly disproportionate electoral system,\endnote{It had an average Gallagher disproportionality of 16.5 from 2000 to 2011.} but no violence. One reason for this might be that it has a very old democracy both left-leaning Labour and right-leaning Conservative parties have had experience in government and can expect to be in government in the future. They can therefore more easily view parliamentary procedures as fair and legitimate. Conversely, no incidences of violence were observed in South Africa's new democracy. However, they have very proportional electoral outcomes.\endnote{South Africa’s average disproportionality was 0.29 from 2000 until 2011, one of the lowest observed in the sample.} So it may be easier for opposition legislators to view parliamentary rules and decisions as fair and legitimate.
 
 This brief tour of descriptive statistics suggests that violence between legislators does not occur randomly. Instead violence does appear to be a characteristic of countries with disproportional electoral outcomes and new democracies.
 
@@ -211,15 +211,19 @@ This brief tour of descriptive statistics suggests that violence between legisla
 
 \end{figure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Empirical Analysis
-\section{Empirical Analysis: What is Associated with Legislative Brawls?}
+%%%%%%%%%%%%%%%% Run Analyses %%%%%%%%%%%%%%%%%%%%%%%%
 
-To be able to more closely and robustly investigate this finding I use incidences of legislative brawls as the dependent variable in a series of rare events logistic regression models \citep{KingRareEvents2001, KingRareEventsPA2001}. Following Gary King's \citeyearpar{King1995} recommendation, full replication data and code used for all of the analyses can be found in this paper's source code files.\endnote{Full replication files can be found at \url{https://github.com/christophergandrud/LegislativeViolence}.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Empirical Analysis
+\section{Empirical Analysis}
+
+To be able to more closely and robustly investigate these findings I use incidences of legislative brawls in competitively elected legislatures per country-year as the dependent variable in a series of rare events logistic regression models \citep{KingRareEvents2001, KingRareEventsPA2001}. Data on whether or not a legislature was competitively elected is from the DPI {\emph{Legislative Indices of Electoral Competitiveness}} variable.\endnote{Specifically, I kept only legislatures that they code as having elections where multiple parties won seats.} Due to a lack of data on some of the co-variates discussed below I also constricted the data to before 2010. This reduced the number of legislative violence incidences from 88 to 69. Full replication data and code used for all of the analyses can be found in this paper's source code files.\endnote{Full replication files can be found at \url{https://github.com/christophergandrud/LegislativeViolence}.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Independent variables
 \subsection{Right-hand Variables}
 
-I included a number of political, societal, and economic variables in the regression models to test if the associations we saw earlier are actually spurious and other factors, such as legislative immunity are associated with legislative violence. Variable descriptions and sources are summarized in Table \ref{var_summary} in the Appendix. In the interest of transparency, the table includes all of the variables that I have included in all versions of the models, even those not shown.\endnote{Estimates from a number of them are not shown for simplicity. In general, these variables that are not shown in the following results tables did not generate statistically significant results and it was theoretically unclear how they would influence legislative violence. Nonetheless, please contact me for these results tables.} A matrix illustrating the variables' correlations can be found in Figure \ref{corrmatrix} in the Appendix. This figure also includes the variables' observed minimum and maximum values for reference. 
+I included a number of political, societal, and economic variables in the regression models to test if the associations we saw earlier are actually spurious. Variable descriptions and sources are summarized in Table \ref{var_summary} in the Appendix. In the interest of transparency, the table includes all of the variables that I have included in all versions of the models, even those not shown because they did not generate substantively or statistically meaningful results.\endnote{Estimates from a number of them are not shown for simplicity. In general, these variables that are not shown in the following results tables did not generate statistically significant results and it was theoretically unclear how they would influence legislative violence. Nonetheless, please contact me for these results tables.} A matrix illustrating the variables' correlations can be found in Figure \ref{corrmatrix} in the Appendix. This figure also includes the variables' observed minimum and maximum values for reference. 
 
 As mentioned earlier, I measure the {\emph{age of a democratic regime}} as the number of years a country's Polity score is greater than five. Older democracies are more likely to have higher proportions of legislators who have actually experienced being both winners and losers. I would have liked to more directly model the effects of legislator tenure by including some measures of the time legislators are in office. Unfortunately, I was unable to find data on legislator tenure for the range of countries included in the sample. As a proxy I include the {\emph{tenure of the shortest serving veto player}} variable from the Database of Political Institutions (DPI) \citep[updated to 2010]{DPI2001}. In this data set veto players are either the prime minister and major parliamentary parties or the president and the largest legislative party.
 
@@ -259,14 +263,9 @@ Legislative brawls are rare. The overwhelming majority of legislatures, most of 
 
 What is associated with legislative violence? To estimate the rare events bias corrected logit regressions for this paper I used the {\tt{relogit}} model from the {\tt{R}} package Zelig \citep{IMAIKingZelig2008} with data that was in country-year format.\footnote{Country-years with more than one act of violence are given multiple records. See below for a discussion of how the standard errors were adjusted to address statistical issues related to this.} Furthermore, to get a better understanding of the magnitude of the estimated relationships between the right-hand variables and violence, I also used Zelig to predict incident probabilities with 1000 simulations per fitted value \citep[see][]{King2002}. Predicted probabilities for various fitted values of the main variables of interest with robust results are shown in Figure \ref{pred_prob}. These give us a substantively meaningful sense of estimated effects' magnitudes. Selected regression coefficient point estimates and standard errors can be found in Table \ref{outputTable.dem}. Because the variables are recorded as country-years, all of the results should be interpreted in terms of the predicted effect of a variable on the probability of legislative violence in a given year.
 
-I constricted the sample to include only country-years with elected legislatures. Data on whether or not a legislature was elected is from the DPI {\emph{Legislative Indices of Electoral Competitiveness}} variable. Using this criteria constricted the number of legislative violence incidences from 88 to 72 largely because DPI does not have data for 2010 and 2011.\endnote{I used the existing proportion of all observations with legislative violence in the time constricted sample 1.7 percent of observations up until 2010 had violence ($\tau = \frac{72}{4152} = 0.017$). for prior correction in the rare events logistic regressions \citep[see][]{KingRareEventsPA2001}.}
-
-I observed relatively few incidences of violence in the 1980s.\endnote{There were only 8 observed incidence before 1990.} This is probably because news articles from before the 1990s have not been made available on the internet with the same frequency as those written from the 1990s. To examine any estimation biases this sampling bias might create I ran the regressions on a further constricted sample of elected legislatures. The sample included country-years with elected legislatures from 1990.\endnote{For prior correction I used the observed number of violent incidences from 1990. There were 64 observed incidences of violence and 2778 country-years from 1990 through 2009 in the sample, so: $\tau = \frac{64}{2778} = 0.023$.} The results were broadly similar across the different samples. 
+I observed relatively few incidences of violence in the 1980s.\endnote{There were only 8 observed incidence before 1990.} This is probably because news articles from before the 1990s have not been made available on the internet with the same frequency as those written from the 1990s. To examine any estimation biases this sampling bias might create I ran the regressions on a further constricted sample of elected legislatures. The sample included country-years with elected legislatures from 1990.\endnote{For prior correction in the full sample of competitively elected legislatures I used the existing proportion of all observations with legislative violence in the time constricted sample 1.7 percent of observations up until 2010 had violence ($\tau = \frac{69}{3347} = 0.021$). for prior correction in the rare events logistic regressions \citep[see][]{KingRareEventsPA2001}. I used the observed number of violent incidences from 1990. There were 61 observed incidences of violence and 2778 country-years from 1990 through 2009 in the sample, so: $\tau = \frac{61}{2531} = 0.023$.} The results were broadly similar across the different samples. 
 
 Individual observations are clearly correlated within countries and years, especially when there were multiple acts of violence in a country in a year. To address this issue I used robust standard errors \citep{Golder2006, Mainwaring2007}. Standard errors were adjusted using \cite{Lumley1999} weighted empirical adaptive variance estimators (WEAVE) where the true dependence structure does not need to be specified prior to running the analysis.\endnote{Also, using WEAVE to find robust standard errors allowed me to take advantage of Zelig's ability to simulate quantities of interest. Results were very similar to those from estimating the same models in Stata using {\tt{relogit}} with the {\tt{cluster(country)}} option. Please contact me for tables comparing the two sets of results.} 
-
-%%%%%%%%%%%%%%%% Run Analyses %%%%%%%%%%%%%%%%%%%%%%%%
-
 
 %%%%%%%% Elected Legislatures Results Table
 \begin{table}
@@ -278,42 +277,42 @@ Individual observations are clearly correlated within countries and years, espec
 \hline
                        & A1 & A2 & A3 & A4 & A5 \\
 \hline
-(Intercept)            & $-3.25^{***}$ & $-1.37$       & $-7.37$      & $-2.16$      & $-1.73$     \\
-                       & $(0.20)$      & $(0.80)$      & $(5.38)$     & $(1.31)$     & $(0.94)$    \\
-Low Disproportionality & $-0.92^{**}$  & $-1.42^{***}$ & $-1.89^{**}$ & $-1.07^{**}$ & $-0.88^{*}$ \\
-                       & $(0.34)$      & $(0.37)$      & $(0.62)$     & $(0.37)$     & $(0.36)$    \\
-Dem. Age               & $-0.02^{*}$   & $-0.02^{*}$   & $-0.02$      & $-0.02^{*}$  & $-0.02^{*}$ \\
-                       & $(0.01)$      & $(0.01)$      & $(0.01)$     & $(0.01)$     & $(0.01)$    \\
-Majority Size          &               & $-0.04^{***}$ & $-0.03$      & $-0.03^{*}$  & $-0.02^{*}$ \\
-                       &               & $(0.01)$      & $(0.02)$     & $(0.01)$     & $(0.01)$    \\
-Leg. Immunity          &               & $-0.54$       &              &              &             \\
-                       &               & $(0.34)$      &              &              &             \\
-Shortest VP Tenure     &               & $-0.08$       &              &              &             \\
-                       &               & $(0.08)$      &              &              &             \\
-PR Electoral System    &               & $1.07^{*}$    &              &              &             \\
-                       &               & $(0.51)$      &              &              &             \\
-Self Expression        &               &               & $4.34$       &              &             \\
-                       &               &               & $(4.14)$     &              &             \\
-Ethnic Frac.           &               &               & $0.83$       &              &             \\
-                       &               &               & $(1.14)$     &              &             \\
-No. of Parties         &               &               &              & $0.07$       &             \\
-                       &               &               &              & $(0.11)$     &             \\
-Parliamentary          &               &               &              & $0.33$       &             \\
-                       &               &               &              & $(1.05)$     &             \\
-Presidential           &               &               &              & $0.30$       &             \\
-                       &               &               &              & $(1.04)$     &             \\
-Federal                &               &               &              & $0.88^{*}$   &             \\
-                       &               &               &              & $(0.42)$     &             \\
-Gov. Frac.             &               &               &              & $0.10$       &             \\
-                       &               &               &              & $(0.73)$     &             \\
-GINI                   &               &               &              &              & $0.00$      \\
-                       &               &               &              &              & $(0.02)$    \\
-GDP per Capita         &               &               &              &              & $0.00$      \\
-                       &               &               &              &              & $(0.03)$    \\
+(Intercept)            & $-3.04^{***}$ & $-1.19$       & $-7.02$      & $-1.23$           & $-1.51$      \\
+                       & $(0.20)$      & $(0.80)$      & $(5.46)$     & $(0.92)$          & $(0.96)$     \\
+Low Disproportionality & $-0.99^{**}$  & $-1.42^{***}$ & $-2.28^{**}$ & $-1.17^{**}$      & $-1.02^{**}$ \\
+                       & $(0.35)$      & $(0.37)$      & $(0.75)$     & $(0.39)$          & $(0.37)$     \\
+Dem. Age               & $-0.02^{*}$   & $-0.02^{*}$   & $-0.02$      & $-0.02^{*}$       & $-0.02^{*}$  \\
+                       & $(0.01)$      & $(0.01)$      & $(0.01)$     & $(0.01)$          & $(0.01)$     \\
+Majority Size          &               & $-0.04^{***}$ & $-0.04^{*}$  & $-0.03^{**}$      & $-0.03^{**}$ \\
+                       &               & $(0.01)$      & $(0.02)$     & $(0.01)$          & $(0.01)$     \\
+Leg. Immunity          &               & $-0.54$       &              &                   &              \\
+                       &               & $(0.34)$      &              &                   &              \\
+Shortest VP Tenure     &               & $-0.08$       &              &                   &              \\
+                       &               & $(0.08)$      &              &                   &              \\
+PR Electoral System    &               & $1.07^{*}$    &              &                   &              \\
+                       &               & $(0.51)$      &              &                   &              \\
+Self Expression        &               &               & $4.80$       &                   &              \\
+                       &               &               & $(4.20)$     &                   &              \\
+Ethnic Frac.           &               &               & $0.71$       &                   &              \\
+                       &               &               & $(1.18)$     &                   &              \\
+No. of Parties         &               &               &              & $0.05$            &              \\
+                       &               &               &              & $(0.11)$          &              \\
+Mixed                  &               &               &              & $629264.28^{***}$ &              \\
+                       &               &               &              & $(676.59)$        &              \\
+Presidential           &               &               &              & $-0.05$           &              \\
+                       &               &               &              & $(0.40)$          &              \\
+Federal                &               &               &              & $0.89^{*}$        &              \\
+                       &               &               &              & $(0.42)$          &              \\
+Gov. Frac.             &               &               &              & $0.22$            &              \\
+                       &               &               &              & $(0.73)$          &              \\
+GINI                   &               &               &              &                   & $0.00$       \\
+                       &               &               &              &                   & $(0.02)$     \\
+GDP per Capita         &               &               &              &                   & $0.01$       \\
+                       &               &               &              &                   & $(0.03)$     \\
 \hline
-AIC                    & 413.50        & 386.32        & 195.30       & 350.50       & 368.63      \\
-BIC                    & 430.05        & 424.75        & 222.37       & 398.82       & 401.08      \\
-Log Likelihood         & -203.75       & -186.16       & -91.65       & -166.25      & -178.31     \\
+AIC                    & 404.54        & 386.29        & 183.09       & 335.92            & 358.57       \\
+BIC                    & 421.07        & 424.70        & 210.14       & 384.21            & 391.00       \\
+Log Likelihood         & -199.27       & -186.14       & -85.55       & -158.96           & -173.29      \\
 \hline
 \multicolumn{6}{l}{\scriptsize{\textsuperscript{***}$p<0.001$, 
   \textsuperscript{**}$p<0.01$, 
@@ -325,7 +324,7 @@ Log Likelihood         & -203.75       & -186.16       & -91.65       & -166.25 
 \end{center}
 {\scriptsize{
     Standard errors in parentheses. All models use robust (WEAVE) standard errors. \\
-    Assembly-Elected Presidential system is the reference category for government system variables (Presidential and Parliamentary). \\
+    Parliamentary is the is the reference category for government system variables (Mixed Assembly-Elected Presidential and Parliamentary). \\
 }}
 \end{table}
 
@@ -339,42 +338,42 @@ Log Likelihood         & -203.75       & -186.16       & -91.65       & -166.25 
 \hline
                        & B1 & B2 & B3 & B4 & B5 \\
 \hline
-(Intercept)            & $-3.24^{***}$ & $-1.12$      & $-8.75$      & $-2.22$     & $-2.13^{*}$ \\
-                       & $(0.22)$      & $(0.85)$     & $(5.60)$     & $(1.35)$    & $(1.01)$    \\
-Low Disproportionality & $-0.78^{*}$   & $-1.18^{**}$ & $-1.68^{**}$ & $-0.96^{*}$ & $-0.79^{*}$ \\
-                       & $(0.36)$      & $(0.39)$     & $(0.64)$     & $(0.40)$    & $(0.38)$    \\
-Dem. Age               & $-0.02^{*}$   & $-0.02^{*}$  & $-0.02$      & $-0.02^{*}$ & $-0.03^{*}$ \\
-                       & $(0.01)$      & $(0.01)$     & $(0.01)$     & $(0.01)$    & $(0.02)$    \\
-Majority Size          &               & $-0.04^{**}$ & $-0.03^{*}$  & $-0.03^{*}$ & $-0.03^{*}$ \\
-                       &               & $(0.01)$     & $(0.02)$     & $(0.01)$    & $(0.01)$    \\
-Leg. Immunity          &               & $-0.36$      &              &             &             \\
-                       &               & $(0.37)$     &              &             &             \\
-Shortest VP Tenure     &               & $-0.07$      &              &             &             \\
-                       &               & $(0.08)$     &              &             &             \\
-PR Electoral System    &               & $0.68$       &              &             &             \\
-                       &               & $(0.53)$     &              &             &             \\
-Self Expression        &               &              & $5.71$       &             &             \\
-                       &               &              & $(4.34)$     &             &             \\
-Ethnic Frac.           &               &              & $0.99$       &             &             \\
-                       &               &              & $(1.31)$     &             &             \\
-No. of Parties         &               &              &              & $0.07$      &             \\
-                       &               &              &              & $(0.11)$    &             \\
-Parliamentary          &               &              &              & $0.11$      &             \\
-                       &               &              &              & $(1.08)$    &             \\
-Presidential           &               &              &              & $0.36$      &             \\
-                       &               &              &              & $(1.05)$    &             \\
-Federal                &               &              &              & $0.60$      &             \\
-                       &               &              &              & $(0.48)$    &             \\
-Gov. Frac.             &               &              &              & $0.29$      &             \\
-                       &               &              &              & $(0.78)$    &             \\
-GINI                   &               &              &              &             & $0.01$      \\
-                       &               &              &              &             & $(0.02)$    \\
-GDP per Capita         &               &              &              &             & $0.03$      \\
-                       &               &              &              &             & $(0.03)$    \\
+(Intercept)            & $-2.91^{***}$ & $-0.81$      & $-8.12$      & $-1.36$           & $-1.80$      \\
+                       & $(0.22)$      & $(0.85)$     & $(5.70)$     & $(0.99)$          & $(1.03)$     \\
+Low Disproportionality & $-0.85^{*}$   & $-1.18^{**}$ & $-2.07^{**}$ & $-1.06^{*}$       & $-0.95^{*}$  \\
+                       & $(0.38)$      & $(0.39)$     & $(0.76)$     & $(0.42)$          & $(0.40)$     \\
+Dem. Age               & $-0.02^{*}$   & $-0.02^{*}$  & $-0.02$      & $-0.02^{*}$       & $-0.03^{*}$  \\
+                       & $(0.01)$      & $(0.01)$     & $(0.01)$     & $(0.01)$          & $(0.02)$     \\
+Majority Size          &               & $-0.04^{**}$ & $-0.05^{**}$ & $-0.04^{*}$       & $-0.03^{**}$ \\
+                       &               & $(0.01)$     & $(0.02)$     & $(0.01)$          & $(0.01)$     \\
+Leg. Immunity          &               & $-0.36$      &              &                   &              \\
+                       &               & $(0.37)$     &              &                   &              \\
+Shortest VP Tenure     &               & $-0.07$      &              &                   &              \\
+                       &               & $(0.08)$     &              &                   &              \\
+PR Electoral System    &               & $0.68$       &              &                   &              \\
+                       &               & $(0.53)$     &              &                   &              \\
+Self Expression        &               &              & $6.09$       &                   &              \\
+                       &               &              & $(4.43)$     &                   &              \\
+Ethnic Frac.           &               &              & $0.87$       &                   &              \\
+                       &               &              & $(1.38)$     &                   &              \\
+No. of Parties         &               &              &              & $0.06$            &              \\
+                       &               &              &              & $(0.11)$          &              \\
+Mixed                  &               &              &              & $693378.55^{***}$ &              \\
+                       &               &              &              & $(708.93)$        &              \\
+Presidential           &               &              &              & $0.23$            &              \\
+                       &               &              &              & $(0.46)$          &              \\
+Federal                &               &              &              & $0.60$            &              \\
+                       &               &              &              & $(0.49)$          &              \\
+Gov. Frac.             &               &              &              & $0.45$            &              \\
+                       &               &              &              & $(0.78)$          &              \\
+GINI                   &               &              &              &                   & $0.02$       \\
+                       &               &              &              &                   & $(0.02)$     \\
+GDP per Capita         &               &              &              &                   & $0.03$       \\
+                       &               &              &              &                   & $(0.03)$     \\
 \hline
-AIC                    & 343.07        & 322.39       & 158.45       & 285.73      & 305.92      \\
-BIC                    & 358.82        & 358.92       & 183.92       & 331.54      & 336.82      \\
-Log Likelihood         & -168.54       & -154.20      & -73.23       & -133.87     & -146.96     \\
+AIC                    & 334.61        & 322.38       & 145.95       & 271.56            & 295.39       \\
+BIC                    & 350.32        & 358.90       & 171.38       & 317.34            & 326.27       \\
+Log Likelihood         & -164.31       & -154.19      & -66.97       & -126.78           & -141.70      \\
 \hline
 \multicolumn{6}{l}{\scriptsize{\textsuperscript{***}$p<0.001$, 
   \textsuperscript{**}$p<0.01$, 
@@ -385,7 +384,7 @@ Log Likelihood         & -168.54       & -154.20      & -73.23       & -133.87  
 \end{center}
 {\scriptsize{
     Standard errors in parentheses. All models use robust (WEAVE) standard errors. \\
-    Assembly-Elected Presidential system is the reference category for government system variables (Presidential and Parliamentary). \\
+    Parliamentary is the is the reference category for government system variables (Mixed Assembly-Elected Presidential and Parliamentary). \\
 }}
 \end{table}
 
@@ -478,7 +477,7 @@ As this is the first large scale study of its kind there is still considerable w
             Gov. Fractionalization & Probability that two members of the Government will be from different parties & \cite{DPI2001} \\
             Gini & Gini Coefficient of income inequality & \cite{UNU2008} \\
             Immunity & Whether a legislators are immune from arrest and/or criminal prosecution or not & \cite{Fish2009} \\
-            LEIC & Legislative Indices of Electoral Competition. Includes both the existence of a legislature and its electoral competitiveness. & \cite{DPI2001} \\
+            LEIC & Legislative Indices of Electoral Competitiveness. Includes both the existence of a legislature and its level of electoral competitiveness. & \cite{DPI2001} \\
             Majority & Percentage of legislature controlled by governing parties & \cite{DPI2001} \\
             Polity & Polity IV Score & \cite{Marshall2009} \\
             PR & Whether a country uses a proportional representation electoral system or a plurality system & \cite{DPI2001} \\

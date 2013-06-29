@@ -458,6 +458,24 @@ the
 sample.
 \@endanenote 
 \@doanenote {18}
+macro:->Specifically,
+I
+kept
+only
+legislatures
+that
+they
+code
+as
+having
+elections
+where
+multiple
+parties
+won
+seats.
+\@endanenote 
+\@doanenote {19}
 macro:->Full
 replication
 files
@@ -468,7 +486,7 @@ at
 \url
 {https://github.com/christophergandrud/LegislativeViolence}.
 \@endanenote 
-\@doanenote {19}
+\@doanenote {20}
 macro:->Estimates
 from
 a
@@ -519,7 +537,7 @@ these
 results
 tables.
 \@endanenote 
-\@doanenote {20}
+\@doanenote {21}
 macro:->Carey
 and
 Hix
@@ -577,7 +595,7 @@ $i$'s
 seat
 share.
 \@endanenote 
-\@doanenote {21}
+\@doanenote {22}
 macro:->Full
 details
 can
@@ -587,7 +605,7 @@ at
 {\url
 {http://christophergandrud.github.com/Disproportionality_Data/}}.
 \@endanenote 
-\@doanenote {22}
+\@doanenote {23}
 macro:->Though
 the
 observed
@@ -625,7 +643,7 @@ of
 or
 smaller.
 \@endanenote 
-\@doanenote {23}
+\@doanenote {24}
 macro:->Models
 were
 estimated
@@ -642,7 +660,7 @@ not
 statistically
 significant.
 \@endanenote 
-\@doanenote {24}
+\@doanenote {25}
 macro:->I
 also
 considered
@@ -679,7 +697,7 @@ constitutionally
 mandated
 immunity.
 \@endanenote 
-\@doanenote {25}
+\@doanenote {26}
 macro:->In
 earlier
 versions
@@ -707,7 +725,7 @@ and
 unstable
 results.
 \@endanenote 
-\@doanenote {26}
+\@doanenote {27}
 macro:->The
 surveys
 were
@@ -729,7 +747,7 @@ Wave
 5:
 2005--2007
 \@endanenote 
-\@doanenote {27}
+\@doanenote {28}
 macro:->Their
 data
 is
@@ -745,7 +763,7 @@ for
 further
 details.
 \@endanenote 
-\@doanenote {28}
+\@doanenote {29}
 macro:->Their
 data
 is
@@ -761,7 +779,7 @@ for
 further
 details.
 \@endanenote 
-\@doanenote {29}
+\@doanenote {30}
 macro:->Note,
 for
 country-years
@@ -805,7 +823,7 @@ treated
 as
 missing.
 \@endanenote 
-\@doanenote {30}
+\@doanenote {31}
 macro:->If
 there
 is
@@ -844,8 +862,29 @@ $\mathrm
 \beta
 )$.
 \@endanenote 
-\@doanenote {31}
-macro:->I
+\@doanenote {32}
+macro:->There
+were
+only
+8
+observed
+incidence
+before
+1990.
+\@endanenote 
+\@doanenote {33}
+macro:->For
+prior
+correction
+in
+the
+full
+sample
+of
+competitively
+elected
+legislatures
+I
 used
 the
 existing
@@ -873,9 +912,9 @@ violence
 ($\tau
 =
 \frac
-{72}{4152}
+{69}{3347}
 =
-0.017$).
+0.021$).
 for
 prior
 correction
@@ -887,21 +926,6 @@ logistic
 regressions
 \citep
 [see][]{KingRareEventsPA2001}.
-\@endanenote 
-\@doanenote {32}
-macro:->There
-were
-only
-8
-observed
-incidence
-before
-1990.
-\@endanenote 
-\@doanenote {33}
-macro:->For
-prior
-correction
 I
 used
 the
@@ -914,7 +938,7 @@ from
 1990.
 There
 were
-64
+61
 observed
 incidences
 of
@@ -933,7 +957,7 @@ so:
 $\tau
 =
 \frac
-{64}{2778}
+{61}{2531}
 =
 0.023$.
 \@endanenote 
