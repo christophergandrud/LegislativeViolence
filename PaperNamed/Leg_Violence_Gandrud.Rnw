@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths
 % Christopher Gandrud
-% 29 June 2013
+% 30 June 2013
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -32,7 +32,7 @@
 \setlength{\belowcaptionskip}{0.5cm}
 
 %%%%%%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{Two Sword Lengths: Violence in Multi-party Elected National Legislatures}
+\title{Two Sword Lengths Apart: Violence in Multi-party Elected National Legislatures}
 
 \author{Christopher Gandrud \\
                 {\emph{Hertie School of Governance}}\endnote{Research Associate. Friedrichstra{\ss}er 180. 10117 Berlin, Germany. Email: \href{mailto:christopher.gandrud@gmail.com}{christopher.gandrud@gmail.com}. Thank you to Emily Beaulieu and Simon Hix for very helpful comments, Hortense Badarani for research assistance, seminar participants at Yonsei University, and my students at the LSE for inspiration.}}
@@ -44,7 +44,7 @@
 
 %%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-Multi-party elected national legislative chambers should be venues for peacefully resolving conflicts between opposing groups. However, they can sometimes become the scenes of physical violence between legislators. Legislative violence is an indication that a country's democratic institutions are functioning far from perfectly as legislative actors are deciding to drop out of the `game', rather than follow the rules. In this first global study of legislative violence, I argue that violence is more likely when legislators do not view the prevailing nonviolent rules as fair and are therefore illegitimate. Perceived fairness and legitimacy are higher in countries with highly proportional electoral outcomes and established democracies. I use a new global data set of legislative violence from the 1980s through Winter 2011 to test this assertion. I find robust evidence that legislative violence is more prevalent in countries with disproportionate electoral outcomes and in new democracies. 
+Multi-party elected national legislative chambers should be venues for peacefully resolving conflicts between opposing groups. However, they can sometimes become the scenes of physical violence between legislators. Legislative violence is an indication that a country's democratic institutions are functioning far from perfectly as legislative actors are deciding to drop out of the `game', rather than follow the rules. In this first global study of legislative violence, I argue that violence is more likely when legislators do not view the prevailing nonviolent legislative rules and use of procedures as fair and are therefore illegitimate. Perceived fairness and legitimacy are higher in countries with highly proportional electoral outcomes and established democracies. I use a new global data set of legislative violence from the 1980s through Winter 2011 to test this assertion. I find robust evidence that legislative violence is more prevalent in countries with disproportionate electoral outcomes and in new democracies. 
 \end{abstract}
 
 
