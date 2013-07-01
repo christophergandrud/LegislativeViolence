@@ -1,47 +1,4 @@
 \@doanenote {1}
-macro:->Research
-Associate.
-Friedrichstra{\ss
-}er
-180.
-10117
-Berlin,
-Germany.
-Email:
-\href
-{mailto:christopher.gandrud@gmail.com}{christopher.gandrud@gmail.com}.
-Thank
-you
-to
-Emily
-Beaulieu
-and
-Simon
-Hix
-for
-very
-helpful
-comments,
-Hortense
-Badarani
-for
-research
-assistance,
-seminar
-participants
-at
-Yonsei
-University,
-and
-my
-students
-at
-the
-LSE
-for
-inspiration.
-\@endanenote 
-\@doanenote {2}
 macro:->The
 Guardian
 newspaper,
@@ -72,7 +29,7 @@ See
 {\url
 {http://en.wikipedia.org/wiki/Legislative_violence}}.
 \@endanenote 
-\@doanenote {3}
+\@doanenote {2}
 macro:->In
 Ukraine
 the
@@ -92,7 +49,7 @@ media
 ownership
 laws.
 \@endanenote 
-\@doanenote {4}
+\@doanenote {3}
 macro:->A
 recent
 special
@@ -139,7 +96,7 @@ contexts''
 \citep
 [394-395]{Spary2013}.
 \@endanenote 
-\@doanenote {5}
+\@doanenote {4}
 macro:->If
 the
 ratio
@@ -161,6 +118,85 @@ its
 proportion
 of
 votes.
+\@endanenote 
+\@doanenote {5}
+macro:->\cite
+{CHO2006}
+find
+that
+in
+Lesotho,
+while
+smaller
+party
+partisan
+voters
+were
+more
+satisfied
+with
+proportional
+outcomes,
+those
+who
+support
+larger
+`winning'
+parties
+tended
+to
+become
+less
+satisfied
+with
+more
+proportional
+outcomes.
+They
+argue
+that
+more
+proportional
+electoral
+systems
+promote
+a
+convergence
+in
+satisfaction
+between
+winners
+and
+losers.
+The
+key
+here
+is
+that
+the
+point
+of
+convergence
+is
+above
+a
+threshold
+where
+parliamentarians
+would
+view
+legislative
+procedures
+as
+so
+unfair
+and
+illegitimate
+that
+they
+would
+use
+violence.
 \@endanenote 
 \@doanenote {6}
 macro:->The
@@ -305,6 +341,9 @@ by
 how
 many
 years
+in
+a
+row
 a
 country
 had
@@ -326,7 +365,7 @@ the
 Polity
 data
 set
-choose
+chose
 for
 determining
 if
@@ -412,9 +451,10 @@ percent
 of
 observations
 with
-democratic
+elected
 legislatures.
 It
+also
 became
 a
 democracy
@@ -530,6 +570,45 @@ at
 {https://github.com/christophergandrud/LegislativeViolence}.
 \@endanenote 
 \@doanenote {21}
+macro:->If
+there
+is
+no
+rare
+event
+bias,
+rare
+events
+logistic
+regression
+will
+produce
+results
+similar
+to
+a
+standard
+logit
+analysis.
+Please
+see
+King
+and
+Zeng
+\citep
+[147--148]{KingRareEventsPA2001}
+for
+a
+more
+detailed
+discussion
+of
+$\mathrm
+{Bias}(\hat
+\beta
+)$.
+\@endanenote 
+\@doanenote {22}
 macro:->Estimates
 from
 a
@@ -580,7 +659,7 @@ these
 results
 tables.
 \@endanenote 
-\@doanenote {22}
+\@doanenote {23}
 macro:->Carey
 and
 Hix
@@ -638,7 +717,7 @@ $i$'s
 seat
 share.
 \@endanenote 
-\@doanenote {23}
+\@doanenote {24}
 macro:->Full
 details
 can
@@ -648,7 +727,7 @@ at
 {\url
 {http://christophergandrud.github.com/Disproportionality_Data/}}.
 \@endanenote 
-\@doanenote {24}
+\@doanenote {25}
 macro:->Though
 the
 observed
@@ -686,7 +765,7 @@ of
 or
 smaller.
 \@endanenote 
-\@doanenote {25}
+\@doanenote {26}
 macro:->Models
 were
 estimated
@@ -701,9 +780,13 @@ estimates
 were
 not
 statistically
-significant.
+significant
+and
+are
+not
+shown.
 \@endanenote 
-\@doanenote {26}
+\@doanenote {27}
 macro:->I
 also
 considered
@@ -740,7 +823,7 @@ constitutionally
 mandated
 immunity.
 \@endanenote 
-\@doanenote {27}
+\@doanenote {28}
 macro:->In
 earlier
 versions
@@ -768,7 +851,7 @@ and
 unstable
 results.
 \@endanenote 
-\@doanenote {28}
+\@doanenote {29}
 macro:->The
 surveys
 were
@@ -790,7 +873,7 @@ Wave
 5:
 2005--2007
 \@endanenote 
-\@doanenote {29}
+\@doanenote {30}
 macro:->Their
 data
 is
@@ -806,7 +889,7 @@ for
 further
 details.
 \@endanenote 
-\@doanenote {30}
+\@doanenote {31}
 macro:->Their
 data
 is
@@ -822,7 +905,7 @@ for
 further
 details.
 \@endanenote 
-\@doanenote {31}
+\@doanenote {32}
 macro:->Note,
 for
 country-years
@@ -865,45 +948,6 @@ were
 treated
 as
 missing.
-\@endanenote 
-\@doanenote {32}
-macro:->If
-there
-is
-no
-rare
-event
-bias,
-rare
-events
-logistic
-regression
-will
-produce
-results
-similar
-to
-a
-standard
-logit
-analysis.
-Please
-see
-King
-and
-Zeng
-\citep
-[147--148]{KingRareEventsPA2001}
-for
-a
-more
-detailed
-discussion
-of
-$\mathrm
-{Bias}(\hat
-\beta
-)$.
 \@endanenote 
 \@doanenote {33}
 macro:->There
@@ -1113,6 +1157,35 @@ results
 tables.
 \@endanenote 
 \@doanenote {39}
+macro:->This
+does
+not
+mean
+that
+there
+are
+no
+instances
+of
+disruption
+in
+these
+legislatures.
+However,
+disruption
+has
+always
+been
+nonviolent
+\cite
+[for
+research
+on
+South
+Africa
+see][]{Johnson2013}.
+\@endanenote 
+\@doanenote {40}
 macro:->Namibia's
 average
 disproportionality

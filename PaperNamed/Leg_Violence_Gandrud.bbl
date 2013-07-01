@@ -28,13 +28,6 @@ Almond, Gabriel \harvardand\ Sydney Verba. 1963.
 \newblock {\em Civic Culture}.
 \newblock Princeton:  Princeton University Press.
 
-\harvarditem[Alvarez et~al.]{Alvarez, Cheibub, Limongi \harvardand\
-  Przeworski}{1996}{Alvarez1996}
-Alvarez, Mike, Jos{\'e}~Antonio Cheibub, Fernando Limongi \harvardand\ Adam
-  Przeworski. 1996.
-\newblock ``{Classifying Political Regimes}.'' {\em Studies in Comparative
-  International Development} 31(2):3--36.
-
 \harvarditem[Anderson et~al.]{Anderson, Blais, Bowler, Donovan \harvardand\
   Listhaug}{2005}{Anderson2005}
 Anderson, Christopher~J, Andr{\'e} Blais, Shaun Bowler, Todd Donovan
@@ -72,6 +65,10 @@ Brambor, Thomas, William~Roberts Clark \harvardand\ Matt Golder. 2006.
 \newblock ``{Understanding Interaction Models: Improving Empirical Analyses}.''
   {\em Political Analysis} 14(1):63--82.
 
+\harvarditem{Bratton}{1998}{Bratton1998}
+Bratton, M. 1998.
+\newblock ``Second Elections in Africa.'' {\em Journal of Democracy} 9:51--66.
+
 \harvarditem{Byrne}{2011}{ByrneViolence}
 Byrne, Eugene. 2011.
 \newblock ``Commons Brawl.''.
@@ -108,11 +105,6 @@ Dahl, R.A. 1989.
 \newblock {\em Democracy and Its Critics}.
 \newblock Political science Yale University Press.
 \newline\harvardurl{http://books.google.co.kr/books?id=VGLYxulu19cC}
-
-\harvarditem{Dahl}{1971}{Dahl1971}
-Dahl, Robert~A. 1971.
-\newblock {\em Polyarchy: Participation and Opposition}.
-\newblock New Haven:  Yale University Press.
 
 \harvarditem{Dalton \harvardand\ Ong}{2005}{Dalton2005}
 Dalton, Russell~J \harvardand\ Nhu-Ngoc~T Ong. 2005.
@@ -248,6 +240,11 @@ Lijphart, Arend. 2003.
   Endineering--Reflections on Rein Taagepera's Meta-Study}.'' {\em Political
   Studies} 51:20--25.
 
+\harvarditem{Lindberg}{2006}{Lindberg2006}
+Lindberg, S. 2006.
+\newblock {\em Democracy and Elections in Africa}.
+\newblock Baltimore:  Johns Hopkins University Press.
+
 \harvarditem{Lumley \harvardand\ Heagerty}{1999}{Lumley1999}
 Lumley, Thomas \harvardand\ Patrick Heagerty. 1999.
 \newblock ``{Weighted Empirical Adaptive Variance Estimators for Correlated
@@ -262,6 +259,12 @@ Mainwaring, S. \harvardand\ A. P{\'e}rez-Li{\~n}{\'a}n. 2007.
 \newblock Oxford:  Oxford University Press chapter Why Regions of the World Are
   Important: Regional Specificities and Region-Wide Diffusion of Democracy,
   pp.~199--230.
+
+\harvarditem{March \harvardand\ Olsen}{2008}{March2008}
+March, James~G. \harvardand\ Johan~P. Olsen. 2008.
+\newblock The Logic of Appropriateness.  In {\em The Oxford Handbook of Public
+  Policy}, ed. Michael Moran, Martin Rein \harvardand\ Robert~E Goodin.
+\newblock Oxford:  Oxford University Press pp.~689--708.
 
 \harvarditem{Marien}{2011}{Marien2011}
 Marien, Sofie. 2011.
@@ -379,6 +382,12 @@ Tyler, Tom~R. 2006.
 {UNU-WIDER}. 2008.
 \newblock ``World Income Inequality Database.''
   \url{http://www.wider.unu.edu/research/Database/en_GB/database/}.
+
+\harvarditem{Wilkinson}{2006}{wilkinson2006}
+Wilkinson, Steven~I. 2006.
+\newblock {\em Votes and violence: Electoral competition and ethnic riots in
+  India}.
+\newblock Cambridge:  Cambridge University Press.
 
 \harvarditem{Wolfe}{2004}{Wolfe2004}
 Wolfe, Eugene~L. 2004.

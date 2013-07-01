@@ -10,7 +10,7 @@
     age.disp.scatter <- qplot(dem_age, disproportionality, position = position_jitter(w = 10), color = factor(violence_y_cum), data = leg.cumulative) +
                         facet_grid(.~violence) +
                         scale_y_log10(breaks = c(1, 2.5, 5, 10, 20, 30), labels = c(1, 2.5,  5, 10, 20, 30)) +
-                        scale_x_continuous(breaks = c(0, 50, 100, 150, 200), labels = c("", "", "", "", "")) +
+                        scale_x_continuous(breaks = c(0, 50, 100, 150, 200)) +
                         xlab("\n Age of Democracy") +
                         ylab("Disproportionality (log)\n") +
                         theme_bw(base_size = 12) +
