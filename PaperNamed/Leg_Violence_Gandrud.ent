@@ -108,108 +108,6 @@ and
 interchangeably.
 \@endanenote 
 \@doanenote {5}
-macro:->If
-the
-ratio
-equals
-one
-then
-the
-proportion
-of
-seats
-that
-a
-party
-wins
-is
-equal
-to
-its
-proportion
-of
-votes.
-\@endanenote 
-\@doanenote {6}
-macro:->\cite
-{CHO2006}
-find
-that
-in
-Lesotho,
-while
-smaller
-party
-partisan
-voters
-were
-more
-satisfied
-with
-proportional
-outcomes,
-those
-who
-support
-larger
-`winning'
-parties
-tended
-to
-become
-less
-satisfied
-with
-more
-proportional
-outcomes.
-They
-argue
-that
-more
-proportional
-electoral
-systems
-promote
-a
-convergence
-in
-satisfaction
-between
-winners
-and
-losers.
-The
-key
-issue
-here
-is
-that
-the
-convergence
-point
-is
-above
-a
-threshold
-where
-parliamentarians
-would
-view
-legislative
-procedures
-as
-so
-unfair
-and
-illegitimate
-that
-they
-would
-use
-violence.
-\@endanenote 
-\@doanenote {7}
 macro:->The
 most
 trusting
@@ -233,7 +131,7 @@ about
 this
 measure.
 \@endanenote 
-\@doanenote {8}
+\@doanenote {6}
 macro:->Outcomes
 in
 the
@@ -257,7 +155,7 @@ and
 disproportional
 outcomes.
 \@endanenote 
-\@doanenote {9}
+\@doanenote {7}
 macro:->How
 proportional
 an
@@ -283,7 +181,89 @@ country,
 for
 example.
 \@endanenote 
-\@doanenote {10}
+\@doanenote {8}
+macro:->\cite
+{Mainwaring2007b}
+argue
+that
+it
+is
+the
+time
+period
+when
+democracy
+was
+created
+that
+is
+associated
+with
+party
+volatility
+rather
+than
+the
+number
+of
+years
+a
+country
+is
+democratic.
+However,
+their
+analysis
+they
+base
+this
+claim
+on
+is
+highly
+problematic
+because
+(a)
+they
+arbitrarily
+limit
+the
+democracy
+years
+variable
+to
+30,
+ruling
+out
+effects
+beyond
+30
+years
+and
+(b)
+include
+this
+variable
+in
+the
+same
+models
+as
+the
+highly
+correlated
+democratic
+age
+variable
+which
+can
+lead
+to
+unreliable
+coefficient
+estimates.
+\@endanenote 
+\@doanenote {9}
 macro:->These
 are
 often
@@ -296,7 +276,7 @@ cultures
 {Inglehart2005,
 Inglehart2010}.
 \@endanenote 
-\@doanenote {11}
+\@doanenote {10}
 macro:->Admitted
 as
 a
@@ -305,7 +285,7 @@ state
 in
 1845.
 \@endanenote 
-\@doanenote {12}
+\@doanenote {11}
 macro:->Pro-slavery
 advocates
 did
@@ -371,7 +351,7 @@ destabilized
 old
 commitments.
 \@endanenote 
-\@doanenote {13}
+\@doanenote {12}
 macro:->Industrial
 and
 population
@@ -434,7 +414,7 @@ in
 immigration
 began.
 \@endanenote 
-\@doanenote {14}
+\@doanenote {13}
 macro:->California
 was
 admitted
@@ -457,7 +437,7 @@ senator
 to
 Congress.
 \@endanenote 
-\@doanenote {15}
+\@doanenote {14}
 macro:->For
 example:
 ``It
@@ -512,7 +492,7 @@ the
 National
 Government.''
 \@endanenote 
-\@doanenote {16}
+\@doanenote {15}
 macro:->The
 whigs
 had
@@ -524,7 +504,7 @@ issue
 of
 slavery.
 \@endanenote 
-\@doanenote {17}
+\@doanenote {16}
 macro:->It
 was
 committed
@@ -567,12 +547,12 @@ Sumner
 \citep
 {Donald2009}.
 \@endanenote 
-\@doanenote {18}
+\@doanenote {17}
 macro:->See
 {\url
 {http://news.google.com/archivesearch}}.
 \@endanenote 
-\@doanenote {19}
+\@doanenote {18}
 macro:->The
 Google
 News
@@ -596,7 +576,7 @@ and
 search
 terms.
 \@endanenote 
-\@doanenote {20}
+\@doanenote {19}
 macro:->Disproportionality
 is
 measured
@@ -614,7 +594,7 @@ for
 further
 details]{Gallagher1991,Gallagher2012}.
 \@endanenote 
-\@doanenote {21}
+\@doanenote {20}
 macro:->Democratic
 age
 is
@@ -660,7 +640,7 @@ not
 \citep
 {Marshall2009}.
 \@endanenote 
-\@doanenote {22}
+\@doanenote {21}
 macro:->This
 is
 not
@@ -706,7 +686,7 @@ See
 {\url
 {http://www.guardian.co.uk/politics/2012/mar/12/eric-joyce-labour-membership}}.
 \@endanenote 
-\@doanenote {23}
+\@doanenote {22}
 macro:->South
 Korea’s
 average
@@ -747,7 +727,7 @@ past
 20
 years.
 \@endanenote 
-\@doanenote {24}
+\@doanenote {23}
 macro:->It
 had
 an
@@ -761,7 +741,7 @@ from
 to
 2011.
 \@endanenote 
-\@doanenote {25}
+\@doanenote {24}
 macro:->South
 Africa’s
 average
@@ -781,7 +761,7 @@ in
 the
 sample.
 \@endanenote 
-\@doanenote {26}
+\@doanenote {25}
 macro:->Country-years
 with
 more
@@ -814,7 +794,7 @@ related
 to
 this.
 \@endanenote 
-\@doanenote {27}
+\@doanenote {26}
 macro:->Specifically,
 I
 kept
@@ -841,7 +821,7 @@ of
 or
 7.
 \@endanenote 
-\@doanenote {28}
+\@doanenote {27}
 macro:->Full
 replication
 files
@@ -852,7 +832,7 @@ at
 \url
 {https://github.com/christophergandrud/LegislativeViolence}.
 \@endanenote 
-\@doanenote {29}
+\@doanenote {28}
 macro:->If
 there
 is
@@ -891,7 +871,7 @@ $\mathrm
 \beta
 )$.
 \@endanenote 
-\@doanenote {30}
+\@doanenote {29}
 macro:->Estimates
 from
 a
@@ -942,7 +922,7 @@ these
 results
 tables.
 \@endanenote 
-\@doanenote {31}
+\@doanenote {30}
 macro:->Carey
 and
 Hix
@@ -999,8 +979,18 @@ party
 $i$'s
 seat
 share.
+The
+available
+data
+is
+in
+terms
+of
+overall
+national
+disproportionality
 \@endanenote 
-\@doanenote {32}
+\@doanenote {31}
 macro:->Full
 details
 can
@@ -1010,7 +1000,7 @@ at
 {\url
 {http://christophergandrud.github.com/Disproportionality_Data/}}.
 \@endanenote 
-\@doanenote {33}
+\@doanenote {32}
 macro:->Though
 the
 observed
@@ -1048,7 +1038,7 @@ of
 or
 smaller.
 \@endanenote 
-\@doanenote {34}
+\@doanenote {33}
 macro:->Models
 were
 estimated
@@ -1069,7 +1059,7 @@ are
 not
 shown.
 \@endanenote 
-\@doanenote {35}
+\@doanenote {34}
 macro:->I
 also
 considered
@@ -1106,7 +1096,7 @@ constitutionally
 mandated
 immunity.
 \@endanenote 
-\@doanenote {36}
+\@doanenote {35}
 macro:->In
 earlier
 versions
@@ -1134,7 +1124,7 @@ and
 unstable
 results.
 \@endanenote 
-\@doanenote {37}
+\@doanenote {36}
 macro:->The
 surveys
 were
@@ -1156,7 +1146,7 @@ Wave
 5:
 2005--2007
 \@endanenote 
-\@doanenote {38}
+\@doanenote {37}
 macro:->Their
 data
 is
@@ -1172,7 +1162,7 @@ for
 further
 details.
 \@endanenote 
-\@doanenote {39}
+\@doanenote {38}
 macro:->Their
 data
 is
@@ -1188,7 +1178,7 @@ for
 further
 details.
 \@endanenote 
-\@doanenote {40}
+\@doanenote {39}
 macro:->Note,
 for
 country-years
@@ -1232,7 +1222,7 @@ treated
 as
 missing.
 \@endanenote 
-\@doanenote {41}
+\@doanenote {40}
 macro:->There
 were
 only
@@ -1242,7 +1232,7 @@ incidence
 before
 1990.
 \@endanenote 
-\@doanenote {42}
+\@doanenote {41}
 macro:->For
 prior
 correction
@@ -1331,7 +1321,7 @@ $\tau
 =
 0.023$.
 \@endanenote 
-\@doanenote {43}
+\@doanenote {42}
 macro:->Also,
 using
 WEAVE
@@ -1386,7 +1376,7 @@ sets
 of
 results.
 \@endanenote 
-\@doanenote {44}
+\@doanenote {43}
 macro:->It
 is
 statistically
@@ -1399,7 +1389,7 @@ the
 significance
 level.
 \@endanenote 
-\@doanenote {45}
+\@doanenote {44}
 macro:->To
 estimate
 these
@@ -1429,7 +1419,7 @@ at
 their
 means.
 \@endanenote 
-\@doanenote {46}
+\@doanenote {45}
 macro:->Please
 contact
 the
@@ -1439,7 +1429,7 @@ these
 results
 tables.
 \@endanenote 
-\@doanenote {47}
+\@doanenote {46}
 macro:->This
 does
 not
@@ -1468,7 +1458,7 @@ South
 Africa
 see][]{Johnson2013}.
 \@endanenote 
-\@doanenote {48}
+\@doanenote {47}
 macro:->Namibia's
 average
 disproportionality

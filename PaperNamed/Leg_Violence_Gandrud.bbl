@@ -62,10 +62,6 @@ Brambor, Thomas, William~Roberts Clark \harvardand\ Matt Golder. 2006.
 \newblock ``{Understanding Interaction Models: Improving Empirical Analyses}.''
   {\em Political Analysis} 14(1):63--82.
 
-\harvarditem{Bratton}{1998}{Bratton1998}
-Bratton, M. 1998.
-\newblock ``Second Elections in Africa.'' {\em Journal of Democracy} 9:51--66.
-
 \harvarditem{Byrne}{2011}{ByrneViolence}
 Byrne, Eugene. 2011.
 \newblock ``Commons Brawl.''.
@@ -86,11 +82,6 @@ Cho, Wonbin. 2012.
 \newblock ``{Accountability or Representation? How Electoral Systems Promote
   Public Trust in African Legislatures}.'' {\em Governance} 25(4):617--637.
 
-\harvarditem{Cho \harvardand\ Bratton}{2006}{CHO2006}
-Cho, Wonbin \harvardand\ Michael Bratton. 2006.
-\newblock ``{Electoral institutions, partisan status, and political support in
-  Lesotho}.'' {\em Electoral Studies} 25(4):731--750.
-
 \harvarditem{Cox \harvardand\ McCubbins}{2007}{cox2007}
 Cox, Gary~.W. \harvardand\ Mathew~D. McCubbins. 2007.
 \newblock {\em Legislative Leviathan: Party Government in the House}.
@@ -102,6 +93,14 @@ Cox, Gary.W. \harvardand\ Mathew~D. McCubbins, McCubbins. 2005.
 \newblock {\em Setting the Agenda: Responsible Party Government in the U.S.
   House of Representatives}.
 \newblock Cambridge:  Cambridge University Press.
+
+\harvarditem{Cox}{1997}{cox1997}
+Cox, G.W. 1997.
+\newblock {\em Making Votes Count: Strategic Coordination in the World's
+  Electoral Systems}.
+\newblock Political Economy of Institutions and Decisions Cambridge:  Cambridge
+  University Press.
+\newline\harvardurl{http://books.google.co.uk/books?id=c3bqMzBoinsC}
 
 \harvarditem{Dahl}{1989}{Dahl1989}
 Dahl, R.A. 1989.
@@ -130,21 +129,10 @@ Elkins, Zachary, Tom Ginsburg \harvardand\ James Melton. 2010.
 \newblock ``The Comparative Constitutions Project.''
   \url{https://comparativeconstitutionsproject.org}.
 
-\harvarditem{Ellingsen \harvardand\ Johannesson}{2004}{Ellingsen2004}
-Ellingsen, Tore \harvardand\ Magnus Johannesson. 2004.
-\newblock ``{Threats and Fairness}.'' {\em The Economic Journal}
-  114(495):397--420.
-
 \harvarditem{Fearon}{1995}{Fearon1995}
 Fearon, James~D. 1995.
 \newblock ``{Rationalist Explanations for War}.'' {\em International
   Organization} 49(3):379--414.
-
-\harvarditem[Fehr, Kremhelmer \harvardand\ Schmidt]{Fehr, Kremhelmer
-  \harvardand\ Schmidt}{2008}{Fehr2008}
-Fehr, Ernst, Susanne Kremhelmer \harvardand\ Klaus~M Schmidt. 2008.
-\newblock ``{Fairness and the Optimal Allocation of Ownership Rights}.'' {\em
-  The Economic Journal} 118(August):1262--1284.
 
 \harvarditem{Fish \harvardand\ Kroening}{2009}{Fish2009}
 Fish, M.~Steven \harvardand\ Matthew Kroening. 2009.
@@ -262,22 +250,11 @@ Lijphart, A. 2007.
 \newblock Taylor \& Francis.
 \newline\harvardurl{http://books.google.co.kr/books?id=da8MVBvtt3IC}
 
-\harvarditem{Lijphart}{1999}{lijphart1999}
-Lijphart, Arend. 1999.
-\newblock {\em Patterns of Democracy: Government Forms and Performance in
-  Thirty-Six Countries}.
-\newblock New Haven:  Yale University Press.
-
 \harvarditem{Lijphart}{2003}{Lijphart2003}
 Lijphart, Arend. 2003.
 \newblock ``{DEBATE: Measurement Validity and Institutional
   Endineering--Reflections on Rein Taagepera's Meta-Study}.'' {\em Political
   Studies} 51:20--25.
-
-\harvarditem{Lindberg}{2006}{Lindberg2006}
-Lindberg, S. 2006.
-\newblock {\em Democracy and Elections in Africa}.
-\newblock Baltimore:  Johns Hopkins University Press.
 
 \harvarditem{Lumley \harvardand\ Heagerty}{1999}{Lumley1999}
 Lumley, Thomas \harvardand\ Patrick Heagerty. 1999.
@@ -293,6 +270,12 @@ Mainwaring, S. \harvardand\ A. P{\'e}rez-Li{\~n}{\'a}n. 2007.
 \newblock Oxford:  Oxford University Press chapter Why Regions of the World Are
   Important: Regional Specificities and Region-Wide Diffusion of Democracy,
   pp.~199--230.
+
+\harvarditem{Mainwaring \harvardand\ Zoco}{2007}{Mainwaring2007b}
+Mainwaring, S \harvardand\ E Zoco. 2007.
+\newblock ``{Political Sequences and the Stabilization of Interparty
+  Competition: Electoral Volatility in Old and New Democracies}.'' {\em Party
+  Politics} 13(2):155--178.
 
 \harvarditem{March \harvardand\ Olsen}{2008}{March2008}
 March, James~G. \harvardand\ Johan~P. Olsen. 2008.
@@ -320,11 +303,6 @@ Mozaffar, Shaheen, James~R Scarritt \harvardand\ Glen Galaich. 2003.
 Neto, Octavio~Amorim \harvardand\ Gary~W Cox. 1997.
 \newblock ``{Electoral Institutions, Cleavage Structures, and the Number of
   Parties}.'' {\em American Journal of Political Science} 41(1):149--174.
-
-\harvarditem{Norris}{1997}{norris1997}
-Norris, Pippa. 1997.
-\newblock ``Choosing electoral systems: proportional, majoritarian and mixed
-  systems.'' {\em International Political Science Review} 18(3):297--312.
 
 \harvarditem{Ostrow}{1996}{Ostrow1996}
 Ostrow, Joel~M. 1996.
@@ -357,6 +335,11 @@ Powell, Robert. 2006.
 Przeworski, Adam. 1991.
 \newblock {\em Democracy and the Market}.
 \newblock Cambridge:  Cambridge University Press.
+
+\harvarditem{Rabin}{1993}{Rabin1993}
+Rabin, Matthew. 1993.
+\newblock ``{Incorporating Fairness into Game Theory and Economics}.'' {\em The
+  American Econimic Review} 83(5):1281--1301.
 
 \harvarditem{Rai}{2013}{Rai2013}
 Rai, Shirin~M. 2013.
