@@ -108,6 +108,33 @@ and
 interchangeably.
 \@endanenote 
 \@doanenote {5}
+macro:->When
+their
+is
+ambiguity
+over
+how
+fair
+the
+system
+is
+actors
+may
+not
+impose
+very
+high
+costs,
+such
+as
+reputational
+damage,
+from
+breaking
+the
+rules.
+\@endanenote 
+\@doanenote {6}
 macro:->The
 most
 trusting
@@ -131,7 +158,7 @@ about
 this
 measure.
 \@endanenote 
-\@doanenote {6}
+\@doanenote {7}
 macro:->Outcomes
 in
 the
@@ -155,7 +182,29 @@ and
 disproportional
 outcomes.
 \@endanenote 
-\@doanenote {7}
+\@doanenote {8}
+macro:->Disproportional
+majoritarian
+elections
+produce
+highly
+accountable
+legislatures
+where
+citizens
+feel
+a
+strong
+sense
+of
+control
+over
+their
+politicians
+\citep
+{Aarts2008,CHO2012}.
+\@endanenote 
+\@doanenote {9}
 macro:->How
 proportional
 an
@@ -181,7 +230,7 @@ country,
 for
 example.
 \@endanenote 
-\@doanenote {8}
+\@doanenote {10}
 macro:->\cite
 {Mainwaring2007b}
 argue
@@ -263,7 +312,26 @@ unreliable
 coefficient
 estimates.
 \@endanenote 
-\@doanenote {9}
+\@doanenote {11}
+macro:->If
+power
+does
+not
+alternate,
+this
+could
+exacerbate
+credible
+commitment
+problems
+and
+eventually
+lead
+to
+democratic
+collapse.
+\@endanenote 
+\@doanenote {12}
 macro:->These
 are
 often
@@ -276,7 +344,7 @@ cultures
 {Inglehart2005,
 Inglehart2010}.
 \@endanenote 
-\@doanenote {10}
+\@doanenote {13}
 macro:->Admitted
 as
 a
@@ -285,7 +353,7 @@ state
 in
 1845.
 \@endanenote 
-\@doanenote {11}
+\@doanenote {14}
 macro:->Pro-slavery
 advocates
 did
@@ -351,7 +419,7 @@ destabilized
 old
 commitments.
 \@endanenote 
-\@doanenote {12}
+\@doanenote {15}
 macro:->Industrial
 and
 population
@@ -414,7 +482,7 @@ in
 immigration
 began.
 \@endanenote 
-\@doanenote {13}
+\@doanenote {16}
 macro:->California
 was
 admitted
@@ -437,7 +505,7 @@ senator
 to
 Congress.
 \@endanenote 
-\@doanenote {14}
+\@doanenote {17}
 macro:->For
 example:
 ``It
@@ -492,7 +560,7 @@ the
 National
 Government.''
 \@endanenote 
-\@doanenote {15}
+\@doanenote {18}
 macro:->The
 whigs
 had
@@ -504,7 +572,7 @@ issue
 of
 slavery.
 \@endanenote 
-\@doanenote {16}
+\@doanenote {19}
 macro:->It
 was
 committed
@@ -547,12 +615,12 @@ Sumner
 \citep
 {Donald2009}.
 \@endanenote 
-\@doanenote {17}
+\@doanenote {20}
 macro:->See
 {\url
 {http://news.google.com/archivesearch}}.
 \@endanenote 
-\@doanenote {18}
+\@doanenote {21}
 macro:->The
 Google
 News
@@ -576,7 +644,7 @@ and
 search
 terms.
 \@endanenote 
-\@doanenote {19}
+\@doanenote {22}
 macro:->Disproportionality
 is
 measured
@@ -594,7 +662,7 @@ for
 further
 details]{Gallagher1991,Gallagher2012}.
 \@endanenote 
-\@doanenote {20}
+\@doanenote {23}
 macro:->Democratic
 age
 is
@@ -640,7 +708,7 @@ not
 \citep
 {Marshall2009}.
 \@endanenote 
-\@doanenote {21}
+\@doanenote {24}
 macro:->This
 is
 not
@@ -686,7 +754,7 @@ See
 {\url
 {http://www.guardian.co.uk/politics/2012/mar/12/eric-joyce-labour-membership}}.
 \@endanenote 
-\@doanenote {22}
+\@doanenote {25}
 macro:->South
 Korea’s
 average
@@ -727,7 +795,7 @@ past
 20
 years.
 \@endanenote 
-\@doanenote {23}
+\@doanenote {26}
 macro:->It
 had
 an
@@ -741,7 +809,7 @@ from
 to
 2011.
 \@endanenote 
-\@doanenote {24}
+\@doanenote {27}
 macro:->South
 Africa’s
 average
@@ -761,7 +829,7 @@ in
 the
 sample.
 \@endanenote 
-\@doanenote {25}
+\@doanenote {28}
 macro:->Country-years
 with
 more
@@ -794,7 +862,7 @@ related
 to
 this.
 \@endanenote 
-\@doanenote {26}
+\@doanenote {29}
 macro:->Specifically,
 I
 kept
@@ -821,7 +889,7 @@ of
 or
 7.
 \@endanenote 
-\@doanenote {27}
+\@doanenote {30}
 macro:->Full
 replication
 files
@@ -832,7 +900,7 @@ at
 \url
 {https://github.com/christophergandrud/LegislativeViolence}.
 \@endanenote 
-\@doanenote {28}
+\@doanenote {31}
 macro:->If
 there
 is
@@ -871,7 +939,7 @@ $\mathrm
 \beta
 )$.
 \@endanenote 
-\@doanenote {29}
+\@doanenote {32}
 macro:->Estimates
 from
 a
@@ -922,7 +990,7 @@ these
 results
 tables.
 \@endanenote 
-\@doanenote {30}
+\@doanenote {33}
 macro:->Carey
 and
 Hix
@@ -990,7 +1058,7 @@ overall
 national
 disproportionality
 \@endanenote 
-\@doanenote {31}
+\@doanenote {34}
 macro:->Full
 details
 can
@@ -1000,7 +1068,7 @@ at
 {\url
 {http://christophergandrud.github.com/Disproportionality_Data/}}.
 \@endanenote 
-\@doanenote {32}
+\@doanenote {35}
 macro:->Though
 the
 observed
@@ -1038,7 +1106,7 @@ of
 or
 smaller.
 \@endanenote 
-\@doanenote {33}
+\@doanenote {36}
 macro:->Models
 were
 estimated
@@ -1059,7 +1127,7 @@ are
 not
 shown.
 \@endanenote 
-\@doanenote {34}
+\@doanenote {37}
 macro:->I
 also
 considered
@@ -1096,7 +1164,7 @@ constitutionally
 mandated
 immunity.
 \@endanenote 
-\@doanenote {35}
+\@doanenote {38}
 macro:->In
 earlier
 versions
@@ -1124,7 +1192,7 @@ and
 unstable
 results.
 \@endanenote 
-\@doanenote {36}
+\@doanenote {39}
 macro:->The
 surveys
 were
@@ -1146,7 +1214,7 @@ Wave
 5:
 2005--2007
 \@endanenote 
-\@doanenote {37}
+\@doanenote {40}
 macro:->Their
 data
 is
@@ -1162,7 +1230,7 @@ for
 further
 details.
 \@endanenote 
-\@doanenote {38}
+\@doanenote {41}
 macro:->Their
 data
 is
@@ -1178,7 +1246,7 @@ for
 further
 details.
 \@endanenote 
-\@doanenote {39}
+\@doanenote {42}
 macro:->Note,
 for
 country-years
@@ -1222,7 +1290,7 @@ treated
 as
 missing.
 \@endanenote 
-\@doanenote {40}
+\@doanenote {43}
 macro:->There
 were
 only
@@ -1232,7 +1300,7 @@ incidence
 before
 1990.
 \@endanenote 
-\@doanenote {41}
+\@doanenote {44}
 macro:->For
 prior
 correction
@@ -1321,7 +1389,7 @@ $\tau
 =
 0.023$.
 \@endanenote 
-\@doanenote {42}
+\@doanenote {45}
 macro:->Also,
 using
 WEAVE
@@ -1376,7 +1444,7 @@ sets
 of
 results.
 \@endanenote 
-\@doanenote {43}
+\@doanenote {46}
 macro:->It
 is
 statistically
@@ -1389,7 +1457,7 @@ the
 significance
 level.
 \@endanenote 
-\@doanenote {44}
+\@doanenote {47}
 macro:->To
 estimate
 these
@@ -1419,7 +1487,7 @@ at
 their
 means.
 \@endanenote 
-\@doanenote {45}
+\@doanenote {48}
 macro:->Please
 contact
 the
@@ -1429,7 +1497,7 @@ these
 results
 tables.
 \@endanenote 
-\@doanenote {46}
+\@doanenote {49}
 macro:->This
 does
 not
@@ -1458,7 +1526,7 @@ South
 Africa
 see][]{Johnson2013}.
 \@endanenote 
-\@doanenote {47}
+\@doanenote {50}
 macro:->Namibia's
 average
 disproportionality
