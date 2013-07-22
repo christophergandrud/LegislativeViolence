@@ -1,7 +1,7 @@
 #######################
 # Legislative Violence Expected Value Graphs
 # Christopher Gandrud
-# Updated 29 June 2013
+# Updated 22 July 2013
 #######################
 
 ##require(ggplot2)
@@ -43,7 +43,7 @@ DN2.HighProp.ePer <- subset(DN2.HighProp.ePer, Lower == FALSE & Upper == FALSE)
 DN2.HighProp.p <- ggplot(DN2.HighProp.ePer, aes(variable, value)) +
   geom_point(shape = 21, color = "gray30", alpha = I(0.05)) +
   stat_smooth(method = "lm", se = FALSE) +
-  scale_x_reverse(breaks = c(1, 2), labels = c("Higher", "Very Low")) +
+  scale_x_reverse(breaks = c(1, 2), labels = c("Above", "Below Median")) +
   scale_y_continuous(breaks = c(0, 0.02, 0.05, 0.1, 0.125), 
                      labels = c("0", "0.02", "0.05", "0.1", "0.125"),
                      limits = c(0, 0.125)) +

@@ -259,7 +259,7 @@ country
 is
 democratic.
 However,
-their
+the
 analysis
 they
 base
@@ -270,8 +270,8 @@ is
 highly
 problematic
 because
-(a)
 they
+(a)
 arbitrarily
 limit
 the
@@ -383,15 +383,15 @@ a
 previous
 realization
 that
-Westward
-expansion
+westward
+expansion,
 which
 had
 been
 supported
 by
 pro-slave
-Democrats
+Democrats,
 had
 actually
 destabilized
@@ -413,7 +413,9 @@ largely
 the
 result
 of
-lacking
+a
+lack
+of
 slave
 institutions
 \citep
@@ -541,7 +543,7 @@ Government.''
 \@endanenote 
 \@doanenote {17}
 macro:->The
-whigs
+Whigs
 had
 been
 divided
@@ -562,13 +564,8 @@ in
 1845.
 \@endanenote 
 \@doanenote {20}
-macro:->It
+macro:->He
 was
-committed
-by
-Representative
-Preston
-Brooks,
 the
 nephew
 of
@@ -606,7 +603,7 @@ Sumner
 \@endanenote 
 \@doanenote {21}
 macro:->Though
-arrested
+arrested,
 the
 total
 sum
@@ -909,6 +906,7 @@ only
 elected
 legislatures
 that
+the
 DPI
 codes
 as
@@ -966,17 +964,7 @@ King
 and
 Zeng
 \citep
-[147--148]{KingRareEventsPA2001}
-for
-a
-more
-detailed
-discussion
-of
-$\mathrm
-{Bias}(\hat
-\beta
-)$.
+[147--148]{KingRareEventsPA2001}.
 \@endanenote 
 \@doanenote {35}
 macro:->Estimates
@@ -1352,18 +1340,20 @@ before
 macro:->For
 prior
 correction
+\citep
+[see][]{KingRareEventsPA2001}
 in
 the
 full
 sample
 of
-competitively
 elected
+multi-party
 legislatures
 I
 used
 the
-existing
+observed
 proportion
 of
 all
@@ -1371,11 +1361,10 @@ observations
 with
 legislative
 violence
-in
-the
-time
-constricted
-sample
+up
+to
+2010:
+i.e.
 1.7
 percent
 of
@@ -1391,27 +1380,6 @@ violence
 {69}{3347}
 =
 0.021$).
-for
-prior
-correction
-in
-the
-rare
-events
-logistic
-regressions
-\citep
-[see][]{KingRareEventsPA2001}.
-I
-used
-the
-observed
-number
-of
-violent
-incidences
-from
-1990.
 There
 were
 61
@@ -1506,36 +1474,6 @@ significance
 level.
 \@endanenote 
 \@doanenote {51}
-macro:->To
-estimate
-these
-probabilities
-I
-ran
-1000
-simulations
-for
-each
-value
-of
-the
-low
-disproportionality
-variable
-using
-estimates
-from
-model
-B2.
-Other
-covariates
-were
-held
-at
-their
-means.
-\@endanenote 
-\@doanenote {52}
 macro:->Please
 contact
 the
@@ -1545,7 +1483,7 @@ these
 results
 tables.
 \@endanenote 
-\@doanenote {53}
+\@doanenote {52}
 macro:->This
 does
 not
@@ -1574,7 +1512,7 @@ South
 Africa
 see][]{Johnson2013}.
 \@endanenote 
-\@doanenote {54}
+\@doanenote {53}
 macro:->Namibia's
 average
 disproportionality
@@ -1585,22 +1523,5 @@ as
 a
 democracy
 is
-0.83
-and
-South
-Africa's
-is
-0.31.
-South
-Africa
-has
-one
-of
-the
-most
-proportional
-systems
-in
-the
-sample.
+0.83.
 \@endanenote 
