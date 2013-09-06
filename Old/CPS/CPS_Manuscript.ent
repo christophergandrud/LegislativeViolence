@@ -846,6 +846,35 @@ to
 2011.
 \@endanenote 
 \@doanenote {30}
+macro:->This
+does
+not
+mean
+that
+there
+are
+no
+instances
+of
+disruption
+in
+these
+legislatures.
+However,
+disruption
+has
+always
+been
+non-violent
+\cite
+[for
+research
+on
+South
+Africa
+see][]{Johnson2013}.
+\@endanenote 
+\@doanenote {31}
 macro:->South
 Africa’s
 average
@@ -865,7 +894,7 @@ in
 the
 sample.
 \@endanenote 
-\@doanenote {31}
+\@doanenote {32}
 macro:->Country-years
 with
 more
@@ -898,7 +927,7 @@ related
 to
 this.
 \@endanenote 
-\@doanenote {32}
+\@doanenote {33}
 macro:->Specifically,
 I
 kept
@@ -926,7 +955,7 @@ of
 or
 7.
 \@endanenote 
-\@doanenote {33}
+\@doanenote {34}
 macro:->Full
 replication
 files
@@ -934,10 +963,12 @@ can
 be
 found
 at
-\url
-{https://github.com/christophergandrud/LegislativeViolence}.
+[withheld
+to
+preserve
+anonymity].
 \@endanenote 
-\@doanenote {34}
+\@doanenote {35}
 macro:->If
 there
 is
@@ -966,7 +997,7 @@ Zeng
 \citep
 [147--148]{KingRareEventsPA2001}.
 \@endanenote 
-\@doanenote {35}
+\@doanenote {36}
 macro:->Estimates
 from
 a
@@ -1017,7 +1048,7 @@ these
 results
 tables.
 \@endanenote 
-\@doanenote {36}
+\@doanenote {37}
 macro:->Carey
 and
 Hix
@@ -1085,17 +1116,19 @@ overall
 national
 disproportionality
 \@endanenote 
-\@doanenote {37}
+\@doanenote {38}
 macro:->Full
 details
 can
 be
 found
 at
-{\url
-{http://christophergandrud.github.com/Disproportionality_Data/}}.
+[withheld
+to
+preserve
+anonymity].
 \@endanenote 
-\@doanenote {38}
+\@doanenote {39}
 macro:->Though
 the
 observed
@@ -1133,7 +1166,7 @@ of
 or
 smaller.
 \@endanenote 
-\@doanenote {39}
+\@doanenote {40}
 macro:->The
 observed
 range
@@ -1142,7 +1175,7 @@ is
 to
 34.52.
 \@endanenote 
-\@doanenote {40}
+\@doanenote {41}
 macro:->Models
 were
 estimated
@@ -1163,7 +1196,7 @@ are
 not
 shown.
 \@endanenote 
-\@doanenote {41}
+\@doanenote {42}
 macro:->I
 also
 considered
@@ -1200,7 +1233,7 @@ constitutionally
 mandated
 immunity.
 \@endanenote 
-\@doanenote {42}
+\@doanenote {43}
 macro:->In
 earlier
 versions
@@ -1228,7 +1261,7 @@ and
 unstable
 results.
 \@endanenote 
-\@doanenote {43}
+\@doanenote {44}
 macro:->The
 surveys
 were
@@ -1250,7 +1283,7 @@ Wave
 5:
 2005--2007
 \@endanenote 
-\@doanenote {44}
+\@doanenote {45}
 macro:->Their
 data
 is
@@ -1266,7 +1299,7 @@ for
 further
 details.
 \@endanenote 
-\@doanenote {45}
+\@doanenote {46}
 macro:->Their
 data
 is
@@ -1282,7 +1315,7 @@ for
 further
 details.
 \@endanenote 
-\@doanenote {46}
+\@doanenote {47}
 macro:->Note,
 for
 country-years
@@ -1326,7 +1359,7 @@ treated
 as
 missing.
 \@endanenote 
-\@doanenote {47}
+\@doanenote {48}
 macro:->There
 were
 only
@@ -1336,7 +1369,7 @@ incidence
 before
 1990.
 \@endanenote 
-\@doanenote {48}
+\@doanenote {49}
 macro:->For
 prior
 correction
@@ -1382,7 +1415,7 @@ violence
 0.021$).
 There
 were
-62
+61
 observed
 incidences
 of
@@ -1405,7 +1438,7 @@ $\tau
 =
 0.023$.
 \@endanenote 
-\@doanenote {49}
+\@doanenote {50}
 macro:->Also,
 using
 WEAVE
@@ -1460,7 +1493,7 @@ sets
 of
 results.
 \@endanenote 
-\@doanenote {50}
+\@doanenote {51}
 macro:->It
 is
 statistically
@@ -1473,7 +1506,7 @@ the
 significance
 level.
 \@endanenote 
-\@doanenote {51}
+\@doanenote {52}
 macro:->Please
 contact
 the
@@ -1482,4 +1515,17 @@ for
 these
 results
 tables.
+\@endanenote 
+\@doanenote {53}
+macro:->Namibia's
+average
+disproportionality
+for
+its
+years
+as
+a
+democracy
+is
+0.83.
 \@endanenote 
