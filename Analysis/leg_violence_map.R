@@ -1,4 +1,9 @@
-library(foreign)
+###############
+# Create global map of legislative violence
+# Christopher Gandrud
+# 6 September 2013
+###############
+
 library(googleVis)
 library(gregmisc)
 library(plyr)
@@ -18,7 +23,9 @@ leg.raw <- read.csv("/Users/christophergandrud/Dropbox/Leg_Violence/Data/Legisla
 # Make Google Map
 violence.map <- gvisGeoMap(incidence, locationvar = "Country", numvar = "Leg Brawl", 
                            options = list(
-                             colors = "[0xEDDD00, 0xED6700, 0xA04400]"
+                             colors = "[0xEDDD00, 0xED6700, 0xA04400]",
+                             height="510",
+                             width="750"
                              )
                            )
 

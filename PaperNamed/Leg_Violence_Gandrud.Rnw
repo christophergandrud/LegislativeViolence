@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths Apart
 % Christopher Gandrud
-% 24 July 2013
+% 6 September 2013
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -35,7 +35,7 @@
 \title{Two Sword Lengths Apart: Violence in Multi-party Elected National Legislatures}
 
 \author{Christopher Gandrud \\
-                {\emph{Hertie School of Governance}}\footnote{Research Associate. Friedrichstra{\ss}er 180. 10117 Berlin, Germany. Email: \href{mailto:christopher.gandrud@gmail.com}{christopher.gandrud@gmail.com}. Thank you to Emily Beaulieu, Gary Cox, Simon Hix, and seminar participants at Yonsei University for very helpful comments. I would also like to thank Hortense Badarani for excellent research assistance and my students at the LSE for inspiration. An earlier version was circulated under the title ``Two Sword Lengths: Losers' consent and violence in national legislatures''.}}
+                {\emph{Hertie School of Governance}}\footnote{Post-doctoral Researcher. Friedrichstra{\ss}er 180. 10117 Berlin, Germany. Email: \href{mailto:christopher.gandrud@gmail.com}{christopher.gandrud@gmail.com}. Thank you to Carol Spary, Gary Cox, Simon Hix, and seminar participants at Yonsei University for very helpful comments. I would also like to thank Hortense Badarani for excellent research assistance and my students at the LSE for inspiration. An earlier version was circulated under the title ``Two Sword Lengths: Losers' consent and violence in national legislatures''.}}
                 
 \begin{document}
 
@@ -162,6 +162,7 @@ Its unclear if, at all, the size of the legislative majority, legislative immuni
     \centering
     \caption{Incidences of Physical Fights Between Legislators in National Legislative Chambers (1981- Winter 2011)}
     \label{leg_map}
+    	%% Created with Analysis/leg_violence_map.R
         \includegraphics[width = 13cm]{incidence_map.png}
 \end{figure}
 
