@@ -109,7 +109,7 @@ interchangeably.
 \@endanenote 
 \@doanenote {5}
 macro:->When
-their
+there
 is
 ambiguity
 over
@@ -324,6 +324,32 @@ cultures
 Inglehart2010}.
 \@endanenote 
 \@doanenote {12}
+macro:->According
+to
+the
+\cite
+{UNMurder2013}
+South
+Korea
+had
+a
+murder
+rate
+of
+2.6
+per
+100,000
+people
+in
+2010
+and
+Japan's
+was
+0.4
+in
+2009.
+\@endanenote 
+\@doanenote {13}
 macro:->Admitted
 as
 a
@@ -332,7 +358,7 @@ state
 in
 1845.
 \@endanenote 
-\@doanenote {13}
+\@doanenote {14}
 macro:->Pro-slavery
 advocates
 did
@@ -398,7 +424,7 @@ destabilized
 old
 commitments.
 \@endanenote 
-\@doanenote {14}
+\@doanenote {15}
 macro:->Industrial
 and
 population
@@ -463,7 +489,7 @@ in
 immigration
 began.
 \@endanenote 
-\@doanenote {15}
+\@doanenote {16}
 macro:->California
 was
 admitted
@@ -486,7 +512,7 @@ senator
 to
 Congress.
 \@endanenote 
-\@doanenote {16}
+\@doanenote {17}
 macro:->For
 example:
 ``It
@@ -541,7 +567,7 @@ the
 National
 Government.''
 \@endanenote 
-\@doanenote {17}
+\@doanenote {18}
 macro:->The
 Whigs
 had
@@ -553,17 +579,17 @@ issue
 of
 slavery
 \@endanenote 
-\@doanenote {18}
+\@doanenote {19}
 macro:->Created
 in
 1854.
 \@endanenote 
-\@doanenote {19}
+\@doanenote {20}
 macro:->Created
 in
 1845.
 \@endanenote 
-\@doanenote {20}
+\@doanenote {21}
 macro:->He
 was
 the
@@ -601,7 +627,7 @@ Sumner
 \citep
 {Donald2009}.
 \@endanenote 
-\@doanenote {21}
+\@doanenote {22}
 macro:->Though
 arrested,
 the
@@ -618,7 +644,7 @@ fine
 \cite
 [59]{Wolfe2004}.
 \@endanenote 
-\@doanenote {22}
+\@doanenote {23}
 macro:->An
 `honor
 culture'
@@ -651,12 +677,12 @@ or
 less
 likely.
 \@endanenote 
-\@doanenote {23}
+\@doanenote {24}
 macro:->See
 {\url
 {http://news.google.com/archivesearch}}.
 \@endanenote 
-\@doanenote {24}
+\@doanenote {25}
 macro:->The
 Google
 News
@@ -667,20 +693,75 @@ conducted
 in
 Spring
 2011.
-Please
-contact
-me
-for
-a
-complete
-list
-of
-sources
+Myself
 and
-search
-terms.
+a
+research
+assistant
+searched
+using
+terms
+that
+included
+`national'
+`parliament',
+`legislature',
+`assembly',
+`brawls',
+`scuffles',
+`fights'.
 \@endanenote 
-\@doanenote {25}
+\@doanenote {26}
+macro:->In
+legislatures
+where
+credible
+commitments
+are
+difficult
+to
+make,
+we
+may
+expect
+to
+see
+more
+non-violent
+disruption
+as
+well
+as
+violence.
+An
+interesting
+area
+of
+future
+research
+would
+involve
+the
+collection
+of
+data
+on
+non-violent
+disruption
+on
+a
+global
+scale.
+A
+task
+that
+has
+not
+been
+undertaken
+yet.
+\@endanenote 
+\@doanenote {27}
 macro:->Disproportionality
 is
 measured
@@ -698,7 +779,7 @@ for
 further
 details]{Gallagher1991,Gallagher2012}.
 \@endanenote 
-\@doanenote {26}
+\@doanenote {28}
 macro:->Democratic
 age
 is
@@ -744,7 +825,7 @@ not
 \citep
 {Marshall2009}.
 \@endanenote 
-\@doanenote {27}
+\@doanenote {29}
 macro:->This
 is
 not
@@ -790,7 +871,7 @@ See
 {\url
 {http://www.guardian.co.uk/politics/2012/mar/12/eric-joyce-labour-membership}}.
 \@endanenote 
-\@doanenote {28}
+\@doanenote {30}
 macro:->South
 Korea’s
 average
@@ -831,7 +912,7 @@ past
 20
 years.
 \@endanenote 
-\@doanenote {29}
+\@doanenote {31}
 macro:->It
 had
 an
@@ -845,7 +926,38 @@ from
 to
 2011.
 \@endanenote 
-\@doanenote {30}
+\@doanenote {32}
+macro:->Two
+members
+of
+parliament
+punched
+each
+other
+in
+1998.
+\@endanenote 
+\@doanenote {33}
+macro:->Its
+rate
+of
+murders
+per
+100,000
+people
+is
+regularly
+among
+the
+highest
+in
+the
+\cite
+{UNMurder2013}
+data
+set.
+\@endanenote 
+\@doanenote {34}
 macro:->South
 Africa’s
 average
@@ -865,7 +977,7 @@ in
 the
 sample.
 \@endanenote 
-\@doanenote {31}
+\@doanenote {35}
 macro:->Country-years
 with
 more
@@ -898,7 +1010,7 @@ related
 to
 this.
 \@endanenote 
-\@doanenote {32}
+\@doanenote {36}
 macro:->Specifically,
 I
 kept
@@ -926,7 +1038,7 @@ of
 or
 7.
 \@endanenote 
-\@doanenote {33}
+\@doanenote {37}
 macro:->Full
 replication
 files
@@ -937,7 +1049,7 @@ at
 \url
 {https://github.com/christophergandrud/LegislativeViolence}.
 \@endanenote 
-\@doanenote {34}
+\@doanenote {38}
 macro:->If
 there
 is
@@ -966,7 +1078,7 @@ Zeng
 \citep
 [147--148]{KingRareEventsPA2001}.
 \@endanenote 
-\@doanenote {35}
+\@doanenote {39}
 macro:->Estimates
 from
 a
@@ -1017,7 +1129,7 @@ these
 results
 tables.
 \@endanenote 
-\@doanenote {36}
+\@doanenote {40}
 macro:->Carey
 and
 Hix
@@ -1085,7 +1197,7 @@ overall
 national
 disproportionality
 \@endanenote 
-\@doanenote {37}
+\@doanenote {41}
 macro:->Full
 details
 can
@@ -1095,7 +1207,7 @@ at
 {\url
 {http://christophergandrud.github.com/Disproportionality_Data/}}.
 \@endanenote 
-\@doanenote {38}
+\@doanenote {42}
 macro:->Though
 the
 observed
@@ -1133,7 +1245,7 @@ of
 or
 smaller.
 \@endanenote 
-\@doanenote {39}
+\@doanenote {43}
 macro:->The
 observed
 range
@@ -1142,7 +1254,7 @@ is
 to
 34.52.
 \@endanenote 
-\@doanenote {40}
+\@doanenote {44}
 macro:->Models
 were
 estimated
@@ -1163,7 +1275,7 @@ are
 not
 shown.
 \@endanenote 
-\@doanenote {41}
+\@doanenote {45}
 macro:->I
 also
 considered
@@ -1200,7 +1312,7 @@ constitutionally
 mandated
 immunity.
 \@endanenote 
-\@doanenote {42}
+\@doanenote {46}
 macro:->In
 earlier
 versions
@@ -1228,7 +1340,7 @@ and
 unstable
 results.
 \@endanenote 
-\@doanenote {43}
+\@doanenote {47}
 macro:->The
 surveys
 were
@@ -1250,7 +1362,27 @@ Wave
 5:
 2005--2007
 \@endanenote 
-\@doanenote {44}
+\@doanenote {48}
+macro:->Beyond
+truncating
+the
+sample
+somewhat,
+this
+data
+set
+unfortunately
+does
+not
+record
+Taiwan's
+murder
+rate
+separately
+from
+China's.
+\@endanenote 
+\@doanenote {49}
 macro:->Their
 data
 is
@@ -1266,7 +1398,7 @@ for
 further
 details.
 \@endanenote 
-\@doanenote {45}
+\@doanenote {50}
 macro:->Their
 data
 is
@@ -1282,7 +1414,7 @@ for
 further
 details.
 \@endanenote 
-\@doanenote {46}
+\@doanenote {51}
 macro:->Note,
 for
 country-years
@@ -1326,7 +1458,7 @@ treated
 as
 missing.
 \@endanenote 
-\@doanenote {47}
+\@doanenote {52}
 macro:->There
 were
 only
@@ -1336,7 +1468,7 @@ incidence
 before
 1990.
 \@endanenote 
-\@doanenote {48}
+\@doanenote {53}
 macro:->For
 prior
 correction
@@ -1382,7 +1514,7 @@ violence
 0.021$).
 There
 were
-62
+63
 observed
 incidences
 of
@@ -1405,7 +1537,7 @@ $\tau
 =
 0.023$.
 \@endanenote 
-\@doanenote {49}
+\@doanenote {54}
 macro:->Also,
 using
 WEAVE
@@ -1460,7 +1592,7 @@ sets
 of
 results.
 \@endanenote 
-\@doanenote {50}
+\@doanenote {55}
 macro:->It
 is
 statistically
@@ -1473,7 +1605,7 @@ the
 significance
 level.
 \@endanenote 
-\@doanenote {51}
+\@doanenote {56}
 macro:->Please
 contact
 the
