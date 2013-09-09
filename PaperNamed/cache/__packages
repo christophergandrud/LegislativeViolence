@@ -5,6 +5,7 @@ gridExtra
 knitr
 MASS
 mgcv
+nlme
 plyr
 repmis
 reshape2

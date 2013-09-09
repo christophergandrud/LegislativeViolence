@@ -41,40 +41,40 @@ dNew.7.c <- dNew[complete.cases(dNew[vars.7]),]
 
 ###########################
 ### Sample of countries with elected legislatures
-D1 <- zelig(violence ~ HighProp + DemAge, model = "relogit", data = dem.1.c, tau = 69/3347, robust = list(method = "weave"), cite = FALSE)
+D1 <- zelig(violence ~ HighProp + DemAge, model = "relogit", data = dem.1.c, tau = 71/3376, robust = list(method = "weave"), cite = FALSE)
 
-D2 <- zelig(violence ~ HighProp + DemAge + maj + immunity + pr + singleParty, model = "relogit", data = dem.2.c, tau = 69/3347, robust = list(method = "weave"), cite = FALSE)
+D2 <- zelig(violence ~ HighProp + DemAge + maj + immunity + pr + singleParty, model = "relogit", data = dem.2.c, tau = 71/3376, robust = list(method = "weave"), cite = FALSE)
 
-D3 <- zelig(violence ~ HighProp + DemAge + maj + CWsurvSelfExpr + ethnicAlesina, model = "relogit", data = dem.3.c, tau = 69/3347, robust = list(method = "weave"), cite = FALSE)
+D3 <- zelig(violence ~ HighProp + DemAge + maj + CWsurvSelfExpr + ethnicAlesina, model = "relogit", data = dem.3.c, tau = 71/3376, robust = list(method = "weave"), cite = FALSE)
 
-D4 <- zelig(violence ~ HighProp + DemAge + maj + UNMurderRate, model = "relogit", data = dem.4.c, tau = 69/3347, robust = list(method = "weave"), cite = FALSE)
+D4 <- zelig(violence ~ HighProp + DemAge + maj + UNMurderRate, model = "relogit", data = dem.4.c, tau = 71/3376, robust = list(method = "weave"), cite = FALSE)
 
-D5 <- zelig(violence ~ HighProp + DemAge + maj + federal + govfrac, model = "relogit", data = dem.5.c, tau = 69/3347, robust = list(method = "weave"), cite = FALSE)
+D5 <- zelig(violence ~ HighProp + DemAge + maj + federal + govfrac, model = "relogit", data = dem.5.c, tau = 71/3376, robust = list(method = "weave"), cite = FALSE)
 
-D6 <- zelig(violence ~ HighProp + DemAge + maj + enps + federal, model = "relogit", data = dem.6.c, tau = 69/3347, robust = list(method = "weave"), cite = FALSE)
+D6 <- zelig(violence ~ HighProp + DemAge + maj + enps + federal, model = "relogit", data = dem.6.c, tau = 71/3376, robust = list(method = "weave"), cite = FALSE)
 
-D7 <- zelig(violence ~ HighProp + DemAge + maj + gini + GDPperCapita, model = "relogit", data = dem.7.c, tau = 69/3347, robust = list(method = "weave"), cite = FALSE)
+D7 <- zelig(violence ~ HighProp + DemAge + maj + gini + GDPperCapita, model = "relogit", data = dem.7.c, tau = 71/3376, robust = list(method = "weave"), cite = FALSE)
 
-#D6 <- zelig(violence ~ DemAge + VeryHighProp + maj + gini + GDPperCapita, model = "relogit", data = dem.6.c, tau = 69/3347, robust = list(method = "weave"), cite = FALSE)
+#D6 <- zelig(violence ~ DemAge + VeryHighProp + maj + gini + GDPperCapita, model = "relogit", data = dem.6.c, tau = 71/3376, robust = list(method = "weave"), cite = FALSE)
 
-#D7 <- zelig(violence ~ DemAge*VeryHighProp + maj + gini + GDPperCapita, model = "relogit", data = dem.6.c, tau = 69/3347, robust = list(method = "weave"), cite = FALSE)
+#D7 <- zelig(violence ~ DemAge*VeryHighProp + maj + gini + GDPperCapita, model = "relogit", data = dem.6.c, tau = 71/3376, robust = list(method = "weave"), cite = FALSE)
 
 ###########################
 ### Sample of countries with elected legislatures from 1990
-DN1 <- zelig(violence ~ HighProp + DemAge, model = "relogit", data = dNew.1.c, tau = 61/2631, robust = list(method = "weave"), cite = FALSE)
+DN1 <- zelig(violence ~ HighProp + DemAge, model = "relogit", data = dNew.1.c, tau = 63/2654, robust = list(method = "weave"), cite = FALSE)
 
-DN2 <- zelig(violence ~ HighProp + DemAge + maj + immunity + pr + singleParty, model = "relogit", data = dNew.2.c, tau = 61/2631, robust = list(method = "weave"), cite = FALSE)
+DN2 <- zelig(violence ~ HighProp + DemAge + maj + immunity + pr + singleParty, model = "relogit", data = dNew.2.c, tau = 63/2654, robust = list(method = "weave"), cite = FALSE)
 
-DN3 <- zelig(violence ~ HighProp + DemAge + maj + CWsurvSelfExpr + ethnicAlesina, model = "relogit", data = dNew.3.c, tau = 61/2631, robust = list(method = "weave"), cite = FALSE)
+DN3 <- zelig(violence ~ HighProp + DemAge + maj + CWsurvSelfExpr + ethnicAlesina, model = "relogit", data = dNew.3.c, tau = 63/2654, robust = list(method = "weave"), cite = FALSE)
 
-DN4 <- zelig(violence ~ HighProp + DemAge + maj + UNMurderRate, model = "relogit", data = dNew.4.c, tau = 61/2631, robust = list(method = "weave"), cite = FALSE)
+DN4 <- zelig(violence ~ HighProp + DemAge + maj + UNMurderRate, model = "relogit", data = dNew.4.c, tau = 63/2654, robust = list(method = "weave"), cite = FALSE)
 
 DN5 <- zelig(violence ~ HighProp + DemAge + maj + federal + govfrac, model = "relogit", data = dNew.5.c, tau = 69/3347, robust = list(method = "weave"), cite = FALSE)
 
 DN6 <- zelig(violence ~ HighProp + DemAge + maj + enps + federal, model = "relogit", data = dNew.6.c, tau = 69/3347, robust = list(method = "weave"), cite = FALSE)
 
-DN7 <- zelig(violence ~ HighProp + DemAge + maj + gini + GDPperCapita, model = "relogit", data = dNew.7.c, tau = 61/2631, robust = list(method = "weave"), cite = FALSE)
+DN7 <- zelig(violence ~ HighProp + DemAge + maj + gini + GDPperCapita, model = "relogit", data = dNew.7.c, tau = 63/2654, robust = list(method = "weave"), cite = FALSE)
 
-#DN6 <- zelig(violence ~ DemAge + VeryHighProp + maj + gini + GDPperCapita, model = "relogit", data = dNew.6.c, tau = 61/2631, robust = list(method = "weave"), cite = FALSE)
+#DN6 <- zelig(violence ~ DemAge + VeryHighProp + maj + gini + GDPperCapita, model = "relogit", data = dNew.6.c, tau = 63/2654, robust = list(method = "weave"), cite = FALSE)
 
-#DN7 <- zelig(violence ~ DemAge*VeryHighProp + maj + gini + GDPperCapita, model = "relogit", data = dNew.6.c, tau = 61/2631, robust = list(method = "weave"), cite = FALSE)
+#DN7 <- zelig(violence ~ DemAge*VeryHighProp + maj + gini + GDPperCapita, model = "relogit", data = dNew.6.c, tau = 63/2654, robust = list(method = "weave"), cite = FALSE)
