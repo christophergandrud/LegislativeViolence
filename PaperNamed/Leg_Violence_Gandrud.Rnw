@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths Apart
 % Christopher Gandrud
-% 10 September 2013
+% 13 September 2013
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -35,7 +35,7 @@
 \title{Two Sword Lengths Apart: Credible Commitment Problems and Physical Violence in Multi-party Elected National Legislatures}
 
 \author{Christopher Gandrud \\
-                {\emph{Hertie School of Governance}}\footnote{Post-doctoral Researcher. Friedrichstra{\ss}er 180. 10117 Berlin, Germany. Email: \href{mailto:christopher.gandrud@gmail.com}{christopher.gandrud@gmail.com}. Thank you to Gary Cox, Simon Hix, and seminar participants at Yonsei University for very helpful comments and insights. I would also like to thank Hortense Badarani for excellent research assistance and my students at the LSE for inspiration. Full replication files--including data and source code--can be found at \url{https://github.com/christophergandrud/LegislativeViolence}. An earlier version was circulated under the title ``Two Sword Lengths: Losers' consent and violence in national legislatures''.}}
+                {\emph{Hertie School of Governance}}\footnote{Post-doctoral Researcher. Friedrichstra{\ss}er 180. 10117 Berlin, Germany. Email: \href{mailto:gandrud@hertie-school.org}{gandrud@hertie-school.org}. Thank you to Gary Cox, Simon Hix, and seminar participants at Yonsei University for very helpful comments and insights. I would also like to thank Hortense Badarani for excellent research assistance and my students at the LSE for inspiration. Full replication files--including data and source code--can be found at \url{https://github.com/christophergandrud/LegislativeViolence}. An earlier version was circulated under the title ``Two Sword Lengths: Losers' consent and violence in national legislatures''.}}
                 
 \begin{document}
 
@@ -43,7 +43,7 @@
 
 %%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-Multi-party elected national legislatures should be venues for peacefully resolving conflicts between opposing groups. However, they can sometimes become the scenes of physical violence between legislators. Such violence is an indication that a country's legislative institutions are functioning far from perfectly as legislative actors are deciding to drop out of the normal rules of the `game'. In this first global study of legislative violence, I argue that brawls are often the result of credible commitment problems where legislators find it difficult to credibly commit to follow peaceful bargaining outcomes, including non-violent legislative rules. The problem is exacerbated when legislatures are unfair. Unfairness is higher and the credible commitment problems more acute in countries with disproportionate electoral outcomes and new democracies. I find robust evidence for this argument using a case study of legislative violence in the antebellum United States Senate and a new global data set of incidence from the 1980s through Winter 2011.
+Multi-party elected national legislatures should be venues for peacefully resolving conflicts between opposing groups. However, they can sometimes become the scenes of physical violence between legislators. Such violence is an indication that a country's legislative institutions are functioning far from perfectly as legislative actors are deciding to disregard the normal rules of the `game'. In this first global study of legislative violence, I argue that brawls are often the result of credible commitment problems where legislators find it difficult to credibly commit to follow peaceful bargaining outcomes, including non-violent legislative rules. The problem is exacerbated when legislatures are unfair. Unfairness is higher and credible commitment problems more acute in countries with disproportionate electoral outcomes and new democracies. I find robust evidence for this argument using a case study of legislative violence in the antebellum United States Senate and a new global data set of incidence from the 1980s into 2011.
 \end{abstract}
 
 
