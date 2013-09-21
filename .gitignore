@@ -11,6 +11,5 @@
 *.pdf
 PaperNamed/cache/*
 PaperNamed/figure/*
-PaperNotNamed/cache/*
-PaperNotNamed/figure/*
+PaperNotNamed/*
 CPS/*
