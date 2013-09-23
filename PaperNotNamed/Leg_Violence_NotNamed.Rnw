@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths Apart
-% 21 September 2013
+% 23 September 2013
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -155,7 +155,7 @@ Senator Sumner's rule stretching speech and his subsequent canning happened beca
 
 \paragraph{Alternative Explanations}
 
-It's unclear if, at all, the size of the legislative majority, legislative immunity, or culture played a role in this incident. The pro-slavery Democrats controlled 63 percent of the Senate. Certainly not a minority, which theoretically is most strongly indicative of a tendency for violence. Brooks was arrested for beating Sumner indicating that a formal lack of immunity from arrest did not stop him from using violence.\endnote{Though arrested, the total sum of Brook's ultimate punishment was a \$300 fine \cite[59]{Wolfe2004}.} It is difficult to tell how much cultural values may have played a role in the canning. Certainly it appears that the senators involved on both sides had a low respect for authority. However, this appears to be more the result of increasing unfairness and credible commitment problems than an independent cause of violence. Brooks' and others' appeals to culturally grounded ideas of ``upholding honor'' \cite[555]{Pierson1995} as a justification for violence appear to be secondary to their inability to commit to following established legislative rules because of shifting power. Presumably this culture existed for may decades prior to the incident, but earlier US Senates lack such violence.\endnote{An `honor culture' may have played a role in that it changed the costs and benefits of violence. Further research could explore how culture makes credible commitments more or less likely.}
+It's unclear if, at all, the size of the legislative majority, legislative immunity, or culture played a role in this incident. The pro-slavery Democrats controlled 63 percent of the Senate. Certainly not a minority, which theoretically is most strongly indicative of a tendency for violence. Brooks was arrested for beating Sumner indicating that a formal lack of immunity from arrest did not stop him from using violence.\endnote{Though arrested, the total sum of Brook's ultimate punishment was a \$300 fine \cite[59]{Wolfe2004}.} It is difficult to tell how much cultural values may have played a role in the canning. Certainly it appears that the senators involved on both sides had a low respect for authority. However, this appears to be more the result of increasing unfairness and credible commitment problems than an independent cause of violence. Brooks' and others' appeals to culturally grounded ideas of ``upholding honor'' \cite[555]{Pierson1995} as a justification for violence appear in this case to be secondary to their inability to commit to following established legislative rules because of shifting power.\endnote{An `honor culture' may have played a role in that it changed the costs and benefits of violence. Further research could explore how culture makes credible commitments more or less likely.}
 
 %%%%%%%% Map of Incidences
 \begin{figure}[h!]
