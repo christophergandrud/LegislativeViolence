@@ -1,0 +1,67 @@
+\begin{thebibliography}{xx}
+
+\harvarditem[Alesina et~al.]{Alesina, Devleeschauwer, Easterly, Kurlat
+  \harvardand\ Wacziarg}{2003}{Alesina2003}
+Alesina, Alberto, Arnaud Devleeschauwer, William Easterly, Sergio Kurlat
+  \harvardand\ Romain Wacziarg. 2003.
+\newblock ``{Fractionalization}.'' {\em Journal of Economic Growth} 8:155--194.
+
+\harvarditem[Beck et~al.]{Beck, Clarke, Groff, Keefer,  \harvardand\
+  Walsh}{2001}{DPI2001}
+Beck, Thorsten, George Clarke, Alberto Groff, Philip Keefer,  \harvardand\
+  Patrick Walsh. 2001.
+\newblock ``New Tools in Comparative Political Economy: The Database of
+  Political Institutions.'' {\em World Bank Economic Review} (1).
+
+\harvarditem{Carey \harvardand\ Hix}{2011}{Carey2011}
+Carey, John~M \harvardand\ Simon Hix. 2011.
+\newblock ``{The Electoral Sweet Spot: Low-Magnitude Proportional Electoral
+  Systems}.'' {\em American Journal of Political Science} 55(2):383--397.
+
+\harvarditem{Fish \harvardand\ Kroening}{2009}{Fish2009}
+Fish, M.~Steven \harvardand\ Matthew Kroening. 2009.
+\newblock {\em The Handbook of National Legislatures: A global survey}.
+\newblock Cambridge:  Cambridge University Press.
+
+\harvarditem{Gallagher}{2012}{Gallagher2012}
+Gallagher, Michael. 2012.
+\newblock ``Electoral Systems Website.''
+  \url{http://www.tcd.ie/Political_Science/staff/michael_gallagher/ElSystems/}.
+
+\harvarditem{King \harvardand\ Zeng}{2001}{KingRareEventsPA2001}
+King, Gary \harvardand\ Langche Zeng. 2001.
+\newblock ``{Logistic Regression in Rare Events Data}.'' {\em Political
+  Analysis} 9:137--163.
+
+\harvarditem{Marshall \harvardand\ Jaggers}{2009}{Marshall2009}
+Marshall, Monty~G. \harvardand\ Keith Jaggers. 2009.
+\newblock ``Polity IV Project: Dataset Users' Manual.'' electronic.
+\newblock \url{http://www.systemicpeace.org/polity/polity4.htm}.
+
+\harvarditem[Pemstein, Meserve \harvardand\ Melton]{Pemstein, Meserve
+  \harvardand\ Melton}{2010}{Pemstein2010}
+Pemstein, Daniel, Stephen~A. Meserve \harvardand\ James Melton. 2010.
+\newblock ``Democratic Compromise: A Latent Variable Analysis of Ten Measures
+  of Regime Type.'' {\em Political Analysis} 18(4):426--449.
+
+\harvarditem{{United Nations}}{2013}{UNMurder2013}
+{United Nations}. 2013.
+\newblock ``UN Data.''.
+\newblock \url{http://data.un.org/} (accessed Fall 2013).
+
+\harvarditem{{UNU-WIDER}}{2008}{UNU2008}
+{UNU-WIDER}. 2008.
+\newblock ``World Income Inequality Database.''
+  \url{http://www.wider.unu.edu/research/Database/en_GB/database/}.
+
+\harvarditem{{World Bank}}{2011}{WorldBank2011}
+{World Bank}. 2011.
+\newblock ``World Development Indicators.'' website.
+\newline\harvardurl{\url{http://data.worldbank.org/data-catalog/world-development-indicators}}
+
+\harvarditem{{World Values Survey Association}}{2009}{WVS2009}
+{World Values Survey Association}. 2009.
+\newblock ``WORLD VALUES SURVEY 1981-2008 OFFICIAL AGGREGATE v.20090901.''.
+\newblock \url{http://www.wvsevsdb.com/wvs/WVSData.jsp}.
+
+\end{thebibliography}
