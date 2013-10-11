@@ -9,6 +9,8 @@
 *.log
 *.gz
 *.pdf
+*.bbl
+*.ent
 PaperNamed/cache/*
 PaperNamed/figure/*
 PaperNotNamed/*
