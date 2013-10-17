@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths Apart
-% 15 October 2013
+% 17 October 2013
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -26,6 +26,7 @@
 \usepackage{todonotes}
 \usepackage{verbatim}
 \usepackage{endnotes}
+\usepackage{graphicx}
 
 \usepackage{footmisc}
 \setlength{\footnotesep}{\baselineskip}
@@ -37,7 +38,7 @@
 \title{Two Sword Lengths Apart: Credible Commitment Problems and Physical Violence in Multi-party Elected National Legislatures}
                 
 \author{Christopher Gandrud \\
-       {\emph{Hertie School of Governance}}\footnote{Post-doctoral Researcher. Friedrichstra{\ss}er 180. 10117 Berlin, Germany. Email: \href{mailto:gandrud@hertie-school.org}{gandrud@hertie-school.org}. Thank you to Gary Cox, Simon Hix, Shirin Rai, Carole Spary, and seminar participants at Yonsei University for very helpful comments and insights. I would also like to thank Hortense Badarani for excellent research assistance and my students at the LSE for inspiration. Full replication files--including data and source code--can be found at \url{https://github.com/christophergandrud/LegislativeViolence}. An earlier version was circulated under the title ``Two Sword Lengths: Losers' consent and violence in national legislatures''.}}
+                {\emph{Hertie School of Governance}}\footnote{Post-doctoral Researcher. Friedrichstra{\ss}er 180. 10117 Berlin, Germany. Email: \href{mailto:gandrud@hertie-school.org}{gandrud@hertie-school.org}. Thank you to Gary Cox, Simon Hix, Shirin Rai, Carole Spary, as well as seminar participants at the Hertie School of Governance and Yonsei University for very helpful comments and insights. I would also like to thank Hortense Badarani for excellent research assistance and my students at the LSE for inspiration. Full replication files--including data and source code--can be found at \url{https://github.com/christophergandrud/LegislativeViolence}. An earlier version was circulated under the title ``Two Sword Lengths: Losers' consent and violence in national legislatures''.}}
                 
 \begin{document}
 
@@ -218,7 +219,7 @@ This brief tour of descriptive statistics adds to the evidence from the previous
     leg.raw <- read.csv("/git_repositories/LegislativeViolence/Data/LegViolenceMain.csv")
 
     ## Keep variables of interest
-    vars <- c("country", "year", "violence", "system", "DemAge", "maj", "MajCat", "govfrac", "singleParty", "pr", "tenshort", "UDS", "polity2", "ethnicAlesina", "CWtrust", "higherTrust", "CWsurvSelfExpr", "legislature", "elect_legislature", "disproportionality", "gini", "GDPperCapita", "enps", "enpv", "federal", "immunity", "liec", "UNMurderRate")
+    vars <- c("country", "year", "violence", "system", "DemAge", "maj", "MajCat", "govfrac", "singleParty", "pr", "tenshort", "UDS", "polity2", "ethnicAlesina", "CWtrust", "higherTrust", "CWsurvSelfExpr", "legislature", "elect_legislature", "disproportionality", "gini", "GDPperCapita", "enps", "enpv", "federal", "immunity", "liec", "UNMurderRate", "WomenInParl")
     leg.raw <- leg.raw[vars]
 
     ## Clean violence data for 2009
@@ -286,6 +287,8 @@ I also investigated the possibility that a number of political, institutional, a
 
 To examine the relationships between societal-level values and legislative violence I rely primarily on data from the World Values Survey \citeyearpar{WVS2009}. Over the course of his research, Ingelhart has found that his composite {\emph{self-expression}} indicator is the best way to capture cultural and normative differences between democracies and non-democracies. Societies have high self-expression scores if they emphasize ``liberty and participation, public self-expression, tolerance of diversity, interpersonal trust, and life satisfaction" \citep[64]{Inglehart2003}. So I include the self-expression variable from the World Values Survey.\footnote{In earlier versions of the models I also included components of this variable. However, they were either never statistically significant or produced unintelligible and unstable results.} Following \cite{Inglehart2003} I average the variables across individual participants within countries and survey waves. I only use the third through fifth survey waves\footnote{The surveys were taken in the following years: \\ Wave 3: 1994--1998 \\ Wave 4: 1999--2004 \\ Wave 5: 2005--2007} as the first two waves have very poor coverage. I used wave 3 for all years before 1998, wave 4 for all years between 1999 and 2004 and wave 5 onward. 
 
+Gender is closely correlated with violence in society generally. Though there are many possible reasons for this that are beyond the scope of this paper, women tend to commit many fewer acts of violence than men \citep[see][]{Schwartz2009}. Previous research has found that women's participation in parliament has an impact on government decisions to go to war \citep{Melander2005}. Perhaps if a larger proportion of legislators are women there will be less violence in the parliamentary chamber. To examine this possibility, I gathered data on the \emph{percentage of women in parliament} per country-year from two sources. Data from 1997 and after was from the Inter-Parliamentary Union \citeyearpar{IPU2013}. Data from before 1997 was from \cite{Schwartz2009}.
+
 I included a countries' \emph{murder rate}, i.e. murders per 100,000 people, to measure a possible association between societal-level and legislative violence. The data was from \cite{UNMurder2013}, which aggregated annual murder rates from a variety of national and international sources. The data is available from 1995 through 2011.\footnote{Beyond truncating the sample somewhat, this data set unfortunately does not record Taiwan's murder rate separately from China's.}
 
 To assess any effect of coalition compared to single-party governments I included the DPI {\emph{government fractionalization}} variable. It is the probability that two randomly picked deputies in the government are from different parties. I used the fractionalization variable to create an indicator of {\emph{single-party}} government. It is simply a dummy equaling one if fractionalization was zero, i.e. all governing legislators were from the same party. In general single party governments probably are better able to pass policies very close to their ideal preferences. This could heighten losers' losses and make them less likely to want to conform to non-violent legislative rules. However, all single party governments are not created equal. Some parties may act as umbrella parties that incorporate many different factions. While others are narrowly focused on a particular constituency. 
@@ -312,26 +315,28 @@ Individual observations are clearly correlated within countries and years, espec
 \caption{Legislative Violence Rare Events Logistic Regression Results (Multi-Party Elected Legislature from 1990-2009)}
 \label{outputTable.1990}
 \begin{center}
+\scalebox{0.9}{
 <<OutTable2, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
     library(texreg)
 
     CoefNames <- c("(Intercept)", "Low Disproportionality", 
                 "Dem. Age", "Majority Size",
                 "Leg. Immunity", "PR Electoral System", "Single Party Gov.",
-                "Self Expression", "Ethnic Frac.", "Murder Rate", 
+                "Self Expression", "Ethnic Frac.", "Perc. Women in Parl.", "Murder Rate", 
                 "Federal", "Gov. Frac.",
                 "No. of Parties by Seats", 
                 "GINI", "GDP per Capita")
 
-    ModNamesB <- c("A1", "A2", "A3", "A4", "A5", "A6", "A7")
+    ModNamesB <- c("A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8")
 
-    texreg(list(DN1, DN2, DN3, DN4, DN5, DN6, DN7),
+    texreg(list(DN1, DN2, DN3, DN4, DN5, DN6, DN7, DN8),
         table = FALSE,
         custom.coef.names = CoefNames,
         custom.model.names = ModNamesB,
         use.packages = FALSE)
    
 @
+}
 \end{center}
 {\scriptsize{
     Standard errors are in parentheses. All models use robust (WEAVE) standard errors. \\
@@ -379,7 +384,7 @@ None of the cultural, ethnic fractionalization, or other societal-level variable
 
 \paragraph{Other Political and Institutional Variables}
 
-Results for other political and institutional variables were largely not statistically significant. Legislative immunity from arrest and/or prosecution is not significantly associated with legislative violence. We should approach this result cautiously since the Fish and Koening immunity variable is based on observations in 2007 and therefore might not be a valid indicator for many country-years. None of the effective number of parties variables, the basic continuous government fractionalization variable, nor the single-party government variable were statistically significant in the analyses. Likewise, federalism did not appear to be robustly related to legislative violence across the models. All of these variables are not as directly related to legislative fairness and an ability to make credible legislative commitments at a theoretical level, compared to disproportionality, democratic age and, to a lesser extent, governing majority size. So it should not come as too much of a surprise to find that they are more loosely, if not at all, associated with legislative violence.
+Results for other political and institutional variables were largely not statistically significant. Legislative immunity from arrest and/or prosecution is not significantly associated with legislative violence. We should approach this result cautiously since the Fish and Koening immunity variable is based on observations in 2007 and therefore might not be a valid indicator for many country-years. The proportion of women in parliament coefficient estimates were negative--i.e. legislatures with a higher proportion of women were predicted to be less likely to have violence. However, this was not statistically significant in any of the models. None of the effective number of parties variables, the basic continuous government fractionalization variable, nor the single-party government variable were statistically significant in the analyses. Likewise, federalism did not appear to be robustly related to legislative violence across the models. All of these variables are not as directly related to legislative fairness and an ability to make credible legislative commitments at a theoretical level, compared to disproportionality, democratic age and, to a lesser extent, governing majority size. So it should not come as too much of a surprise to find that they are more loosely, if not at all, associated with legislative violence.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Conclusions
 \section*{Conclusions: What Keeps Legislators Two Sword Lengths Apart?}

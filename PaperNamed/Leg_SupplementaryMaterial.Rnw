@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths Apart: Supplementary Material
-% 27 September 2013
+% 17 October 2013
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -26,6 +26,7 @@
 \usepackage{todonotes}
 \usepackage{verbatim}
 \usepackage{endnotes}
+\usepackage{graphicx}
 
 \usepackage{footmisc}
 \setlength{\footnotesep}{\baselineskip}
@@ -51,7 +52,7 @@
     leg.raw <- read.csv("/git_repositories/LegislativeViolence/Data/LegViolenceMain.csv")
 
     ## Keep variables of interest
-    vars <- c("country", "year", "violence", "system", "DemAge", "maj", "MajCat", "govfrac", "singleParty", "pr", "tenshort", "UDS", "polity2", "ethnicAlesina", "CWtrust", "higherTrust", "CWsurvSelfExpr", "legislature", "elect_legislature", "disproportionality", "gini", "GDPperCapita", "enps", "enpv", "federal", "immunity", "liec", "UNMurderRate")
+    vars <- c("country", "year", "violence", "system", "DemAge", "maj", "MajCat", "govfrac", "singleParty", "pr", "tenshort", "UDS", "polity2", "ethnicAlesina", "CWtrust", "higherTrust", "CWsurvSelfExpr", "legislature", "elect_legislature", "disproportionality", "gini", "GDPperCapita", "enps", "enpv", "federal", "immunity", "liec", "UNMurderRate","WomenInParl")
     leg.raw <- leg.raw[vars]
 
     ## Clean violence data for 2009
@@ -108,26 +109,27 @@ For prior correction \citep[see][]{KingRareEventsPA2001} in the models with the 
 \caption{Legislative Violence Rare Events Logistic Regression Results (Multi-Party Elected Legislature 1981-2009)}
 \label{outputTable.dem}
 \begin{center}
+\scalebox{0.9}{
 <<OutTable1, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
     library(texreg)
 
     CoefNames <- c("(Intercept)", "Low Disproportionality", 
                     "Dem. Age", "Majority Size",
                     "Leg. Immunity", "PR Electoral System", "Single Party Gov.",
-                    "Self Expression", "Ethnic Frac.", "Murder Rate", 
+                    "Self Expression", "Ethnic Frac.", "Perc. Women in Parl.", "Murder Rate", 
                     "Federal", "Gov. Frac.",
                     "No. of Parties by Seats", 
                     "GINI", "GDP per Capita")
-    ModNamesA <- c("B1", "B2", "B3", "B4", "B5", "B6", "B7")
+    ModNamesA <- c("B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8")
 
-    texreg(list(D1, D2, D3, D4, D5, D6, D7),
+    texreg(list(D1, D2, D3, D4, D5, D6, D7, D8),
         table = FALSE,
         custom.coef.names = CoefNames,
         custom.model.names = ModNamesA,
         use.packages = FALSE)
    
 @
-
+}
 \end{center}
 {\scriptsize{
     Standard errors are in parentheses. All models use robust (WEAVE) standard errors. \\
@@ -169,6 +171,7 @@ For prior correction \citep[see][]{KingRareEventsPA2001} in the models with the 
             Trust & Average of WVS responses where 1 $=$ most people can be trusted and 2 $=$ you can't be too careful & \cite{WVS2009} \\
             UDS & Posterior Mean Unified Democracy Score & \cite{Pemstein2010} \\
             Violence & Incidences of violence between legislators in the national parliamentary chamber & author \\
+            Perc. Women in Parl. & Percentage of parliamentary seats held by women & \cite{WomParCrossNat} \& \cite{IPU2013} \\
             \hline
 
     \end{tabular}
