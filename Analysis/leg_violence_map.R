@@ -1,7 +1,7 @@
 ###############
 # Create global map of legislative violence
 # Christopher Gandrud
-# 6 September 2013
+# 15 February 2014
 ###############
 
 library(googleVis)
@@ -9,7 +9,7 @@ library(gregmisc)
 library(plyr)
 
 ## Load data
-leg.raw <- read.csv("/Users/christophergandrud/Dropbox/Leg_Violence/Data/Legislative_Violence_Research_stata_ready.csv")
+leg.raw <- read.csv("/git_repositories/LegislativeViolence/Data/Legislative_Violence_Research_stata_ready.csv")
 
 # Get frequency count
   incidence <- count(leg.raw, c("violence", "Country"))
