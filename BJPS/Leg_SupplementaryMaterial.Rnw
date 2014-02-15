@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths Apart: Supplementary Material
-% 17 October 2013
+% 15 February 2014
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -100,7 +100,7 @@
 
 \subsection*{Details on Prior Correction of the Rare Logistic Regression Models}
 
-For prior correction\footnote{\citep[see][]{KingRareEventsPA2001}} in the models with the full sample of elected multi-party legislatures I used the observed proportion of all observations with legislative violence up to 2010: i.e. 2.1 percent of observations up until 2010 had violence ($\tau = \frac{71}{3370} = 0.021$). There were \Sexpr{sum(dNew$violence, na.rm = TRUE)} observed incidences of violence and 2654 country-years from 1990 through 2009 in the sample, so: $\tau = \frac{63}{2654} = 0.024$.
+For prior correction\footnote{\citep[see][]{KingRareEventsPA2001}} in the models with the full sample of elected multi-party legislatures I used the observed proportion of all observations with legislative violence up to 2010: i.e. 2 percent of observations up until 2010 had violence ($\tau = \frac{77}{3830} = 0.02$). There were \Sexpr{sum(dNew$violence, na.rm = TRUE)} observed incidences of violence and \Sexpr{nrow(dNew)} country-years from 1990 through 2009 in the sample, so: $\tau = \frac{69}{2927} = 0.024$.
 
 
 
