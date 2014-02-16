@@ -1,0 +1,15 @@
+base
+boot
+ggplot2
+gridExtra
+knitr
+MASS
+mgcv
+nlme
+plyr
+repmis
+reshape2
+sandwich
+texreg
+Zelig
+zoo

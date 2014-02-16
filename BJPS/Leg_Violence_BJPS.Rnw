@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths Apart
 % BJPS version
-% 15 February 2014
+% 16 February 2014
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -272,7 +272,7 @@ To more closely and robustly investigate these findings I use incidences of legi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Empirical Model
 \subsection{Parametric Model}
 
-Most of the time legislatures do not have physical fights. The much higher frequency of 0's (no violence) to 1's (violence) in the country-year data presents a problem for accurately estimating regression coefficients. Estimated regression coefficients from logistic regression analysis with many fewer observed events than non-events will be too small.\footnote{\citealt[137]{KingRareEventsPA2001}} Furthermore, standard methods for computing event probabilities with logistic regression produce results biased in the same direction as the coefficient estimates. To overcome this problem King and Zeng\footnote{\citealt{KingRareEvents2001,KingRareEventsPA2001}} propose a bias-corrected logistic model for rare events data that they call rare events logistic regression. I use this method below.
+Most of the time legislatures do not have physical fights. The much higher frequency of 0's (no violence) to 1's (violence) in the global country-year data presents a problem for accurately estimating regression coefficients. Estimated regression coefficients from logistic regression analysis with many fewer observed events than non-events will be too small.\footnote{\citealt[137]{KingRareEventsPA2001}} Furthermore, standard methods for computing event probabilities with logistic regression produce results biased in the same direction as the coefficient estimates. To overcome this problem King and Zeng\footnote{\citealt{KingRareEvents2001,KingRareEventsPA2001}} propose a bias-corrected logistic model for rare events data that they call rare events logistic regression. I use this method below.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Independent variables
 \subsection{Right-hand Variables}
