@@ -31,7 +31,7 @@ Replace2 <- data.frame(from = c('30+'), to = c('31'))
 Base <- FindReplace(Base, Var = 'No.join', replaceData = Replace2)
 Base$No.join <- as.numeric(Base$No.join)
 
-# Combine video and print
+# Combine video and print (Criteria use print only when video is unavailable)
 Second <- Base[, c('iso2c', 'year', 'R.involved')]
 Second <- DropNA(Second, 'R.involved')
 Base$Total <- as.character(Base$No.atPeak)
