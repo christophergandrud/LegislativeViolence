@@ -96,7 +96,7 @@ ggplot(DensComb, aes(jw_domr, colour = as.factor(Violence))) +
   geom_density() +
   ylab('Density\n') + xlab('\nDominant Personal Vote Index') +
   scale_color_manual(values = wes.palette(4, "Royal1"), name = '') +
-  theme_bw()
+  theme_bw(base_size = 15)
 
 #### DPI Data ####
 Vars = c('maj', 'mdmh', 'totalseats')
