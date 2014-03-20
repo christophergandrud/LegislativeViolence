@@ -19,6 +19,7 @@ library(gridExtra)
 # Set working directory
 setwd('/git_repositories/LegislativeViolence/VioParties/')
 
+# -------------------------------------------------------------------------- #
 #### Load and clean basic violence data ####
 Base <- read.csv(file = 'data/LegislativeViolenceMainDataVersion2.csv', stringsAsFactors = FALSE, na.strings = c('NA', ''))
 
@@ -37,33 +38,41 @@ Base <- FindReplace(Base, Var = 'No.join', replaceData = Replace2)
 Base$No.join <- as.numeric(Base$No.join)
 
 # Combine video and print (Criteria use print only when video is unavailable)
-Second <- Base[, c('iso2c', 'year', 'R.involved')]
+Second <- Base[, c('ID', 'R.involved')]
 Second <- DropNA(Second, 'R.involved')
 Base$Total <- as.character(Base$No.atPeak)
-Base <- FillIn(Base, Second, Var1 = 'Total', Var2 = 'R.involved', allow.cartesian = TRUE)
+Base <- FillIn(Base, Second, Var1 = 'Total', Var2 = 'R.involved', KeyVar = 'ID', allow.cartesian = TRUE)
+#Base <- Base[!duplicated(Base$fake), ]
 
-Replace3 <- data.frame(from = c('10\\+', "\"Several\"", "-several", "17\\+", "3\\+", "12\\+", "Several", "~20", "~24",
-                                "~5", "\"Multiple\"", "2\\+", "Multiple", "3 to 10", "\"Dozens\"", "\"Lawmakers\"",
-                                "~12", "5 to 10", "~40", "70\\+", "Several ", '5\\+', '~4'), 
-                       to = c('11', '5', '5', '18', '4', '13', '5', '20', '24', '5', '5', '3', '5', '6.5',
-                              '24', '5', '12', '7.5', '40', '71', '5', '5', '4'))
+Replace3 <- data.frame(from = c('10\\+', "\"Several\"", "-several", "17\\+", "3\\+",
+                                "12\\+", "Several", "~20", "~24", "~5", 
+                                "\"Multiple\"", "2\\+", "Multiple", "3 to 10", "\"Dozens\"",
+                                "\"Lawmakers\"", "~12", "5 to 10", "~40", "70\\+", 
+                                "Several ", '5\\+', '~4'), 
+                       to = c('11', '5', '5', '18', '4', 
+                              '13', '5', '20', '24', '5', 
+                              '5', '3', '5', '6.5', '24',
+                              '5', '12', '7.5', '40', '71', 
+                              '5', '5', '4'))
 Base <- FindReplace(Base, Var = 'Total', replaceData = Replace3)
 Base$Total <- as.numeric(Base$Total)
 Base <- Base[!duplicated(Base$ID),]
 Base <- VarDrop(Base, 'ID')
 
 
-#### Load democratic age data ####
+# -------------------------------------------------------------------------- #
+#### Load democratic age data (from Gandrud Violence 1) ####
 Age <- read.dta('/Applications/CJ\'s Old Folders/PhD/Research/General Data/Polity_IV/democracy_age2012.dta')
 Age$iso2c <- countrycode(Age$country, origin = 'country.name', destination = 'iso2c')
 Age <- VarDrop(Age, 'country')
 
+# -------------------------------------------------------------------------- #
 #### Load and clean Quality of Government data ####
 ## Main variables from Johnson & Wallack
 URL <- 'http://www.qogdata.pol.gu.se/data/qog_std_ts_20dec13.csv'
 FullQoG <- source_data(url = URL, cache = TRUE, sep = ';')
 
-SubQoG <- FullQoG[, c('cname', 'year', 'jw_persr', 'jw_domr', 'jw_avgballot', 'jw_avgpool', 'jw_avgvote')] # use lower house
+SubQoG <- FullQoG[, c('cname', 'year', 'jw_rank', 'jw_persr', 'jw_domr', 'jw_avgballot', 'jw_avgpool', 'jw_avgvote')] # use lower house
 SubQoG <- CountryID(SubQoG, countryVar = 'cname', timeVar = 'year', duplicates = 'drop')
 SubQoG <- subset(SubQoG, year >= 1980)
 
@@ -71,7 +80,7 @@ SubQoGSub <- SubQoG[SubQoG$iso2c %in% unique(Base$iso2c), ]
 
 SubQ3 <- subset(SubQoGSub, year > 2005)
 
-Vars = c('jw_persr', 'jw_domr', 'jw_avgballot', 'jw_avgpool', 'jw_avgvote')
+Vars = c('jw_rank', 'jw_persr', 'jw_domr', 'jw_avgballot', 'jw_avgpool', 'jw_avgvote')
 
 for (i in Vars){
   Sub <- subset(SubQoGSub, year == 2005)
@@ -92,14 +101,17 @@ DensComb$Violence <- 0
 DensComb$Violence[!is.na(DensComb$month)] <- 1
 DensComb$Violence <- factor(DensComb$Violence, labels = c('No Violence', 'Violence'))
 
+
+######### In Paper #######
 ggplot(DensComb, aes(jw_domr, colour = as.factor(Violence))) + 
   geom_density() +
-  ylab('Density\n') + xlab('\nDominant Personal Vote Index') +
+  ylab('Density\n') + xlab('\nDomninant Personal Vote Index') +
   scale_color_manual(values = wes.palette(4, "Royal1"), name = '') +
   theme_bw(base_size = 15)
 
+# -------------------------------------------------------------------------- #
 #### DPI Data ####
-Vars = c('maj', 'mdmh', 'totalseats')
+Vars = c('maj', 'mdmh', 'totalseats', 'mdmh')
 DPI <- DpiGet(vars = Vars, standardCountryName = FALSE, duplicates = 'message', na.rm = FALSE)
 DPI$iso2c[DPI$country == 'ROK'] <- 'KR'
 DPI <- DPI[, c('iso2c', 'year', Vars)]
@@ -107,8 +119,16 @@ DPI <- DPI[, c('iso2c', 'year', Vars)]
 DPI$maj[DPI$maj < 0] <- NA
 DPI$mdmh[DPI$mdmh < 0] <- NA
 DPI$totalseats[DPI$totalseats < 0] <- NA
+DPI$mdmh[DPI$mdmh < 0] <- NA
 
-# Merge with violence data
+# Create District magnitude (lower house) > 1 variable 
+DPI$mdmhDum <- NA
+DPI$mdmhDum[DPI$mdmh == 1] <- 0
+DPI$mdmhDum[DPI$mdmh > 1] <- 1
+DPI$mdmhDum <- factor(DPI$mdmhDum,  labels = c('District Mag. = 1', 'District Mag. > 1'))
+
+# -------------------------------------------------------------------------- #
+##### Merge with violence data
 Comb <- merge(Spread, Age, by = c('iso2c', 'year'), all.y = TRUE)
 Comb <- merge(Comb, DPI, by = c('iso2c', 'year'), all.x = TRUE)
 Comb <- merge(Comb, Base, by = c('iso2c', 'year'), all.y = TRUE)
@@ -125,8 +145,11 @@ write.csv(Comb, file = '~/Dropbox/Parliamentary Brawls/DataEarlyMarch.csv', row.
 
 Comb <- read.csv(file = '~/Dropbox/Parliamentary Brawls/DataEarlyMarch.csv', stringsAsFactors = FALSE)
 
+
+# -------------------------------------------------------------------------- #
 #### Ploting ####
 
+#### In Paper ####
 # Plot violence by country
 ViSub <- Comb[, c('iso2c', 'year', 'TotalPropSeats', 'jw_domr')]
 ViMolten <- melt(ViSub, id.vars = c('iso2c', 'year', 'jw_domr'))
@@ -137,9 +160,9 @@ ViMolten <- ViMolten[order(ViMolten$jw_domr, ViMolten$iso2c, ViMolten$year), ]
 ViMolten$iso2c <- factor(ViMolten$iso2c, levels = unique(ViMolten$iso2c))
 
 ggplot(ViMolten, aes(year, value, colour = as.factor(jw_domr))) + geom_point() + geom_line() + 
-  scale_x_continuous(breaks = c(1990, 2010)) +
+  scale_x_continuous(breaks = c(1990, 2010), labels = c('90', '10')) +
   scale_color_discrete(name = 'Dominant \nPers. Index') +
-  ylab('Total brawl participants/seats\n') + xlab('') +
+  ylab('Total brawl participants/seats\n') + xlab('\nYear') +
   facet_grid(. ~ iso2c) + theme_bw()
 
 # Average ballot
@@ -155,8 +178,18 @@ ggplot(Comb, aes(jw_avgpool, TotalPropSeats)) + geom_jitter() + theme_bw()
 PM1 <- ggplot(Comb, aes(maj, TotalPropSeats)) + geom_jitter() + theme_bw()
 
 # Mean house district magnitude
-PDM1 <- ggplot(Comb, aes(mdmh, TotalPropSeats)) + geom_jitter() + ylab('Total brawl participants\n') + 
-  xlab('\nMean House District Magnitued') + theme_bw()
+PDM1 <- ggplot(Comb, aes(mdmh, TotalPropSeats)) + geom_jitter() + ylab('Total brawl participants/seats\n') + 
+  xlab('\njw_domr') + theme_bw()
+
+
+#### In Paper ####
+CombNoNAMag <- DropNA(Comb, 'mdmhDum')
+ggplot(CombNoNAMag, aes(jw_domr, TotalPropSeats, label = iso2c)) + geom_point() + 
+  geom_text(angle = 30, vjust = -1) +  
+  facet_grid(. ~ mdmhDum) +
+  ylab('Total brawl participants/seats\n') + 
+  xlab('\nDominant Pers. Index') +  
+  theme_bw()
 
 
 # Dominant personalistic vote incentives
