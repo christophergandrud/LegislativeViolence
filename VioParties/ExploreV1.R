@@ -1,7 +1,7 @@
 ################
 # Explore legislative violence intensity (V1)
 # Christopher Gandrud
-# 18 March 2014
+# 20 March 2014
 ################
 
 # Load packages
@@ -44,9 +44,9 @@ Base <- FillIn(Base, Second, Var1 = 'Total', Var2 = 'R.involved', allow.cartesia
 
 Replace3 <- data.frame(from = c('10\\+', "\"Several\"", "-several", "17\\+", "3\\+", "12\\+", "Several", "~20", "~24",
                                 "~5", "\"Multiple\"", "2\\+", "Multiple", "3 to 10", "\"Dozens\"", "\"Lawmakers\"",
-                                "~12", "5 to 10", "~40", "70\\+", "Several ", '5\\+'), 
+                                "~12", "5 to 10", "~40", "70\\+", "Several ", '5\\+', '~4'), 
                        to = c('11', '5', '5', '18', '4', '13', '5', '20', '24', '5', '5', '3', '5', '6.5',
-                              '24', '5', '12', '7.5', '40', '71', '5', '5'))
+                              '24', '5', '12', '7.5', '40', '71', '5', '5', '4'))
 Base <- FindReplace(Base, Var = 'Total', replaceData = Replace3)
 Base$Total <- as.numeric(Base$Total)
 Base <- Base[!duplicated(Base$ID),]
