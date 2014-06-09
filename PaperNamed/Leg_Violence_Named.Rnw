@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths Apart
-% 15 February 2014
+% 9 June 2014
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -183,16 +183,17 @@ This brief tour of descriptive statistics adds to the evidence from the previous
     \begin{center}
 
 <<FrameworkEmpirical, warning=FALSE, echo=FALSE, message=FALSE, fig.width=7, fig.height=4, out.width='0.8\\linewidth'>>=
-	library(ggplot2)
-	library(gridExtra)
-  library(repmis)
+    library(ggplot2)
+    library(gridExtra)
+    library(repmis)
 
     
     ## Load Data (one observation per country-year)
     #URLDescript <- "https://raw.github.com/christophergandrud/LegislativeViolence/master/Data/LegViolenceDescriptives.csv"
     #leg.cumulative <- repmis::source_GitHubData(URLDescript)
 
-    leg.cumulative <- read.csv("/git_repositories/LegislativeViolence/Data/LegViolenceDescriptives.csv")
+    leg.cumulative <- read.csv("/git_repositories/LegislativeViolence/Data/LegViolenceDescriptives.csv",
+                               stringsAsFactors = FALSE)
 
     leg.cumulative$violence <- factor(leg.cumulative$violence, label = c("No Violence", "Violence"))
     leg.cumulative <- subset(leg.cumulative, violence != "NA")
@@ -334,7 +335,6 @@ Individual observations are clearly correlated within countries and years, espec
         custom.coef.names = CoefNames,
         custom.model.names = ModNamesB,
         use.packages = FALSE)
-   
 @
 }
 \end{center}

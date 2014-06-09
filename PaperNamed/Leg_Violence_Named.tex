@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths Apart
-% 15 February 2014
+% 9 June 2014
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -89,7 +89,6 @@
 \author{Christopher Gandrud \\
                 {\emph{Hertie School of Governance}}\footnote{Post-doctoral Researcher. Friedrichstra{\ss}er 180. 10117 Berlin, Germany. Email: \href{mailto:gandrud@hertie-school.org}{gandrud@hertie-school.org}. Thank you to Gary Cox, Simon Hix, Shirin Rai, Carole Spary, as well as seminar participants at the Hertie School of Governance and Yonsei University for very helpful comments and insights. I would also like to thank Hortense Badarani for excellent research assistance and my students at the LSE for inspiration. Full replication files--including data and source code--can be found at \url{https://github.com/christophergandrud/LegislativeViolence}. An earlier version was circulated under the title ``Two Sword Lengths: Losers' consent and violence in national legislatures''.}}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-                
 \begin{document}
 
 \maketitle
@@ -237,7 +236,6 @@ This brief tour of descriptive statistics adds to the evidence from the previous
 \includegraphics[width=0.8\linewidth]{figure/FrameworkEmpirical} 
 
 \end{knitrout}
-
     \end{center}
     \begin{singlespace}
         {\scriptsize{Each point represents a country-year. The data is from a sample of 200 countries from 1981 through 2009 due to data availability. The points are jittered horizontally.}}
@@ -246,7 +244,6 @@ This brief tour of descriptive statistics adds to the evidence from the previous
 \end{figure}
 
 %%%%%%%%%%%%%%%% Run Analyses %%%%%%%%%%%%%%%%%%%%%%%%
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Empirical Analysis
@@ -306,50 +303,47 @@ Individual observations are clearly correlated within countries and years, espec
 \hline
                         & A1 & A2 & A3 & A4 & A5 & A6 & A7 & A8 \\
 \hline
-(Intercept)             & $-2.70^{***}$ & $-0.97$       & $-4.31$      & $-1.34$     & $-2.19^{*}$ & $-1.80^{*}$  & $-1.85^{*}$  & $-2.20^{*}$  \\
-                        & $(0.21)$      & $(0.80)$      & $(4.47)$     & $(0.71)$    & $(0.85)$    & $(0.84)$     & $(0.79)$     & $(1.11)$     \\
-Low Disproportionality  & $-1.12^{**}$  & $-1.33^{***}$ & $-1.81^{**}$ & $-0.91^{*}$ & $-1.27^{*}$ & $-1.53^{**}$ & $-1.16^{**}$ & $-1.05^{**}$ \\
-                        & $(0.36)$      & $(0.37)$      & $(0.63)$     & $(0.41)$    & $(0.53)$    & $(0.57)$     & $(0.39)$     & $(0.40)$     \\
-Dem. Age                & $-0.02^{**}$  & $-0.03^{**}$  & $-0.03$      & $-0.02^{*}$ & $-0.03^{*}$ & $-0.03^{*}$  & $-0.03^{**}$ & $-0.04^{*}$  \\
-                        & $(0.01)$      & $(0.01)$      & $(0.01)$     & $(0.01)$    & $(0.01)$    & $(0.01)$     & $(0.01)$     & $(0.02)$     \\
-Majority Size           &               & $-0.03^{**}$  & $-0.03$      & $-0.02^{*}$ & $0.00$      & $-0.02$      & $-0.03^{*}$  & $-0.03^{*}$  \\
-                        &               & $(0.01)$      & $(0.02)$     & $(0.01)$    & $(0.01)$    & $(0.01)$     & $(0.01)$     & $(0.01)$     \\
-Leg. Immunity           &               & $-0.20$       &              &             &             &              &              &              \\
-                        &               & $(0.36)$      &              &             &             &              &              &              \\
-PR Electoral System     &               & $0.74$        &              &             &             &              &              &              \\
-                        &               & $(0.53)$      &              &             &             &              &              &              \\
-Single Party Gov.       &               & $-0.64$       &              &             &             &              &              &              \\
-                        &               & $(0.35)$      &              &             &             &              &              &              \\
-Self Expression         &               &               & $2.51$       &             &             &              &              &              \\
-                        &               &               & $(3.59)$     &             &             &              &              &              \\
-Ethnic Frac.            &               &               & $0.89$       &             &             &              &              &              \\
-                        &               &               & $(1.23)$     &             &             &              &              &              \\
-Perc. Women in Parl.    &               &               &              & $-0.02$     &             &              &              &              \\
-                        &               &               &              & $(0.02)$    &             &              &              &              \\
-Murder Rate             &               &               &              &             & $0.01$      &              &              &              \\
-                        &               &               &              &             & $(0.02)$    &              &              &              \\
-Federal                 &               &               &              &             &             & $0.74$       & $0.64$       &              \\
-                        &               &               &              &             &             & $(0.60)$     & $(0.46)$     &              \\
-Gov. Frac.              &               &               &              &             &             & $0.79$       &              &              \\
-                        &               &               &              &             &             & $(0.82)$     &              &              \\
-No. of Parties by Seats &               &               &              &             &             &              & $0.13$       &              \\
-                        &               &               &              &             &             &              & $(0.08)$     &              \\
-GINI                    &               &               &              &             &             &              &              & $0.03$       \\
-                        &               &               &              &             &             &              &              & $(0.02)$     \\
-GDP per Capita          &               &               &              &             &             &              &              & $0.03$       \\
-                        &               &               &              &             &             &              &              & $(0.03)$     \\
+(Intercept)             & $-2.70^{***}$ & $-0.98$       & $-4.32$      & $-1.34$     & $-2.19^{**}$ & $-1.80^{*}$  & $-1.85^{*}$  & $-2.20^{*}$  \\
+                        & $(0.21)$      & $(0.80)$      & $(4.47)$     & $(0.71)$    & $(0.85)$     & $(0.84)$     & $(0.79)$     & $(1.11)$     \\
+Low Disproportionality  & $-1.12^{**}$  & $-1.33^{***}$ & $-1.81^{**}$ & $-0.91^{*}$ & $-1.27^{*}$  & $-1.53^{**}$ & $-1.16^{**}$ & $-1.05^{**}$ \\
+                        & $(0.36)$      & $(0.37)$      & $(0.63)$     & $(0.41)$    & $(0.53)$     & $(0.57)$     & $(0.39)$     & $(0.40)$     \\
+Dem. Age                & $-0.02^{**}$  & $-0.03^{**}$  & $-0.03$      & $-0.02^{*}$ & $-0.03^{*}$  & $-0.03^{*}$  & $-0.03^{**}$ & $-0.04^{*}$  \\
+                        & $(0.01)$      & $(0.01)$      & $(0.01)$     & $(0.01)$    & $(0.01)$     & $(0.01)$     & $(0.01)$     & $(0.02)$     \\
+Majority Size           &               & $-0.03^{**}$  & $-0.03$      & $-0.02^{*}$ & $0.00$       & $-0.02$      & $-0.03^{*}$  & $-0.03^{*}$  \\
+                        &               & $(0.01)$      & $(0.02)$     & $(0.01)$    & $(0.01)$     & $(0.01)$     & $(0.01)$     & $(0.01)$     \\
+Leg. Immunity           &               & $-0.20$       &              &             &              &              &              &              \\
+                        &               & $(0.36)$      &              &             &              &              &              &              \\
+PR Electoral System     &               & $0.74$        &              &             &              &              &              &              \\
+                        &               & $(0.53)$      &              &             &              &              &              &              \\
+Single Party Gov.       &               & $-0.64$       &              &             &              &              &              &              \\
+                        &               & $(0.35)$      &              &             &              &              &              &              \\
+Self Expression         &               &               & $2.51$       &             &              &              &              &              \\
+                        &               &               & $(3.59)$     &             &              &              &              &              \\
+Ethnic Frac.            &               &               & $0.89$       &             &              &              &              &              \\
+                        &               &               & $(1.23)$     &             &              &              &              &              \\
+Perc. Women in Parl.    &               &               &              & $-0.02$     &              &              &              &              \\
+                        &               &               &              & $(0.02)$    &              &              &              &              \\
+Murder Rate             &               &               &              &             & $0.01$       &              &              &              \\
+                        &               &               &              &             & $(0.02)$     &              &              &              \\
+Federal                 &               &               &              &             &              & $0.74$       & $0.64$       &              \\
+                        &               &               &              &             &              & $(0.60)$     & $(0.46)$     &              \\
+Gov. Frac.              &               &               &              &             &              & $0.79$       &              &              \\
+                        &               &               &              &             &              & $(0.82)$     &              &              \\
+No. of Parties by Seats &               &               &              &             &              &              & $0.13$       &              \\
+                        &               &               &              &             &              &              & $(0.08)$     &              \\
+GINI                    &               &               &              &             &              &              &              & $0.03$       \\
+                        &               &               &              &             &              &              &              & $(0.02)$     \\
+GDP per Capita          &               &               &              &             &              &              &              & $0.03$       \\
+                        &               &               &              &             &              &              &              & $(0.03)$     \\
 \hline
-AIC                     & 370.24        & 356.99        & 178.59       & 302.28      & 191.36      & 176.05       & 299.34       & 288.98       \\
-BIC                     & 386.58        & 395.02        & 205.25       & 328.78      & 215.19      & 204.71       & 331.04       & 319.95       \\
-Log Likelihood          & -182.12       & -171.49       & -83.30       & -146.14     & -90.68      & -82.02       & -143.67      & -138.49      \\
-Deviance                & 364.24        & 342.99        & 166.59       & 292.28      & 181.36      & 164.05       & 287.34       & 276.98       \\
-Num. obs.               & 1714          & 1691          & 628          & 1691        & 1492        & 931          & 1509         & 1458         \\
+AIC                     & 370.24        & 356.99        & 178.59       & 302.28      & 191.36       & 176.05       & 299.34       & 288.98       \\
+BIC                     & 386.58        & 395.02        & 205.25       & 328.78      & 215.19       & 204.71       & 331.04       & 319.95       \\
+Log Likelihood          & -182.12       & -171.49       & -83.30       & -146.14     & -90.68       & -82.02       & -143.67      & -138.49      \\
+Deviance                & 364.24        & 342.99        & 166.59       & 292.28      & 181.36       & 164.05       & 287.34       & 276.98       \\
+Num. obs.               & 1714          & 1691          & 628          & 1691        & 1492         & 931          & 1509         & 1458         \\
 \hline
-\multicolumn{9}{l}{\scriptsize{\textsuperscript{***}$p<0.001$, 
-  \textsuperscript{**}$p<0.01$, 
-  \textsuperscript{*}$p<0.05$}}
+\multicolumn{9}{l}{\scriptsize{$^{***}p<0.001$, $^{**}p<0.01$, $^*p<0.05$}}
 \end{tabular}
-
 
 }
 \end{center}
@@ -373,7 +367,6 @@ I avoid focusing on models that include highly correlated variables \citep[see][
 \includegraphics[width=0.8\linewidth]{figure/predProb} 
 
 \end{knitrout}
-
     \end{center}
     \begin{singlespace}
       {\scriptsize{The graphs show the middle 95\% of 1000 simulations at each fitted value of the variables. The simulations use Model A2, Table \ref{outputTable.1990}. For each set of simulations all other variables were fitted at their means.}}
