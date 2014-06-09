@@ -14,7 +14,5 @@
 PaperNamed/cache/*
 PaperNamed/figure/*
 PaperNotNamed/*
-BJPS/cache/*
-BJPS/figure/*
-CPS/*
 Old/*
+JJPS/*
