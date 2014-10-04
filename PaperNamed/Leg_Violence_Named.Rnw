@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths Apart
-% 2 August 2014
+% 4 October 2014
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -46,7 +46,7 @@
 
 %%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-Multi-party elected national legislatures should be venues for peacefully resolving conflicts between opposing groups. However, they can become scenes of physical violence. Such violence is an indication that a country’s legislative institutions are functioning far from perfectly as legislative actors are deciding to disregard the rules of the `game’. In some cases, such as recently in Ukraine, violence can indicate and possibly fuel deeper political divisions. In this first global study of legislative violence, I argue that brawls are more likely when legislators find it difficult to credibly commit to follow peaceful bargaining outcomes. The problem is exacerbated when legislatures are `unfair’. Un-fairness is higher and credible commitment problems more acute in countries with disproportionate electoral outcomes and new democracies. I find robust evidence for this argument using a case study of legislative violence in the antebellum United States Senate and a new global data set.
+Multi-party elected national legislatures should be venues for peacefully resolving conflicts between opposing groups. However, they can become scenes of physical violence. Such violence is an indication that a country's legislative institutions are functioning far from perfectly as legislative actors are deciding to disregard the rules of the `game'. In some cases, such as recently in Ukraine, violence can indicate and possibly fuel deeper political divisions. In this first global study of legislative violence, I argue that brawls are more likely when legislators find it difficult to credibly commit to follow peaceful bargaining outcomes. The problem is exacerbated when legislatures are `unfair'. Un-fairness is higher and credible commitment problems more acute in countries with disproportionate electoral outcomes and new democracies. I find robust evidence for this argument using a case study of legislative violence in the antebellum United States Senate and a new global data set.
 \end{abstract}
 
 
