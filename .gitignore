@@ -124,3 +124,5 @@ sympy-plots-for-*.tex/
 # knitr
 *-concordance.tex
 *.ent
+
+JoPR/*
