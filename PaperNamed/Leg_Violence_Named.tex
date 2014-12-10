@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths Apart
-% 18 October 2014
+% 10 December 2014
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -91,7 +91,7 @@
 
 %%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-Multi-party elected national legislatures should be venues for peacefully resolving conflicts between opposing groups. However, they can become scenes of physical violence. Such violence is an indication that a country's legislative institutions are functioning far from perfectly as legislative actors are deciding to disregard the rules of the game. In some cases, such as recently in Ukraine, violence can indicate and possibly fuel deeper political divisions. In this first global study of legislative violence, I argue that brawls are more likely when legislators find it difficult to credibly commit to follow peaceful bargaining outcomes. Credible commitment problems are more acute in countries with disproportionate electoral outcomes and in new democracies. I find robust evidence for this argument using a case study of legislative violence in the antebellum United States Senate and a new global data set.
+Multi-party elected national legislatures should be venues for peacefully resolving conflicts between opposing groups. However, they can become scenes of physical violence. Such violence is an indication that a country's legislative institutions are functioning far from perfectly as legislative actors are deciding to disregard the rules of the game. In some cases, such as recently in Ukraine, violence can indicate and possibly fuel deeper political divisions. In this first global study of legislative violence, I argue that brawls are more likely when legislators find it difficult to credibly commit to follow peaceful bargains. Credible commitment problems are more acute in countries with disproportionate electoral outcomes and in new democracies. I find robust evidence for this argument using a case study of legislative violence in the antebellum United States Senate and a new global data set.
 \end{abstract}
 
 
@@ -127,7 +127,7 @@ Why do very fair legislatures not create equally large credible commitment probl
 
 \subsection{Observing Situations Where Credible Commitment Problems are Worse}
 
-To empirically test my theory I focus on two clearly observable institutional factors that structure bargaining by influencing legislators' credible commitment problems: proportionality of electoral outcomes and age of democracy. Please note that these are likely not the only factors that implact credible commitments, but they are definitively observable in a cross-country study.
+To empirically test my theory I focus on two clearly observable institutional factors that structure bargaining by influencing legislators' credible commitment problems: proportionality of electoral outcomes and age of democracy. Please note that these are likely not the only factors that shape credible commitments, but they are definitively observable in a cross-country study.
 
 \paragraph{Proportional Electoral Outcomes}
 
@@ -294,53 +294,12 @@ Individual observations are clearly correlated within countries and years, espec
 \label{outputTable.1990}
 \begin{center}
 \scalebox{0.9}{
+\begin{kframe}
 
-\begin{tabular}{l c c c c c c c c }
-\hline
-                        & A1 & A2 & A3 & A4 & A5 & A6 & A7 & A8 \\
-\hline
-(Intercept)             & $-2.70^{***}$ & $-0.98$       & $-4.32$      & $-1.34$     & $-2.19^{**}$ & $-1.80^{*}$  & $-1.85^{*}$  & $-2.20^{*}$  \\
-                        & $(0.21)$      & $(0.80)$      & $(4.47)$     & $(0.71)$    & $(0.85)$     & $(0.84)$     & $(0.79)$     & $(1.11)$     \\
-Low Disproportionality  & $-1.12^{**}$  & $-1.33^{***}$ & $-1.81^{**}$ & $-0.91^{*}$ & $-1.27^{*}$  & $-1.53^{**}$ & $-1.16^{**}$ & $-1.05^{**}$ \\
-                        & $(0.36)$      & $(0.37)$      & $(0.63)$     & $(0.41)$    & $(0.53)$     & $(0.57)$     & $(0.39)$     & $(0.40)$     \\
-Dem. Age                & $-0.02^{**}$  & $-0.03^{**}$  & $-0.03$      & $-0.02^{*}$ & $-0.03^{*}$  & $-0.03^{*}$  & $-0.03^{**}$ & $-0.04^{*}$  \\
-                        & $(0.01)$      & $(0.01)$      & $(0.01)$     & $(0.01)$    & $(0.01)$     & $(0.01)$     & $(0.01)$     & $(0.02)$     \\
-Majority Size           &               & $-0.03^{**}$  & $-0.03$      & $-0.02^{*}$ & $0.00$       & $-0.02$      & $-0.03^{*}$  & $-0.03^{*}$  \\
-                        &               & $(0.01)$      & $(0.02)$     & $(0.01)$    & $(0.01)$     & $(0.01)$     & $(0.01)$     & $(0.01)$     \\
-Leg. Immunity           &               & $-0.20$       &              &             &              &              &              &              \\
-                        &               & $(0.36)$      &              &             &              &              &              &              \\
-PR Electoral System     &               & $0.74$        &              &             &              &              &              &              \\
-                        &               & $(0.53)$      &              &             &              &              &              &              \\
-Single Party Gov.       &               & $-0.64$       &              &             &              &              &              &              \\
-                        &               & $(0.35)$      &              &             &              &              &              &              \\
-Self Expression         &               &               & $2.51$       &             &              &              &              &              \\
-                        &               &               & $(3.59)$     &             &              &              &              &              \\
-Ethnic Frac.            &               &               & $0.89$       &             &              &              &              &              \\
-                        &               &               & $(1.23)$     &             &              &              &              &              \\
-Perc. Women in Parl.    &               &               &              & $-0.02$     &              &              &              &              \\
-                        &               &               &              & $(0.02)$    &              &              &              &              \\
-Murder Rate             &               &               &              &             & $0.01$       &              &              &              \\
-                        &               &               &              &             & $(0.02)$     &              &              &              \\
-Federal                 &               &               &              &             &              & $0.74$       & $0.64$       &              \\
-                        &               &               &              &             &              & $(0.60)$     & $(0.46)$     &              \\
-Gov. Frac.              &               &               &              &             &              & $0.79$       &              &              \\
-                        &               &               &              &             &              & $(0.82)$     &              &              \\
-No. of Parties by Seats &               &               &              &             &              &              & $0.13$       &              \\
-                        &               &               &              &             &              &              & $(0.08)$     &              \\
-GINI                    &               &               &              &             &              &              &              & $0.03$       \\
-                        &               &               &              &             &              &              &              & $(0.02)$     \\
-GDP per Capita          &               &               &              &             &              &              &              & $0.03$       \\
-                        &               &               &              &             &              &              &              & $(0.03)$     \\
-\hline
-AIC                     & 370.24        & 356.99        & 178.59       & 302.28      & 191.36       & 176.05       & 299.34       & 288.98       \\
-BIC                     & 386.58        & 395.02        & 205.25       & 328.78      & 215.19       & 204.71       & 331.04       & 319.95       \\
-Log Likelihood          & -182.12       & -171.49       & -83.30       & -146.14     & -90.68       & -82.02       & -143.67      & -138.49      \\
-Deviance                & 364.24        & 342.99        & 166.59       & 292.28      & 181.36       & 164.05       & 287.34       & 276.98       \\
-Num. obs.               & 1714          & 1691          & 628          & 1691        & 1492         & 931          & 1509         & 1458         \\
-\hline
-\multicolumn{9}{l}{\scriptsize{$^{***}p<0.001$, $^{**}p<0.01$, $^*p<0.05$}}
-\end{tabular}
 
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in library(texreg): there is no package called 'texreg'}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(expr, envir, enclos): could not find function "{}texreg"{}}}\end{kframe}
 }
 \end{center}
 {\scriptsize{
