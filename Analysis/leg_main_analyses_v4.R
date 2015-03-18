@@ -24,7 +24,7 @@ vars.1 <- c("country", "year", "violence", "dem_age", "high_prop")
 vars.2 <- c("country", "year", "violence", "dem_age", "high_prop", "maj",
             "immunity", "pr", "single_party")
 vars.3 <- c("country", "year", "violence", "dem_age", "high_prop", "maj",
-            "CWsurvSelfExpr", "ethnic_alesina")
+            "cw_surv_self_expr", "ethnic_alesina")
 vars.4 <- c("country", "year", "violence", "dem_age", "high_prop", "maj",
             "women_in_parl")
 vars.5 <- c("country", "year", "violence", "dem_age", "high_prop",
@@ -66,7 +66,7 @@ D2 <- zelig(violence ~ high_prop + dem_age + maj + immunity + pr + single_party,
             model = "relogit", data = dem.2.c, tau = tau_dem,
             robust = list(method = "weave"), cite = FALSE)
 
-D3 <- zelig(violence ~ high_prop + dem_age + maj + CWsurvSelfExpr +
+D3 <- zelig(violence ~ high_prop + dem_age + maj + cw_surv_self_expr +
                 ethnic_alesina, model = "relogit", data = dem.3.c, tau = tau_dem,
             robust = list(method = "weave"), cite = FALSE)
 
@@ -104,7 +104,7 @@ DN2 <- zelig(violence ~ high_prop + dem_age + maj + immunity + pr +
              model = "relogit", data = dNew.2.c, tau = tau_dem,
              robust = list(method = "weave"), cite = FALSE)
 
-DN3 <- zelig(violence ~ high_prop + dem_age + maj + CWsurvSelfExpr +
+DN3 <- zelig(violence ~ high_prop + dem_age + maj + cw_surv_self_expr +
                  ethnic_alesina, model = "relogit", data = dNew.3.c,
              tau = tau_dem, robust = list(method = "weave"), cite = FALSE)
 

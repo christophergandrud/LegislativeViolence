@@ -15,7 +15,7 @@ library(countrycode)
 library(psData)
 library(DataCombine)
 if (!('rio' %in% installed.packages()[, 1]))
-    devtools::install_github('leeper/rio', ref = 'fread')
+    devtools::install_github('leeper/rio')
 library(rio)
 library(foreign)
 library(tidyr)
@@ -45,6 +45,8 @@ wdi <- wdi %>% arrange(iso2c, year) %>% group_by(iso2c) %>%
         mutate(gini = FillDown(Var = gini)) %>%
         as.data.frame
 
+wdi <- wdi[!duplicated(wdi[, c('iso2c', 'year')]),]
+
 #### --------------- Women in Parliament ---------------------------------- ####
 # From 1997 data from Inter-Parliamentary Union via World Bank Development 
 # Indicators 
@@ -68,6 +70,9 @@ women_old <- women_old %>% select(iso2c, year, women_in_parl) %>%
                 filter(year < 1997)
 
 women <- rbind(women_old, women) %>% arrange(iso2c, year)
+
+women <- women[!duplicated(women[, c('iso2c', 'year')]),]
+
 
 #### --------------- Age of Democracy ------------------------------------- ####
 polity <- PolityGet(url = 'http://www.systemicpeace.org/inscr/p4v2013.sav') %>%
@@ -103,6 +108,7 @@ cum_nozero <- function(x){
 polity$dem_age <- cum_nozero(x = 'democracy')
 
 polity <- polity %>% select(iso2c, year, polity2, dem_age, durable)
+polity <- polity[!duplicated(polity[, c('iso2c', 'year')]),]
 
 #### ---------------------- Database of Political Institutions ------------ ####
 dpi <- DpiGet() %>% select(iso2c, year, maj, system, govfrac, pr, liec)
@@ -118,6 +124,7 @@ dpi$single_party[dpi$govfrac == 0] <- 1
 
 #### Only countries with elected legislatures
 dpi <- dpi %>% filter(liec > 5)
+dpi <- dpi[!duplicated(dpi[, c('iso2c', 'year')]),]
 
 #### ----------------- Dispoportionality ---------------------------------- ####
 disprop <- import('http://bit.ly/Ss6zDO', format = 'csv') %>% 
@@ -128,8 +135,11 @@ disprop <- import('http://bit.ly/Ss6zDO', format = 'csv') %>%
 disprop$high_prop <- 0
 disprop$high_prop[disprop$disproportionality < 6] <- 1
 
+disprop <- disprop[!duplicated(disprop[, c('iso2c', 'year')]),]
+
 #### ----------------- Legislative Immunity ------------------------------- ####
 immunity <- import('Data/raw/fish_k_immunity.csv') %>% select(-year)
+immunity <- immunity[!duplicated(immunity[, 'iso2c']),]
 
 #### ----------------- Ethnic Fractionalization---------------------------- ####
 ethnic_frac <- 'http://www.anderson.ucla.edu/faculty_pages/romain.wacziarg/downloads/fractionalization.xls' %>%
@@ -143,6 +153,18 @@ ethnic_frac$ethnic_alesina <- ethnic_frac$ethnic_alesina %>% as.character %>%
 ethnic_frac$iso2c <- countrycode(ethnic_frac$country, origin = 'country.name',
                                  destination = 'iso2c')
 ethnic_frac <- select(ethnic_frac, iso2c, ethnic_alesina)
+ethnic_frac <- ethnic_frac[!duplicated(ethnic_frac[, 'iso2c']),]
+
+#### ------------------ World Values Survey ------------------------------- ####
+wvs <- import('Data/raw/wvs.csv')
+wvs <- wvs[!duplicated(wvs[, c('iso2c', 'year')]),]
+
+#### ------------------ Federal ----------- ------------------------------- ####
+federal <- import('Data/raw/federal.csv')
+federal <- federal[!duplicated(federal[, c('iso2c', 'year')]),]
+
+#### ------------------ Effective No. Parties------------------------------ ####
+enpv_enps <- import('Data/raw/enpv_epns.csv')
 
 #### ----------------- Merge together ------------------------------------- ####
 ## Merge dpi with disproportionality
@@ -179,7 +201,33 @@ comb <- merge(comb, immunity, by = c('iso2c'), all.x = T) %>%
 comb <- merge(comb, ethnic_frac, by = c('iso2c'), all.x = T) %>%
     arrange(iso2c, year)
 
+## Merge World Values survey and extend
+comb <- merge(comb, wvs, by = c('iso2c', 'year'), all.x = T) %>%
+            arrange(iso2c, year)
+comb <- comb %>% group_by(iso2c) %>% mutate(higher_trust = 
+                                        FillDown(Var = higher_trust))
+comb <- comb %>% group_by(iso2c) %>% mutate(cw_surv_self_expr = 
+                                        FillDown(Var = cw_surv_self_expr)) %>%
+            as.data.frame
+
+## Merge federal and extend
+comb <- merge(comb, federal, by = c('iso2c', 'year'), all.x = T) %>%
+            arrange(iso2c, year)
+comb <- comb %>% group_by(iso2c) %>% mutate(federal = 
+                                    FillDown(Var = federal)) %>% as.data.frame
+
+## Merge enps/enpv
+comb <- merge(comb, enpv_enps, by = c('iso2c', 'year'), all.x = T) %>%
+    arrange(iso2c, year)
+comb <- comb %>% group_by(iso2c) %>% mutate(enpv = FillDown(Var = enpv))
+comb <- comb %>% group_by(iso2c) %>% mutate(enps = FillDown(Var = enps)) %>% 
+            as.data.frame
+
 ## Final clean 
+comb <- DropNA(comb, 'iso2c')
+
+violence_sub <- comb %>% filter(!is.na(violence))
+
 # Convert NAs to missing
 for (i in c('violence', 'violence_y_cum')) comb[, i][is.na(comb[, i])] <- 0
 
