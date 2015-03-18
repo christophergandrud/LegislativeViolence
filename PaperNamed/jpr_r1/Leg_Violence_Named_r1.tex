@@ -5,7 +5,56 @@
 
 % !Rnw weave = knitr
 
-\documentclass[a4paper]{article}
+\documentclass[a4paper]{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
 \usepackage{fullpage}
 \usepackage{lscape}
 \usepackage[authoryear]{natbib}
@@ -38,7 +87,7 @@
 
 \author{Christopher Gandrud \\
                 {\emph{Hertie School of Governance}}\footnote{Post-doctoral Researcher. Friedrichstra{\ss}er 180. 10117 Berlin, Germany. Email: \href{mailto:gandrud@hertie-school.org}{gandrud@hertie-school.org}. Thank you to Gary Cox, Simon Hix, Shirin Rai, Carole Spary, as well as seminar participants at the Hertie School of Governance and Yonsei University for very helpful comments and insights. I would also like to thank Hortense Badarani for excellent research assistance and my students at the LSE for inspiration. Full replication files--including data and source code--can be found at \url{https://github.com/christophergandrud/LegislativeViolence}. An earlier version was circulated under the title ``Two Sword Lengths: Losers' consent and violence in national legislatures''.}}
-
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
 
 \maketitle
@@ -181,10 +230,11 @@ This brief tour of descriptive statistics adds to the evidence from the previous
     \label{framework_empirical}
     \begin{center}
 
-<<FrameworkEmpirical, warning=FALSE, echo=FALSE, message=FALSE, fig.width=7, fig.height=4, out.width='0.8\\linewidth'>>=
-    source("/git_repositories/LegislativeViolence/Analysis/framework_empirical_v3.R")
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=0.8\linewidth]{figure/FrameworkEmpirical-1} 
 
-@
+\end{knitrout}
     \end{center}
     \begin{singlespace}
         {\scriptsize{Each point represents a country-year. The data is from a sample of 200 countries from 1981 through 2009 due to data availability. The points are jittered horizontally.}}
@@ -193,14 +243,7 @@ This brief tour of descriptive statistics adds to the evidence from the previous
 \end{figure}
 
 %%%%%%%%%%%%%%%% Run Analyses %%%%%%%%%%%%%%%%%%%%%%%%
-<<models, include=FALSE>>=
-    ## Analyses
-    ## Run the main analyses used for predicting quantities of interest and
-    #  estimating regression coefficients.
-    # Run analysis
-    source("/git_repositories/LegislativeViolence/Analysis/leg_main_analyses_v4.R")
 
-@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Empirical Analysis
 \section{Parametric Analysis: Set up}
@@ -250,28 +293,55 @@ Individual observations are clearly correlated within countries and years, espec
 
 %%%%%%%% Elected Legislatures Results Table from 1990
 \begin{table}
-\caption{Legislative Violence Regression Results (Multi-Party Elected Legislature from 1990-2012)}
+\caption{Legislative Violence Regression Results (Multi-Party Elected Legislature from 1990-2009)}
 \label{outputTable.1990}
 \begin{center}
 \scalebox{0.9}{
-<<OutTable2, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
-    library(texreg)
 
-    CoefNames <- c("(Intercept)", "Low Disproportionality",
-                "Dem. Age", "Majority Size",
-                "Leg. Immunity", "PR Electoral System", "Single Party Gov.",
-                "Self Expression", "Ethnic Frac.", "Perc. Women in Parl.",
-                "Murder Rate", "Federal", "Gov. Frac.",
-                "No. of Parties by Seats", "GDP per Capita")
+\begin{tabular}{l c c c c c c c c }
+\hline
+                        & A1 & A2 & A3 & A4 & A5 & A6 & A7 & A8 \\
+\hline
+(Intercept)             & $-3.09^{***}$ & $-2.70^{***}$ & $-4.95$      & $-1.83^{***}$ & $-2.29^{***}$ & $-1.81^{***}$ & $-1.42^{*}$   & $-1.75^{***}$ \\
+                        & $(0.16)$      & $(0.65)$      & $(2.83)$     & $(0.52)$      & $(0.66)$      & $(0.48)$      & $(0.62)$      & $(0.50)$      \\
+Low Disproportionality  & $-0.45$       & $-0.77^{**}$  & $-0.55$      & $-0.65^{*}$   & $-0.72^{*}$   & $-0.68^{*}$   & $-0.64^{*}$   & $-0.55^{*}$   \\
+                        & $(0.25)$      & $(0.26)$      & $(0.29)$     & $(0.30)$      & $(0.36)$      & $(0.27)$      & $(0.27)$      & $(0.28)$      \\
+Dem. Age                & $-0.01^{*}$   & $-0.02^{**}$  & $-0.02^{**}$ & $-0.01^{*}$   & $-0.01^{*}$   & $-0.02^{**}$  & $-0.02^{***}$ & $-0.02^{*}$   \\
+                        & $(0.00)$      & $(0.01)$      & $(0.01)$     & $(0.01)$      & $(0.01)$      & $(0.01)$      & $(0.01)$      & $(0.01)$      \\
+Majority Size           &               & $-0.02^{**}$  & $-0.03^{**}$ & $-0.02^{**}$  & $-0.01$       & $-0.02^{**}$  & $-0.03^{**}$  & $-0.03^{**}$  \\
+                        &               & $(0.01)$      & $(0.01)$     & $(0.01)$      & $(0.01)$      & $(0.01)$      & $(0.01)$      & $(0.01)$      \\
+Leg. Immunity           &               & $-0.23$       &              &               &               &               &               &               \\
+                        &               & $(0.26)$      &              &               &               &               &               &               \\
+PR Electoral System     &               & $1.33^{**}$   &              &               &               &               &               &               \\
+                        &               & $(0.45)$      &              &               &               &               &               &               \\
+Single Party Gov.       &               & $-0.19$       &              &               &               &               &               &               \\
+                        &               & $(0.25)$      &              &               &               &               &               &               \\
+Self Expression         &               &               & $2.88$       &               &               &               &               &               \\
+                        &               &               & $(2.24)$     &               &               &               &               &               \\
+Ethnic Frac.            &               &               & $-0.59$      &               &               &               &               &               \\
+                        &               &               & $(0.69)$     &               &               &               &               &               \\
+Perc. Women in Parl.    &               &               &              & $-0.01$       &               &               &               &               \\
+                        &               &               &              & $(0.02)$      &               &               &               &               \\
+Murder Rate             &               &               &              &               & $0.00$        &               &               &               \\
+                        &               &               &              &               & $(0.01)$      &               &               &               \\
+Federal                 &               &               &              &               &               & $0.54$        & $0.62$        &               \\
+                        &               &               &              &               &               & $(0.33)$      & $(0.34)$      &               \\
+Gov. Frac.              &               &               &              &               &               & $0.02$        &               &               \\
+                        &               &               &              &               &               & $(0.45)$      &               &               \\
+No. of Parties by Seats &               &               &              &               &               &               & $-0.07$       &               \\
+                        &               &               &              &               &               &               & $(0.08)$      &               \\
+GDP per Capita          &               &               &              &               &               &               &               & $0.00$        \\
+                        &               &               &              &               &               &               &               & $(0.01)$      \\
+\hline
+AIC                     & 633.15        & 580.96        & 432.03       & 489.90        & 319.15        & 544.39        & 543.57        & 492.36        \\
+BIC                     & 649.87        & 619.07        & 461.10       & 516.95        & 344.17        & 576.44        & 575.63        & 518.92        \\
+Log Likelihood          & -313.58       & -283.48       & -210.02      & -239.95       & -154.57       & -266.20       & -265.78       & -241.18       \\
+Deviance                & 627.15        & 566.96        & 420.03       & 479.90        & 309.15        & 532.39        & 531.57        & 482.36        \\
+Num. obs.               & 1941          & 1711          & 939          & 1650          & 1154          & 1543          & 1547          & 1547          \\
+\hline
+\multicolumn{9}{l}{\scriptsize{$^{***}p<0.001$, $^{**}p<0.01$, $^*p<0.05$}}
+\end{tabular}
 
-    ModNamesB <- c("A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8")
-
-    texreg(list(DN1, DN2, DN3, DN4, DN5, DN6, DN7, DN8),
-        table = FALSE,
-        custom.coef.names = CoefNames,
-        custom.model.names = ModNamesB,
-        use.packages = FALSE)
-@
 }
 \end{center}
 {\scriptsize{
@@ -289,11 +359,12 @@ I avoid focusing on models that include highly correlated variables \citep[see][
 
     %\includegraphics[width = \textwidth]{leg_violence_paper-PredProb}
 
-<<predProb, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=7, fig.height=4, out.width='0.8\\linewidth', cache=TRUE>>=
-  ## Create Graphs ##
-  source("/git_repositories/LegislativeViolence/Analysis/expectedValueGraphs2.R")
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 
-@
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in file(filename, "{}r"{}, encoding = encoding): cannot open the connection}}\end{kframe}
+\end{knitrout}
     \end{center}
     \begin{singlespace}
       {\scriptsize{The graphs show the middle 95\% of 1000 simulations at each fitted value of the variables. The simulations use Model A2, Table \ref{outputTable.1990}. For each set of simulations all other variables were fitted at their means.}}
