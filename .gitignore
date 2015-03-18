@@ -10,6 +10,7 @@ PaperNotNamed/*
 Old/*
 JJPS/*
 GovandOpp/*
+cache/*
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
