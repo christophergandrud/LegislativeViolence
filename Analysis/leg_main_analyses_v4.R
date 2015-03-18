@@ -4,6 +4,9 @@
 # 18 March 2015
 ############
 
+# Set working directory. Change as needed.
+setwd('/git_repositories/LegislativeViolence/')
+
 # Load package
 if (!('rio' %in% installed.packages()[, 1]))
     devtools::install_github('leeper/rio')
@@ -11,7 +14,7 @@ library(rio)
 library(Zelig)
 
 # Load data
-dem <- import('/git_repositories/LegislativeViolence/Data/LegislativeViolenceMain.csv')
+dem <- import('Data/LegislativeViolenceMain.csv')
 dNew <- subset(dem, year > 1989)
 
 # tau's

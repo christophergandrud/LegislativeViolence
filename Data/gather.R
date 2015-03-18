@@ -40,11 +40,6 @@ wdi <- WDI(indicator = indicators_wdi, start = 1975, end = 2014, extra = T) %>%
 # GDP to thousands of dollars
 wdi$gdp_per_capita <- wdi$gdp_per_capita / 1000
 
-# Assume constant gini
-wdi <- wdi %>% arrange(iso2c, year) %>% group_by(iso2c) %>%
-        mutate(gini = FillDown(Var = gini)) %>%
-        as.data.frame
-
 wdi <- wdi[!duplicated(wdi[, c('iso2c', 'year')]),]
 
 #### --------------- Women in Parliament ---------------------------------- ####
@@ -111,7 +106,18 @@ polity <- polity %>% select(iso2c, year, polity2, dem_age, durable)
 polity <- polity[!duplicated(polity[, c('iso2c', 'year')]),]
 
 #### ---------------------- Database of Political Institutions ------------ ####
-dpi <- DpiGet() %>% select(iso2c, year, maj, system, govfrac, pr, liec)
+tmpfile <- tempfile()
+download.file('http://bit.ly/1jZ3nmM', tmpfile)
+DpiData <- read.dta(tmpfile)
+unlink(tmpfile)
+
+# Correct South Africa
+DpiData$countryname <- as.character(DpiData$countryname)
+DpiData$countryname[DpiData$countryname == "S. Africa"] <- 'South Africa'
+DpiData$iso2c <- countrycode(DpiData$countryname, origin = 'country.name', 
+                             destination = 'iso2c') 
+
+dpi <- DpiData %>% select(iso2c, year, maj, system, govfrac, pr, liec)
 
 for (i in names(dpi)) dpi[, i][dpi[, i] == -999] <- NA
 
@@ -171,12 +177,6 @@ enpv_enps <- import('Data/raw/enpv_epns.csv')
 comb <- merge(dpi, disprop, by = c('iso2c', 'year'), all = T) %>%
         arrange(iso2c, year)
 
-# Fill in disproportionality between election years
-comb <- comb %>% group_by(iso2c) %>% 
-            mutate(disproportionality = FillDown(Var = disproportionality))
-comb <- comb %>% mutate(high_prop = FillDown(Var = high_prop)) %>%
-            as.data.frame
-
 ## Merge in legislative violence variables
 comb <- merge(main_violence, comb, by = c('iso2c', 'year'), all = T) %>%
         arrange(iso2c, year)
@@ -222,6 +222,12 @@ comb <- merge(comb, enpv_enps, by = c('iso2c', 'year'), all.x = T) %>%
 comb <- comb %>% group_by(iso2c) %>% mutate(enpv = FillDown(Var = enpv))
 comb <- comb %>% group_by(iso2c) %>% mutate(enps = FillDown(Var = enps)) %>% 
             as.data.frame
+
+# Fill in disproportionality between election years
+comb <- comb %>% group_by(iso2c) %>% 
+    mutate(disproportionality = FillDown(Var = disproportionality))
+comb <- comb %>% mutate(high_prop = FillDown(Var = high_prop)) %>%
+    as.data.frame
 
 ## Final clean 
 comb <- DropNA(comb, 'iso2c')

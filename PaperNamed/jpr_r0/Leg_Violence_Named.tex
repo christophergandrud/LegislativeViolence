@@ -1,0 +1,411 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Two Sword Lengths Apart
+% 10 December 2014
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% !Rnw weave = knitr
+
+\documentclass[a4paper]{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\usepackage{fullpage}
+\usepackage{lscape}
+\usepackage[authoryear]{natbib}
+\usepackage{setspace}
+    \doublespacing
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=cyan,
+    urlcolor=cyan
+}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{url}
+\usepackage{tikz}
+\usepackage{todonotes}
+\usepackage{verbatim}
+\usepackage{endnotes}
+\usepackage{graphicx}
+
+\setlength{\belowcaptionskip}{0.5cm}
+
+%%%%%%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Two Sword Lengths Apart: Credible Commitment Problems and Physical Violence in Multi-party Elected National Legislatures}
+
+\author{Christopher Gandrud \\
+                {\emph{Hertie School of Governance}}\footnote{Post-doctoral Researcher. Friedrichstra{\ss}er 180. 10117 Berlin, Germany. Email: \href{mailto:gandrud@hertie-school.org}{gandrud@hertie-school.org}. Thank you to Gary Cox, Simon Hix, Shirin Rai, Carole Spary, as well as seminar participants at the Hertie School of Governance and Yonsei University for very helpful comments and insights. I would also like to thank Hortense Badarani for excellent research assistance and my students at the LSE for inspiration. Full replication files--including data and source code--can be found at \url{https://github.com/christophergandrud/LegislativeViolence}. An earlier version was circulated under the title ``Two Sword Lengths: Losers' consent and violence in national legislatures''.}}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\maketitle
+
+%%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+Multi-party elected national legislatures should be venues for peacefully resolving conflicts between opposing groups. However, they can become scenes of physical violence. Such violence is an indication that a country's legislative institutions are functioning far from perfectly as legislative actors are deciding to disregard the rules of the game. In some cases, such as recently in Ukraine, violence can indicate and possibly fuel deeper political divisions. In this first global study of legislative violence, I show that brawls are more likely when legislators find it difficult to credibly commit to follow peaceful bargains. Credible commitment problems are more acute in countries with disproportionate electoral outcomes and in new democracies. I find robust evidence for this argument using a case study of legislative violence in the antebellum United States Senate and a new global data set.
+\end{abstract}
+
+
+\paragraph{Keywords:} legislatures, violence, credible commitment problems, electoral proportionality, institutional design, majority and minority governments
+
+\vspace{0.3cm}
+
+%%%%%%% Introduction %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Though legislators in democracies are often described as `battling' or `fighting' we expect these battles to be in terms of rhetoric and procedural manoeuvres, circumscribed by non-violent rules, that culminate in votes. The outcomes of these contests are then respected by all legislators. However, metaphorical battles sometimes become physical fights between members of legislatures.
+
+Many legislatures' histories contain incidents of physical violence between legislators. In 1856 a member of the United States House of Representatives caned a senator unconscious in the Senate chamber \citep{USSenateCanning}. It has been suggested that the United Kingdom's House of Commons is physically designed to prevent violence between members. The Government and Opposition benches are said to be ``two sword lengths apart" \citep{ParliamentUKSword} so that duels will be fought with words rather than swords. Actual, sword fights do not seem to have taken place in the Commons chamber, but violent incidences did occur in the 1800s \citep[see][]{ByrneViolence}. Violence in legislatures continues to occur. Recent instances of violence between legislators include brawls in South Korea in 2009\footnote{See \url{http://dailym.ai/1rHLruX}. Accessed October 2014} and in Ukraine during the years leading up to the civil war.\footnote{For example see \url{http://online.wsj.com/articles/SB10001424052748704471204575209572380473814}. Accessed October 2014} In 2013 a large confrontation happened in the Venezuelan National Assembly when the Assembly President withheld speaking time from legislators who did not recognize president's victory in a very highly contested election.\footnote{See \url{http://edition.cnn.com/2013/04/30/world/americas/venezuela-lawmakers-violence/index.html}. Accessed October 2014.}
+
+Physical violence is a dramatic break from scholars' assumption that compliance with legislative rules of the game is a given and as such symbolizes poorly functioning legislative institutions. Some work has examined the strategic and expressive choices politicians make when they decide not to participate in the democratic rules of the game \citep{wilkinson2006,Beaulieu2008,BeaulieuForthcoming}. In this paper I extend this work by advancing a theory of legislative violence in multi-party elected national legislatures and test it using both case study and global-level data. Indeed, this paper includes the first cross-country description of violence between legislators. It also provides us with an important window for understanding what makes legislatures work (or not) as institutions for peacefully resolving disputes between opposing parties.\footnote{Note that the underlying process I discuss that creates conditions for violence likely also creates environments where legislators use other types of less violent--and less easily observable on a global scale--forms of legislative rule breaking.}
+
+I begin the paper by advancing an argument for understanding when legislative violence between members of multi-party elected legislatures is more likely. Though legislators' personalities surely play some part in any given violent incident, I argue that the probability of violence is strongly influenced by the wider political environment. In particular, violence is much more likely when there are \emph{credible commitment problems} that incentivize legislators to break peaceful bargains. At least two observable institutional factors are important for affecting the likelihood that commitments will be adhered to: the \emph{proportionality of a country's electoral outcomes} and the \emph{age of its democracy}. After proposing this argument and discussing a number of key alternative explanations, I begin to empirically examine it with a case study of violence in the antebellum United States Senate. I then move to a global level study of contemporary legislative violence by describing a new data set of legislative violence. In this section I also demonstrate simple associations between my argument's key variables and violence on a global scale. I then discuss the variables and parametric regression models I use to further study these events. Finally, I lay out the evidence from these models that legislative violence is more prevalent in countries with disproportionate electoral outcomes and in new democracies. I also find that violence is more likely in legislatures with small minority governments. I conclude the paper with a discussion of the possible implications of these findings for democratic institution designers and directions for future research.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Previous Research & Framework
+
+\section{Understanding Legislative Violence}
+
+Legislative violence, like other forms of violent disruption \citep[see][]{Beaulieu2008,BeaulieuForthcoming,wilkinson2006}, could be used for strategic purposes by both legislative winners and losers. Legislative losers--those who are not in control of the ``legislative cartel''  that sets the agenda \citep{cox2007} and are not part of the deciding majority--may use violence to stall legislation or rule changes they dislike. Winners--those in the legislative cartel--could use violence to prevent losers from utilizing procedures that might constrain their decision-making power. Both winners and losers may use violence to shore up support among their proponents, as a way of expressing dissatisfaction with legislative outcomes, and to publicize issues they and their supporters care about. Winners may not only use active violence, but also might make a strategic choice not to use their powers, e.g. control of security forces, to prevent or curtail losers' violence with the hope that losers will be publicly discredited.
+
+Just because actors can gain a strategic advantage or express their discontent through violence does not mean they will choose to. Though violence may have strategic benefits, it also entails costs. Violent conflict has physical costs. In a number of incidents legislators have been hospitalized or even, as in the case of Charles Sumner discussed below, almost died. Beyond the physical costs of legislative violence, there may be other costs such as legal penalties and reputational costs.
+
+However, there are situations where legislators perceive the benefits of violence to be greater than the costs. Violence in multi-party elected legislatures is often precipitated by situations where legislators find it difficult to credibly commit to follow peaceful bargaining outcomes. In these situations the perceived benefits of violence can outweigh the costs. \cite{Fearon1995} argued that when actors are not able to make credible commitments the benefits from violent conflict can outweigh the costs making violence more likely \cite[see also][]{Powell2006}. If it is difficult to believe that a peaceful bargaining outcome will actually happen because bargained commitments will likely be broken, actors will choose violence to achieve their goals. This logic is applicable to legislatures. In multi-party elected legislatures winners and losers--who may some day become winners--need to be able to credibly commit to not use or remake legislative procedures in their narrow self-interest. They need to commit to limits on their power \citep{riker1982,Gaubatz1996}, especially legislative rules and procedures that are the result of peaceful bargaining processes. If they are not able to credibly make these commitments then legislators may come to believe that disruption and violence is the best way to achieve their goals, despite its costs. What makes legislative credible commitment problems more or less severe?
+
+Credible commitment problems are generally smaller and therefore violence is less likely when \emph{ seats in the legislature and legislative resources, such as speaking time and committee appointments, proportionally correspond to voters' support}. For simplicity I will refer to such legislatures as `fair'. I argue that a lack of correspondence between legislative power and voter support increases legislative credible commitment problems in at least two ways: it (a) creates possibilities for shifts in power from those who benefit from the status quo to beneficiaries of fairer rules and (b) prevents fairness equilibria.
+
+Unfair legislatures have the possibility for large and rapid shifts in legislative power from those who benefit from the status quo rules to those that would benefit from new rules. For example, if an electoral system that creates disproportionate outcomes becomes more proportional, then the winning parties may be likely to change over the course of one election. The new winners could then further alter legislative procedures to benefit themselves through control of the legislative cartel. \cite{Powell2004,Powell2006} identified major commitment problems in bargains over issues affecting future bargaining power when there could be large and rapid power shifts. We can apply his logic to legislatures. Temporarily weak legislators--those with disproportionately fewer seats and access to legislative resources under the status quo--who are not in the legislative cartel need to `buy off' those that are temporarily strong--the beneficiaries of the status quo in the cartel--in order to avoid the strong changing the rules to further benefit themselves. `Buying off' in this context may simply mean agreeing to continue rules that make the legislature unfair at the status quo level. However, because the presently weak have the potential to be much stronger, they are likely to renege on agreements that disproportionately benefit the temporarily strong. They may also have an incentive to use disruption or violence to prevent further rule changes that limit their power or indeed force the rules to become fairer to actively increase their power. Importantly, in the absence of credible commitments from the temporarily weak, the \emph{temporarily strong may use preemptive violence to prevent the rules from becoming fairer}.
+
+Why do very fair legislatures not create equally large credible commitment problems? Presumably legislators that would benefit from a large increases in unfairness would find it difficult to credibly commit. In other words, why would a fair legislature create an equilibrium? Rabin's \citeyearpar{Rabin1993} work studying bargaining consequences when actors care about fairness in addition to material well-being provides an answer. Because actors care about fairness, they are more likely to maintain commitments (punish defectors), even if it hurts their material well-being, when others are being fair (unfair). One form of punishment could be reputational damage inflicted in fair systems by both supporters and opponents of violent legislators who care about fairness. This reduces legislators' incentives to defect from fair rules and bargains even if they could gain legislative power by increasing unfairness. As such credible commitment problems are lower and actors can reach a ``fairness equilibrium''. Experimental research supports the idea that commitments are more credible if they are fairer \citep{Ellingsen2004} and can even act as an enforcement device for incomplete contracts \citep[see][for a review]{Fehr2008}.
+
+\subsection{Observing Situations Where Credible Commitment Problems are Worse}
+
+To empirically test my theory I focus on two clearly observable institutional factors that structure bargaining by influencing legislators' credible commitment problems: proportionality of electoral outcomes and age of democracy. Please note that these are likely not the only factors that shape credible commitments, but they are definitively observable in a cross-country study.
+
+\paragraph{Proportional Electoral Outcomes}
+
+Possibly the most important and clearly observable component of legislature fairness is the proportionality of the election that allocated its seats and therefore the control of its procedures. Disproportional, i.e. unfair, electoral outcomes create credible commitment problems as they create the potential for shifts in power from beneficiaries of unfair to fair rules. More proportional systems conversely enable fairness equilibria. At what observable levels of disproportionately would we expect to see more violence? At most levels of disproportionately there may be credible commitment problems to some degree, because there will be legislators who benefit from an increase in proportionality. It is only when outcomes are close to perfectly proportional that the gains from increasing proportionality are very small or virtually none existent. At the same time in systems with very proportional electoral outcomes it is easy for all to identify the electoral outcomes as fair, thus enabling fairness equilibria.\footnote{When there is ambiguity over how fair the system is actors may not impose very high costs, such as reputational damage, for breaking the rules.} Because of this we should not expect a linear relationship between disproportionately and violence. There should instead be a threshold effect where very proportional electoral outcomes will have very low levels of violence due to very small or non-existent credible commitment problems.
+
+Recent empirical research on the functional form of the relationship between political trust and disproportionality provides some initial evidence for the claim that there could be a threshold effect between disproportionality and legislative violence. \cite{Marien2011} found that there was a curvilinear relationship between proportional electoral outcomes and citizens' political trust. Feelings of political trust were highest with very proportional outcomes as well as disproportional or majoritarian systems. Countries in the middle had the lowest trust. Marien argues that high trust in very proportional systems is caused by high fairness. The fairness effect seems to quickly disappear as we move in the direction of more disproportionate outcomes. Marien argues that high voter trust in very disproportionate countries is caused not by fairness, but by high accountability. So should we expect a similar curvilinear relationship between proportionality and legislative violence? Probably not. Though accountability may please voters in general, there is little reason to believe that this will ameliorate the credible commitment problems among legislators created by unfairness.
+
+For these reasons \emph{we should expect countries with very proportional outcomes to have lower incidences of violence. All other countries should be more likely to have more violence.}
+
+It's important to note that though the exact type of electoral system is ultimately interesting to us from an institutional design point of view, we should not confuse ``the outcome of an electoral system with its mechanics'' \citep[][109]{Golder2005}. When studying legislative fairness and credible commitment problems we are more interested in how proportional electoral outcomes are, rather than the exact type of electoral system that produced these outcomes.
+
+\paragraph{New vs. Old Democracies}
+
+Legislators in older democracies are more likely to view their parliament as fair and are more likely to be able to make credible commitments. There are a number of reasons for this. In new democracies, as with political regime change in general, the rules of the game are in flux and have not been fully institutionalized. This can give present winners considerable power to set the rules to their advantage. The first actors to gain power after a transition--whose decision-making power may be disproportionately large compared to their electoral support--may be better able to establish unfair rules, entrenching their power \cite[108]{Saideman2002}. This could lead to credible commitment problems between the temporarily strong that are making the rules during the democratic transition and the temporarily weak who could gain more if the rules were fairer.
+
+Also, in the relatively early days of a democracy the legislative party system may be shifting considerably \cite[see][161 for a review]{Mainwaring2007b}, possibly as politicians work out electoral coordination problems \citep{cox1997}. New democracies may also have rapidly changing economies and demographics that further change the party system and the proportionality of legislative rules. Even if rules were fair when they were created, they may quickly become less so as the country changes. On average, these shifts could be much larger in new as opposed to old democracies. As we will see in the antebellum US case below, large rapid demographic and party system shifts dramatically altered the fairness of the distribution of power in the US Senate between pro and anti-slavery senators around the 1840s and 1850s. Because of the instability of new party systems, there is a greater likelihood that legislatures could become unfair leading to credible commitment problems and violence.
+
+The alternation of power that generally occurs as democratic regimes survive longer gives legislators more information about the credibility of others' commitments. In new democracies actors simply may not have gathered enough information to know if they can someday become winners. Losers in new democracies may not have learned that ``pretenders to office can expect to reach it, losers can expect to come back'' \citep[][36]{Przeworski1991}. Actual alternations of power allow legislators to gather better information about the credibility of commitments to allow fair alternations of power. Increased information about others' abilities to make credible commitments could strengthen the credibility of future commitments, thus reducing violence.
+
+There may also be a survivor bias created as democracies age. If legislatures are unable to overcome credible commitment problems in some way, legislative institutions will not peacefully organize bargaining. This could lead to discontent and social unrest both inside and outside of the legislature, possibly resulting in democratic collapse. New democracies unable to overcome credible commitment problems simply may not survive long enough to become old.
+
+For these reasons we should expect to see that \emph{violence is more common in new democracies' legislatures.}
+
+\section{Alternative Explanations}
+
+What other factors may contribute to or be alternative explanations of legislative violence?
+
+\paragraph{The Size of the Governing Majority}
+
+The use of legislative procedures may be viewed as more legitimate and therefore worth following simply if there are larger proportions of the parliament supporting them, i.e. if the governing majority is larger. However, the relationship between the size of the governing majority and violence is not clear cut \emph{ex ante}.
+
+On the one hand is the proposition that, though far from the only way of thinking about democratic legitimacy \cite[see][for a discussion]{Follesdal2006}, majority rule is a foundational concept of democracy \citep{Dahl1989} and an important component of democratic legitimacy. An extensive literature led by Arend Lijphart makes the argument that perceptions of democratic legitimacy are larger as the proportion of actors involved in decision-making increases \citep[see][]{Lijphart2007}. The more legislators that are involved in parliamentary decision-making, the more likely it is that legislators will view procedures as legitimate and worth following.
+
+On the other hand another causal mechanism may be at work if there is a relative lack of violence in legislatures with very large majorities. Perhaps these majorities are simply so powerful that they can quickly quash legislative disruption before it starts or even prevent serious opposition politicians becoming legislators. These sorts of actions may be less likely in the types of legislatures that are the focus of this paper--multi-party elected legislatures--, though they are certainly not impossible.
+
+We also have good reasons to suspect that very large legislative majorities may actually increase the incidence of violence in democratic legislatures. If a parliament has a large hegemonic party, minority politicians may feel marginalized. They may have no way to influence policymaking other than with extreme acts of legislative disruption, like violence.
+
+What about at the other end of the spectrum? Minority governments are often constrained in their ability to pass legislation by themselves. They need to assemble a coalition of opposition politicians in order to pass legislation. Though the official legislative cartel has a minority of the seats, legislation may still require a majority to pass. As such non-government party legislators can influence policy \citep{strom1990minority}. However, this does not necessarily mean that we should expect no difference in the fairness of minority and majority governments and their credible commitment problems. Though minority governments may be constrained in their ability to pass legislation without the support of other parties, they can still wield considerable agenda setting power, such as by restricting plenary speaking time \citep{Tsebelis2002,cox2005,cox2007}. Other legislators may be very inclined to view a minority government's agenda control as unfair and see opportunities to increase their power by changing the rules. As such future credible commitments would be more difficult to make and violence would be more likely.
+
+\paragraph{Legislative Immunity}
+
+Like in society generally, having laws that outlaw violence and sanction violators of these laws may dissuade physical attacks. In many countries legislators are immune from prosecution or at least arrest in the legislative chamber. Such immunity is often granted in order to prevent the legislature from being harassed and obstructed by the executive or judicial branches of government  \citep{Seghetti1984}. However, legislators immune from legal consequences may be more likely to physically harass and obstruct one another. Legislators who do not have this immunity might be less likely to attack their colleagues.
+
+It's important to note that if legislative violence is created by credible commitment problems, where legislators are not able to commit to peaceful bargains and rules, then they may not necessarily be prevented from using violence due to a lack of immunity. At the best a lack of immunity would make violence more costly thus marginally decreasing credible commitment problems, but not eliminate them. Furthermore, since the ``application of punishment is inherently political'', formal rules may not have any deterrent effect if legislators do not believe they will be applied to them for political reasons \cite[58]{Wolfe2004}.
+
+\paragraph{The Broader Society}
+
+Perhaps broader societal-level factors create contexts where legislative violence is more likely. Some have argued for instance that certain regional cultures are less likely to respect democratic institutions. If this is true, then these cultures might be more likely to have legislative violence. The many popular hypotheses about East Asian `Confucian' cultures \citep[see][]{Inglehart2005, Inglehart2010} and democratic instability are especially relevant for us given the high number of brawls in East Asia, notably in Japan, South Korea, and Taiwan (Figure \ref{leg_map}). One view is that Asian societies have hierarchical and deferential cultures that are incompatible with democracy because authority is valued over self-expression \citep[see][212-213 for a discussion]{Dalton2005}. It is unclear how this hypothesis would explain the high frequency of legislative violence in Asian democracies. It would seem to actually suggest less violence. Recent empirical evidence has found that Asian societies are in fact not strongly deferential to authority, especially when compared to Western ones \citep{Dalton2005, KimAsianValues2010}. Mostly using Inglehart and Welzel's World Values Survey data, \cite{KimAsianValues2010} actually finds that East Asian societies have lower respect for authority than non-Asians and South-east Asians. Assuming that societal values are generally congruent with legislators' values, perhaps legislators in East Asian countries are more violent because their members do not respect legislative authorities. Legislative violence in this cultural region would thus simply be the result of the same cause as violence in other low-respect for authority societies.
+
+Along with culture, various economic and sociological phenomenon may interact to make certain societies more violent than others. For example, an honor culture in the Southern United States is heavily intertwined with economic, racial, and gender issues \citep[see][]{nisbett1996culture}. This has led to persistently high rates of violence in the South. Perhaps legislators from more violent societies are themselves more likely to use violence in the legislative chamber. Places with higher societal-level violence may have more violent legislators. There are preliminary reasons to be skeptical, however. East Asian countries with many instances of legislative violence tend to have very low levels of societal violence.\footnote{For example, South Korea had a murder rate of 2.6 per 100,000 people in 2010 and Japan's was 0.4 in 2009 \cite{UNMurder2013}.}
+
+An important issue to consider with societal-level explanations of legislative violence is how closely societal-level factors are generalizable to legislators. Legislators are often from relatively privileged segments of society and distinct sub-cultures \citep[408]{Spary2013}. Further work, beyond the scope of this paper, is needed to gather a global data set on legislators' cultures and backgrounds to study how they may contribute to legislative violence. Though there may still be challenges untangling the causal story. For example, legislative institutions that create credible commitment problems may exacerbate legislators' conflictual attitudes.
+
+\section{Case Study: The Caning of Senator Sumner}
+
+The breakdown of the ability to make credible commitments in unfair and new democratic legislatures is a key component behind the caning of United States Senator Charles Sumner in 1856. The development of the Senate prior to the Civil War, and especially in the 1850s, was preoccupied with the apportionment of pro and anti-slavery senators and how this apportionment was becoming increasingly unfair. Two senators were elected by each state's legislature. From the end of the Revolutionary War there had been more slave states than free states, thus more slave state senators and a pro-slave Senate veto \cite[see][151]{Weingast1998}. However, compromises that were made to have at least as many slave states as free states and as many pro as anti-slavery senators became increasingly unfair. As the 1800s progressed these compromises were undermined by three shocks that were largely exogenous from the national legislature.
+
+These shocks created considerable opportunities for politicians from free states to increase their power by increasing fairness. The shocks were (a) factor endowments in potential new Western states, (b) population growth in free states, and (c) the expansion of the franchise to non-property owning white males.  The westward expansion of the United States from the 1850s posed a problem for maintaining commitments to have at least as many senators from slave as free states: there were more potential free states than slave states. This was largely the result of the fact that areas west of eastern Texas\footnote{Admitted as a slave state in 1845.} lacked land conducive to supporting plantations and the institutions of slavery \cite[see][]{Ramsdell1929,Weingast1998}. In 1800 the North and South had roughly equal populations. However, rapid population increases from the mid-1840s, partially from immigration and industrial expansion, in free states greatly increased the disproportionality of the Senate as each free states' number of senators remained the same despite their increased population \cite[see][184]{Weingast1998}. Many of these new people were newly eligible to vote. Between the late 1700s and the 1850s all of the states removed almost all of their property ownership voting requirements.
+
+Anti-slavery supporters became very vocal about the increasing unfairness of the distribution of power in the Senate between pro and anti-slavery supporters. They regularly used the terms ``slave power'' and ``slavocracy'' to refer to pro-slavery advocates' disproportionate power \citep{richards2000}, especially electoral power in the Senate. For example, a friend of Congressman Horace Mann wrote to him in 1850 that ``I have been astonished for many years to see how the Slave power (not one fiftieth part of the voters) manage to control the whole United States'' \citep[quoted in][6]{Gara1969}. Gara argues that beyond concerns of the morality of slavery, ``the main thrust of [abolitionists'] attack was against slave power'' \citeyearpar[6]{Gara1969}. This concern was partially electorally motivated. Large portions of the electorate, such as white labor--who were afraid of competing lower cost slave labor--were also concerned with slave power, though not necessarily the immorality of slavery.
+
+The increasing unfairness of slave power in the Senate made it difficult for anti-slavery proponents to credibly commit to rules of the chamber that entrenched `slave power'. If they succeeded in changing the rules so that the chamber was fairer their power would increase dramatically. Also, because the arrangement was viewed as very unfair by anti-slavery politicians and a wide group of their supporters, they had lower reputational costs if they used legislative disruption. As we will see they had electoral incentives to push the boundaries of accepted legislative rules. In sum, they had far more to gain from breaking and changing the rules than following them.
+
+\cite{Pierson1995} argues that Republican and anti-slavery proponent Charles Sumner was doing just this when he gave his May 1856 ``The Crime Against Kansas'' speech in the Senate. The speech broadly concerned the need to admit Kansas as a free state. Admitting Kansas as a free state would have resulted in a Senate that was majority free state for the first time.\footnote{California was admitted as a free state in 1850, but committed to sending one pro and one anti-slavery senator to Congress.} The speech included a number of personal attacks on pro-slavery senators, multiple allusions to slavery as rape, and denunciations of `slave power'. This speech only barely stayed within the Senate's rules of polite discourse, especially its prohibitions of discussions of sex (a number of Democratic senators argued that it actually had broken these rules). Pierson contends that, rather than being purely emotional and personal, the speech was the culmination of an electorally motivated strategy to push the boundaries of the Senate's rules. Early in his first Senate term beginning in 1851 Sumner spoke ``within the rhetorical restraints imposed by his minority position in the Senate as well as the minority status of his own [Free Soil then Republican] party'' \cite[534]{Pierson1995}. In the early to mid 1850s party alignments shifted considerably, especially following the collapse of the Whig party in 1852.\footnote{The Whigs had been divided on the issue of slavery} The new Republican and anti-Catholic Know Nothing parties were left to compete for the allegiance of Northern voters who were both anti-Catholic and anti-slave power. Sumner attempted to appeal to these voters, not by attacking the Know Nothings as bigoted, as some other Republicans had tried unsuccessfully to do, but by rhetorically emphasizing the problem of unfair slave power. He increased his rhetoric, pushing the bounds of Senate rules to gain more publicity for the Republican's anti-slave power position.
+
+Representative Preston Brooks, the nephew of the senator Sumner had insulted in the speech, caned Charles Sumner. Why? The Senate's unfairness not only made it difficult for minority anti-slavery senators to commit to the rules, it also made it difficult for the majority pro-slavery Democrats as well. They clearly did not view Republican's commitments to the unfair status quo rules as credible. They had a lot to lose from changes that would increase Senate proportionality, as this likely meant an end to slavery. As such, pro-slavery advocates were ``deeply concerned about the security of their `property and their institutions' within the Union'' \cite[281]{Mittal2013}.
+
+Rather than being a personal attack, Pierson argues that Preston Brooks' caning was ``approved by most of the Democratic party both in anticipation of and following the attack'' \cite[553]{Pierson1995}. The Democratic party's denunciation of Sumner's speech on moral grounds (especially the allusions to rape) and Brooks' subsequent attack on Sumner \emph{three days after the speech} were ``designed to halt an escalation of anti-slavery rhetoric'' in the press \cite[553]{Pierson1995}. Rather than suffering reputational damage, Sumner and Brooks gained popularity among their supporters. For example, apparently ``ladies of the South would send [Brooks] hickory sticks, with which to chastise Abolitionists'' \cite[255]{Donald2009}.
+
+Senator Sumner's rule stretching speech and his subsequent caning happened because of an inability of the two sides to commit to follow established Senate rules and peacefully bargain on new ones. Because of increasing unfairness caused by exogenous shocks both sides had more to gain from disruption and violence.
+
+It's unclear if, at all, the size of the legislative majority, legislative immunity, or culture played a role in this incident. The pro-slavery Democrats controlled 63 percent of the Senate. This is certainly not a minority, which theoretically is most strongly indicative of a tendency for violence. Brooks was arrested for beating Sumner indicating that a formal lack of immunity from arrest did not stop him from using violence.\footnote{Though arrested, Brook's ultimate punishment was a \$300 fine \cite[59]{Wolfe2004}.} It is difficult to tell how much cultural values may have played a role in the caning. Certainly it appears that the senators involved on both sides had a low respect for authority. However, this appears to be more the result of increasing unfairness and credible commitment problems than an independent cause of violence.
+
+%%%%%%%% Map of Incidences
+\begin{figure}[h!]
+    \centering
+    \caption{Incidences of Physical Fights Between Legislators in National Legislative Chambers (1981- Winter 2011)}
+    \label{leg_map}
+    	%% Created with Analysis/leg_violence_map.R
+        \includegraphics[width = 13cm]{incidence_map.png}
+\end{figure}
+
+%%%%%%%%%%%%%% Describing violence in National Legislatures
+\section{Describing Violence in National Legislative Chambers Around the World (1981-2011)}
+
+In order to further systematically explore the causes of legislative violence across the contemporary globe I primarily used the Google News Archive \citep{GoogleNews2011}, which has a global coverage of news sources, to create a data set of {\emph{physical fights between legislators in national legislative chambers}}.\endnote{The Google News Archive search was conducted in Spring 2011. A research assistant and I searched using terms that included `national' `parliament', `legislature', `assembly', `brawls', `scuffles', `fights'.} This search was supplemented by information from colleagues resulting in a data set of 91 incidents of legislative violence in 32 countries between 1981 and Winter 2011. We can see in Figure \ref{leg_map} that these events have occurred in many regions around the world. They do not appear to be confined to any one cultural group or region as a simple regional culture explanation would predict. Violence is nonetheless not evenly distributed across countries as we might expect if it was purely the result of legislators with violent personalities. Although I observed 32 countries having legislative violence, about 60 percent of these fights occurred in eight countries with four or more legislative brawls. These countries include Ukraine, Mexico, South Korea, and Taiwan.
+
+Before moving on to the regression analysis it is useful to first examine the simple associations between proportional electoral outcomes, democratic age, and violence in this data. Figure \ref{framework_empirical} plots variables measuring these concepts in the entire sample of countries. In the following parametric analysis we will only look at multi-party elected legislatures. Each point represents a country-year. It's notable that virtually every observed incidence of violence took place in legislatures with more disproportionate seat distributions. Similarly, older democracies (approximately 55 years or older) were never observed having legislative brawls in the chamber. See below for details about how disproportionality and democratic age are measured.
+
+While it appears that having disproportionate electoral outcomes \emph{or} a new democracy is not necessary for legislative violence, based on the data, having \emph{both} of them might make violence much more likely. South Korea's national assembly, like the antebellum US Senate, is an example of a `perfect storm'. It is both in a new democracy and has relatively disproportionate electoral outcomes.\footnote{South Korea’s average disproportionality as measured by the Gallagher Index \citep{Gallagher1991} from 2000 until 2011 was 12.7. This places it in the upper 25 percent of observations with elected legislatures. It also became a democracy within the past 20 years.} South Korea had eight observed incidence of legislative violence in the full sample. Countries that have \emph{either} proportional outcomes \emph{or} old democracies appear to be able to compensate fairly well for an absence of the other characteristic. The United Kingdom has a relatively disproportionate electoral system,\footnote{It had an average Gallagher disproportionality of 16.5 from 2000 to 2011.} but no violence in the sample. One reason for this might be that it has a very old democracy where the major parties have had experience in government and so view commitments to allow for the alteration of power to be credible. Conversely, only one incident of violence\footnote{Two members of parliament punched each other in 1998.} was observed in South Africa's new democracy. South Africa's democracy is about the same age as South Korea's and the country has a very violent recent past and present,\footnote{Its rate of murders per 100,000 people is regularly among the highest in the \cite{UNMurder2013} data set.} but it has very proportionate electoral outcomes.\footnote{South Africa’s average disproportionality was 0.29 from 2000 until 2011, one of the lowest observed in the sample.} South Africa's one scuffle in 1998 is quite an outlier as it is the only violent incident observed in very proportional legislatures in the sample.
+
+This brief tour of descriptive statistics adds to the evidence from the previous case study suggesting that violence between legislators does not occur randomly or is confined to one cultural region. Instead violence does appear to be a characteristic of countries with disproportionate electoral outcomes and new democracies.
+
+%%%%%%%%%%%%%%%% Scatterplot of Disproportionality, AgeDem, and Violence %%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t]
+    \caption{Scatter plots of Disproportionality, Age of Democracy, and Violence in the Full Sample.}
+    \label{framework_empirical}
+    \begin{center}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=0.8\linewidth]{figure/FrameworkEmpirical-1} 
+
+\end{knitrout}
+    \end{center}
+    \begin{singlespace}
+        {\scriptsize{Each point represents a country-year. The data is from a sample of 200 countries from 1981 through 2009 due to data availability. The points are jittered horizontally.}}
+    \end{singlespace}
+
+\end{figure}
+
+%%%%%%%%%%%%%%%% Run Analyses %%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Empirical Analysis
+\section{Parametric Analysis: Set up}
+
+To more closely and robustly investigate these findings I use incidences of legislative brawls in multi-party elected legislative chambers per country-year\footnote{Country-years with more than one act of violence are given multiple records. See below for how standard errors were adjusted to address statistical issues related to this.} as the dependent variable in a series of regression models \citep{KingRareEvents2001, KingRareEventsPA2001}. All country-years for which data is available over the observation period, regardless of legislative violence, are included in the sample. Data on whether or not a legislature had multiple elected parties is from the Database of Political Institutions (DPI) \citep[updated to 2010]{DPI2001} {\emph{Legislative Indices of Electoral Competitiveness}} variable. Due to a lack of data on some of the co-variates discussed below, I also constricted the sample to years before 2010. This reduced the number of incidence from 99 to 77. Full replication data and code used for all of the analyses can be found in this paper's source code files.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Empirical Model
+\subsection{Parametric Models}
+
+Legislative brawls are rare. Most of the time the overwhelming majority of legislatures do not have physical fights. The rarity of legislative brawls creates some empirical problems. Standard logistic regression techniques can ``sharply underestimate the probability of rare events" \cite[137]{KingRareEventsPA2001}. Estimated regression coefficients from logistic regression analysis with many fewer observed events than non-events will be too small. Furthermore, standard methods for computing event probabilities with logistic regression produce results biased in the same direction as the coefficient estimates. To overcome this problem \cite{KingRareEvents2001,KingRareEventsPA2001} propose a bias-corrected logistic model for rare events data--rare events logistic regression. I use this method below.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Independent variables
+\subsection{Right-hand Variables}
+
+I included a number of political and societal variables in the regression models to test if the associations we saw earlier are actually spurious. Variable descriptions and sources are summarized in a table that can be found in the Supplementary Material. In the interest of transparency, the table includes all of the variables that I have included in all versions of the models, even those not shown because they did not generate substantively or statistically meaningful results. A matrix illustrating the variables' correlations can also be found in the Supplementary Material. This figure includes the variables' observed minimum and maximum values for reference.
+
+I measure the {\emph{age of a democratic regime}} as the number of years a country's Polity IV score \citep{Marshall2009} is greater than five, the point above which that data set's creators classify a country as democratic. I use two variables to examine the relationship between the proportionality of electoral outcomes and violence. One is purely institutional: a simple dummy of whether or not a country's legislature is elected by some form of {\emph{proportional electoral system}}. The variable is from the DPI database. As noted earlier, simply looking at the electoral mechanics confuses mechanisms with outcomes. So, more importantly, I use the standard Least Squares or Gallagher Index \citep{Gallagher1991} to measure realized {\emph{electoral disproportionality}}. The available data is in terms of overall national disproportionality. To gain maximum coverage, I compiled the data from both \cite{Gallagher2012} and \cite{Carey2011}. Full details can be found at: \url{http://christophergandrud.github.com/Disproportionality_Data/}. A country's disproportionality score is treated as constant from the year of an election until the year before the following election. Higher values on the Gallagher Index indicate more disproportionate, i.e. less fair electoral outcomes.
+
+As we saw in Figure \ref{framework_empirical} there appears to be a very strong negative correlation between very low levels of disproportionality and legislative violence. Only one instance of violence was observed in countries with a disproportionality score of less than about 2.5.\footnote{Though the observed range of disproportionality scores goes from almost 0 to 30, countries with scores less than 2.5 are not outliers. About 42 percent of county-years in the sample had scores of 2.5 or smaller.} This can be explained by fairness equilibria and is partially corroborated by Marien's \citeyearpar{Marien2011} finding regarding very low disproportionality measured with the Gallagher Index and political trust discussed above. To capture a possible disproportionality threshold effect--where low disproportionality is associated with stronger feelings of fairness--I created a low disproportionality dummy variable. County-years with disproportionality greater than or equal to the observed median (6)\footnote{The observed range is 0.26 to 34.52.} are coded as having higher disproportionality and those with scores lower than 6 are coded as having lower disproportionality.\footnote{Models were estimated with the continuous disproportionality measure. The parameter estimates were not statistically significant and are not shown.}
+
+I also investigated the possibility that a number of political, institutional, and cultural variables may actually be associated with legislative violence and that the key variables from my argument actually have spurious associations. To get a sense of how the size of the governing majority is associated with legislative violence I include the government {\emph{majority}} variable (from the DPI). It simply measures the seats held by governing parties as a proportion of all seats. I transformed the variable from a proportion to a percentage to ease interpretation. Legislators may be less likely to attack one another if they know that they could be arrested for assault. To examine this possibility I include Fish and Koening's \citeyearpar{Fish2009} dichotomous \emph{legislator immunity} variable. It equals one if national legislators are immune from arrest and/or prosecution and zero otherwise. Unfortunately, their data only captures legislative immunity in 2007. I extrapolated the 2007 value of the variable to the other observation years.\footnote{I also considered using the legislator immunity variable from the Comparative Constitutions Project \citep{ElkinsCCP2010}. However, the coding of the immunity variable is vaguer than Fish and Koening's and only deals with constitutionally mandated immunity.} We should therefore approach results from this variable with caution since it might not be a valid indicator for all country-years.
+
+To examine the relationships between societal-level values and legislative violence I rely primarily on data from the World Values Survey \citeyearpar{WVS2009}. Over the course of his research, Ingelhart has found that his composite {\emph{self-expression}} indicator is the best way to capture cultural and normative differences between democracies and non-democracies. Societies have high self-expression scores if they emphasize ``liberty and participation, public self-expression, tolerance of diversity, interpersonal trust, and life satisfaction" \citep[64]{Inglehart2003}. So I include the self-expression variable from the World Values Survey.\footnote{In earlier versions of the models I also included components of this variable. However, they were either never statistically significant or produced unintelligible and unstable results.} Following \cite{Inglehart2003} I average the variables across individual participants within countries and survey waves. I only use the third through fifth survey waves\footnote{The surveys were taken in the following years: \\ Wave 3: 1994--1998 \\ Wave 4: 1999--2004 \\ Wave 5: 2005--2007} as the first two waves have very poor coverage. I used wave 3 for all years before 1998, wave 4 for all years between 1999 and 2004 and wave 5 onward.
+
+Gender is closely correlated with violence in society generally. Though there are many possible reasons for this that are beyond the scope of this paper, women tend to commit many fewer acts of violence than men \citep[see][]{Schwartz2009}. Previous research has found that women's participation in parliament has an impact on government decisions to go to war \citep{Melander2005}. Perhaps if a larger proportion of legislators are women there will be less violence in the parliamentary chamber. To examine this possibility, I gathered data on the \emph{percentage of women in parliament} per country-year from two sources. Data from 1997 and after was from the Inter-Parliamentary Union \citeyearpar{IPU2013}. Data from before 1997 was from \cite{Schwartz2009}.
+
+I included a countries' \emph{murder rate}, i.e. murders per 100,000 people, to measure a possible association between societal-level and legislative violence. The data was from \cite{UNMurder2013}, which aggregated annual murder rates from a variety of national and international sources. The data is available from 1995 through 2011.\footnote{Beyond truncating the sample somewhat, this data set unfortunately does not record Taiwan's murder rate separately from China's.}
+
+To assess any effect of coalition compared to single-party governments I included the DPI {\emph{government fractionalization}} variable. It is the probability that two randomly picked deputies in the government are from different parties. I used the fractionalization variable to create an indicator of {\emph{single-party}} government. It is simply a dummy equaling one if fractionalization was zero, i.e. all governing legislators were from the same party. In general single party governments probably are better able to pass policies very close to their ideal preferences. This could heighten losers' losses and make them less likely to want to conform to non-violent legislative rules. However, all single party governments are not created equal. Some parties may act as umbrella parties that incorporate many different factions. Others are narrowly focused on a particular constituency.
+
+I also included standard measures of the \emph{effective number of parliamentary parties} by votes and by seats \citep[see][]{Laakso1979, Taagepera1989}. The data was taken from \cite{Carey2011} before 2004 and from \cite{Gallagher2012} afterwards. Both of these measures indicate how fragmented a parliamentary party system is. Higher scores indicate that there are more parties that win either votes or seats. Neither measure produced statistically significant results, so only the results for the effective number of parties by seats are shown below.
+
+To examine whether or not national legislative losers may be dissuaded from legislative violence because there is a possibility of gaining power at a provincial-level, I include the \emph{federalism} dummy variable from \cite{Carey2011}. I updated this from 2004 until the end of the observation period. In early models I also controlled for the government system type, i.e. if it had a presidential, parliamentary, or mixed assembly-elected presidential. This was from the DPI.
+
+I include a number of other societal-level variables to help further defend against omitted variable bias. Conflict in more ethnically or economically divided societies may be generally more intense. These conflicts may spill over into legislatures where they precipitate violence between members. I include Alesina et al.'s \citeyearpar{Alesina2003} {\emph{ethnic fractionalization}} data to account for the fact that a legislature's composition in terms of its fractionalization is not only a function of political institutions, but also social divisions \citep{Neto1997, Mozaffar2003}. The variable measures the probability that two randomly selected members of society will be from different ethnic groups. Higher values indicate more societal fractionalization. To capture similar possible effects from economic divisions, I include {\emph{Gini coefficients of economic inequality}} from \cite{UNU2008}.\footnote{Note, for country-years with missing data I assumed that the Gini Coefficient remained constant from the last year there is data for the country, unless the span was ten years or more. If this was the case they were treated as missing.} Finally, as is common in cross-country analyses, I also include {\emph{gross domestic product per capita}}. This data is from the World Bank's International Development Indicators \citeyearpar{WorldBank2011} and is in thousands of United States dollars.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Analyses
+
+
+\section{Regression Results}
+
+I used the {\tt{relogit}} model from the {\tt{R}} package Zelig \citep{IMAIKingZelig2008} to estimate regression models. Furthermore, to get a better understanding of the magnitude of the estimated relationships between the right-hand variables and violence, I also used Zelig to predict incident probabilities with 1000 simulations per fitted value \citep[see][]{King2002}. Predicted probabilities for various fitted values of the key findings of interest with robust results are shown in Figure \ref{pred_prob}. These give us a substantively meaningful sense of estimated effects' magnitudes. Note: because the variables are in country-year records, all of the results should be interpreted in terms of the predicted effect of a variable on the probability of legislative violence in a given country in a year.
+
+I observed relatively few incidences of violence in the 1980s.\footnote{There were only 8 observed incidence before 1990.} This may be because news articles from before the 1990s have not been made available on the internet with the same frequency as those written from the 1990s. To examine any estimation biases this sampling bias might create I ran the regressions on a further constricted sample of multi-party elected legislatures from 1990. The results were broadly similar across the two samples. Regression coefficient point estimates and robust standard errors for the sample that is truncated from 1990 can be found in Table \ref{outputTable.1990}. Results from the full observation period can be found in the Supplementary Material.
+
+Individual observations are clearly correlated within countries and years, especially when there were multiple acts of violence in a country in a year. To address this issue I used robust standard errors \citep{Golder2006, Mainwaring2007}. Standard errors were adjusted using \cite{Lumley1999} weighted empirical adaptive variance estimators (WEAVE) where the true dependence structure does not need to be specified prior to running the analysis.
+
+%%%%%%%% Elected Legislatures Results Table from 1990
+\begin{table}
+\caption{Legislative Violence Regression Results (Multi-Party Elected Legislature from 1990-2009)}
+\label{outputTable.1990}
+\begin{center}
+\scalebox{0.9}{
+
+\begin{tabular}{l c c c c c c c c }
+\hline
+                        & A1 & A2 & A3 & A4 & A5 & A6 & A7 & A8 \\
+\hline
+(Intercept)             & $-2.70^{***}$ & $-0.98$       & $-4.32$      & $-1.34$     & $-2.19^{**}$ & $-1.80^{*}$  & $-1.85^{*}$  & $-2.20^{*}$  \\
+                        & $(0.21)$      & $(0.80)$      & $(4.47)$     & $(0.71)$    & $(0.85)$     & $(0.84)$     & $(0.79)$     & $(1.11)$     \\
+Low Disproportionality  & $-1.12^{**}$  & $-1.33^{***}$ & $-1.81^{**}$ & $-0.91^{*}$ & $-1.27^{*}$  & $-1.53^{**}$ & $-1.16^{**}$ & $-1.05^{**}$ \\
+                        & $(0.36)$      & $(0.37)$      & $(0.63)$     & $(0.41)$    & $(0.53)$     & $(0.57)$     & $(0.39)$     & $(0.40)$     \\
+Dem. Age                & $-0.02^{**}$  & $-0.03^{**}$  & $-0.03$      & $-0.02^{*}$ & $-0.03^{*}$  & $-0.03^{*}$  & $-0.03^{**}$ & $-0.04^{*}$  \\
+                        & $(0.01)$      & $(0.01)$      & $(0.01)$     & $(0.01)$    & $(0.01)$     & $(0.01)$     & $(0.01)$     & $(0.02)$     \\
+Majority Size           &               & $-0.03^{**}$  & $-0.03$      & $-0.02^{*}$ & $-0.00$      & $-0.02$      & $-0.03^{*}$  & $-0.03^{*}$  \\
+                        &               & $(0.01)$      & $(0.02)$     & $(0.01)$    & $(0.01)$     & $(0.01)$     & $(0.01)$     & $(0.01)$     \\
+Leg. Immunity           &               & $-0.20$       &              &             &              &              &              &              \\
+                        &               & $(0.36)$      &              &             &              &              &              &              \\
+PR Electoral System     &               & $0.74$        &              &             &              &              &              &              \\
+                        &               & $(0.53)$      &              &             &              &              &              &              \\
+Single Party Gov.       &               & $-0.64$       &              &             &              &              &              &              \\
+                        &               & $(0.35)$      &              &             &              &              &              &              \\
+Self Expression         &               &               & $2.51$       &             &              &              &              &              \\
+                        &               &               & $(3.59)$     &             &              &              &              &              \\
+Ethnic Frac.            &               &               & $0.89$       &             &              &              &              &              \\
+                        &               &               & $(1.23)$     &             &              &              &              &              \\
+Perc. Women in Parl.    &               &               &              & $-0.02$     &              &              &              &              \\
+                        &               &               &              & $(0.02)$    &              &              &              &              \\
+Murder Rate             &               &               &              &             & $0.01$       &              &              &              \\
+                        &               &               &              &             & $(0.02)$     &              &              &              \\
+Federal                 &               &               &              &             &              & $0.74$       & $0.64$       &              \\
+                        &               &               &              &             &              & $(0.60)$     & $(0.46)$     &              \\
+Gov. Frac.              &               &               &              &             &              & $0.79$       &              &              \\
+                        &               &               &              &             &              & $(0.82)$     &              &              \\
+No. of Parties by Seats &               &               &              &             &              &              & $0.13$       &              \\
+                        &               &               &              &             &              &              & $(0.08)$     &              \\
+GINI                    &               &               &              &             &              &              &              & $0.03$       \\
+                        &               &               &              &             &              &              &              & $(0.02)$     \\
+GDP per Capita          &               &               &              &             &              &              &              & $0.03$       \\
+                        &               &               &              &             &              &              &              & $(0.03)$     \\
+\hline
+AIC                     & 370.24        & 356.99        & 178.59       & 302.28      & 191.36       & 176.05       & 299.34       & 288.98       \\
+BIC                     & 386.58        & 395.02        & 205.25       & 328.78      & 215.19       & 204.71       & 331.04       & 319.95       \\
+Log Likelihood          & -182.12       & -171.49       & -83.30       & -146.14     & -90.68       & -82.02       & -143.67      & -138.49      \\
+Deviance                & 364.24        & 342.99        & 166.59       & 292.28      & 181.36       & 164.05       & 287.34       & 276.98       \\
+Num. obs.               & 1714          & 1691          & 628          & 1691        & 1492         & 931          & 1509         & 1458         \\
+\hline
+\multicolumn{9}{l}{\scriptsize{$^{***}p<0.001$, $^{**}p<0.01$, $^*p<0.05$}}
+\end{tabular}
+
+}
+\end{center}
+{\scriptsize{
+    Standard errors are in parentheses. All models use robust (WEAVE) standard errors. \\
+}}
+\end{table}
+
+I avoid focusing on models that include highly correlated variables \citep[see][]{Achen2002, Schrodt2006}. In these models (not shown), as the statistical literature predicts, the coefficient estimates and standard errors change dramatically for many of the variables. There may be interactions between many of the variables included in the models. I attempted to capture interactions in the analysis, but it was empirically difficult. Given the small number of observed incidences of legislative violence there could simply not be enough information in the data to draw meaningful conclusions about these types of relationship \citep[see][]{Brambor2006}. I also ignore results from models with the government system type variable. It had very large, highly unstable, and largely nonsensical coefficient estimates, suggesting that the model does not contain enough information to test \citep{Babyak2004} whether or not political system type has an effect on violence.
+
+%%%%%%%%%%%%%%%% Predicted Probability Graphs %%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t]
+    \caption{Predicted Probability of Legislative Violence in Multi-Party Elected Legislatures}
+    \label{pred_prob}
+    \begin{center}
+
+    %\includegraphics[width = \textwidth]{leg_violence_paper-PredProb}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=0.8\linewidth]{figure/predProb} 
+
+\end{knitrout}
+    \end{center}
+    \begin{singlespace}
+      {\scriptsize{The graphs show the middle 95\% of 1000 simulations at each fitted value of the variables. The simulations use Model A2, Table \ref{outputTable.1990}. For each set of simulations all other variables were fitted at their means.}}
+    \end{singlespace}
+\end{figure}
+
+\paragraph{Disproportionality}
+
+Across all of the models the estimates for the dummy {\emph{low disproportionality}} variable indicate that proportional electoral outcomes are associated with less legislative violence. This finding is robust at least at the 5\% significance level in all model specifications. The finding corroborates what we saw in the Sumner caning case study and Figure \ref{framework_empirical}. Violence is rare in countries with Gallagher scores below the median--6--and there is something of a cut-off point--around 2.5--below which these highly proportional countries were almost never observed to have had violence. More interesting than simple statistical significance or coefficient point estimates is the magnitude of and uncertainty surrounding the disproportionality/violence relationship. To get a sense of the magnitude of this estimated relationship and the uncertainty around it I plotted the predicted probabilities of having a legislative brawl in the left-most plot of Figure \ref{pred_prob} using estimates from Model A2. We can see that the central tendency of the predicted probabilities of a country having violence when disproportionality is greater than or equal to 6 is over two percent in a given year. All other variables are fitted at their means. Countries with disproportionality less than 6 had a very low predicted probability of violence in a year.
+
+\paragraph{Age of Democracy}
+
+Also, corroborating the evidence we saw before, the analyses indicate that older democracies tend to have less legislative violence. This result is significant at least at the 10 percent level in all of the models. Looking at the middle panel of Figure \ref{pred_prob} we can see that violence is more likely in younger democracies. Very young democracies are predicted to have about a three to four percent probability of experiencing legislative violence in a given year. The probability of violence decreases steadily as a democracy ages. The predicted probability of violence becomes largely indistinguishable from zero--i.e. no probability of violence--sometime shortly after a democracy turns 50 years old.
+
+\paragraph{Governing Majorities}
+
+I also found a negative relationship between the size of governments' legislative majorities and violence. We can see in the right-most panel of Figure \ref{pred_prob} that the predicted probability of violence in countries with minority governments is relatively high at about 5 percent in a year. This is somewhat higher than predicted for countries with high disproportionality or new democracies, though the variance is much larger. This finding fits well within this paper's main argument. Non-legislative cartel members likely view the minority's control of the agenda as unfair--even if the minority government has a constrained ability to affect policy change--and may see considerable opportunities to shift power in their direction. They would be less able to make credible commitments. The minority government may at the same time use violence to try to block attempts to increase fairness. This could make it more difficult for both sides to credibly commit.
+
+It is still less theoretically clear what is causing the very low estimated probability of violence in large majority legislatures. It could be that legislators in these parliaments view the decisions of the larger majority as more legitimate or it could be that hegemonic parties are able to effectively quash disruption and violence before it starts. It is difficult to separate out these two possible causes here. I did try to rule out the possibility that the result is being driven by legislatures with very powerful parties that control virtually all of the seats. To do this I reran the models where observations with government majorities greater than or equal to 75 percent were dropped. The results (not shown) nonetheless persisted. Further case study work is needed to understand the causes of a lack of violence in legislatures with large majorities.
+
+\paragraph{Societal-level Variables}
+
+None of the cultural, ethnic fractionalization, or other societal-level variables such as the GINI coefficient and GDP per capita were found to be associated with legislative violence in any of the models. Countries' murder rates were not found to be associated with violence indicating that the link between societal and legislative violence is not strong. In some limited models (not shown) with data from 1990 ethnic fractionalization was negatively associated with violence. However, the effect became statistically insignificant whenever high disproportionality was included in the models. We should be somewhat skeptical about the strength of the conclusions we can draw from the self-expression variable results. As mentioned earlier there might be a highly endogenous relationship between culture and institutions. However, if societal-level culture was driving institutions that were associated with legislative violence, presumably the cultural variables would have also been associated with violence in models without the institutional variables, which they were not. Nonetheless, it takes a bit of a leap to believe that the mean level of self-expression found using a national-level survey accurately reflects the values held by elite individuals in legislatures. Further work is needed to make stronger conclusions about the relationships between culture and the propensity for legislative violence. This research could possibly use individual legislator-level surveys that would allow us to directly measure the distribution of values among actual legislators. At this point we can say that we have not yet found evidence that societal-level factors are robustly associated with a propensity for violence.
+
+\paragraph{Other Political and Institutional Variables}
+
+Results for other political and institutional variables were largely not statistically significant. Legislative immunity from arrest and/or prosecution is not significantly associated with legislative violence. We should approach this result cautiously since the Fish and Koening immunity variable is based on observations in 2007 and therefore might not be a valid indicator for many country-years. The coefficient estimates from the proportion of women in parliament variable were negative--i.e. legislatures with a higher proportion of women were predicted to be less likely to have violence. However, this was not statistically significant in any of the models. None of the effective number of parties variables, the basic continuous government fractionalization variable, nor the single-party government variable were statistically significant in the analyses. Likewise, federalism did not appear to be robustly related to legislative violence across the models. All of these variables are not as directly related to legislative fairness and an ability to make credible legislative commitments at a theoretical level, compared to disproportionality, democratic age and, to a lesser extent, governing majority size. So it should not come as too much of a surprise to find that they are more loosely, if not at all, associated with legislative violence.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Conclusions
+\section*{Conclusions: What Keeps Legislators Two Sword Lengths Apart?}
+
+In this paper--the first to systematically examine legislative violence in multi-party elected legislative chambers on a global scale--I developed an argument that violence in these chambers is more likely when legislators are unable to make credible commitments to peaceful bargaining outcomes, including non-violent legislative rules. This problem is greatly exacerbated by a lack of legislative fairness. I then empirically tested my argument with a case study of the caning of Senator Sumner in the antebellum United States and a new data set of recent legislative brawls. What conclusions can we make from the paper's findings about why legislators are kept `two sword lengths' apart (or not) and what implications do they have?
+
+The findings in this paper suggest that countries with highly proportional--very fair--electoral outcomes rarely experience legislative violence. Looking broadly at the recent global sample the relationship appears to be subject to a threshold effect where countries with Gallagher Index scores below about 6 rarely experience legislative violence and there was only one observed incident when the Index was below 2.5. This corresponds closely to the idea of fairness equilibrium and previous findings made by Marien \citeyearpar{Marien2011} about perceptions of political trust in countries with highly proportional outcomes using the same measure.
+
+This finding is perhaps more important than the paper's age of democracy result for democratic institutional designers who may want to actively keep legislators two sword lengths apart. Democratic age is subject to many factors far outside of democratic planners' control. Electoral disproportionality is comparatively much more malleable. Proportional electoral systems are the most obvious tool electoral system designers have to increase the correspondence between party's votes and seats \citep{Carey2011}. Depending on the distribution of preferences in the electorate, these systems can be tweaked by increasing district magnitude or altering the formula used to translate votes into seats. The findings in this paper suggest that electoral system designers may want to aim for very proportional outcomes, to the extent possible, when a country transitions to democracy in order to prevent violence in the legislature.
+
+As this is the first large scale study on this subject there is still considerable work that can be done to better understand the causes and consequences of legislative violence. As mentioned earlier more work is needed on legislator-level cultural values and the effects of very large majority governments. Further case study work could examine non-electoral fairness issues that could exacerbate credible commitment problems. In particular, more research could be done on post-election solutions that make the distribution of legislative resources fairer \cite[for example see][who examined informal minority party access to power in Japan's Diet]{Wolfe2004}. Non-fairness/shifts in power causes of credible commitment problems should also be explored. Another avenue worth pursuing would be to empirically examine how credible commitment problems change the likelihood of less severe forms of legislative disruption, such as boycotts and shouting. Finally, what are the consequences of legislative violence, especially for citizens' perceptions of democratic legitimacy and, indeed, the long-term viability of democratic regimes? These issues should be investigated in future work.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Appendix
+
+\bibliographystyle{apsr}
+\bibliography{LegViolence}
+
+
+\end{document}

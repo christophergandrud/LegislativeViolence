@@ -1,0 +1,224 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Two Sword Lengths Apart: Supplementary Material
+% 17 October 2013
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% !Rnw weave = knitr
+
+\documentclass[a4paper]{article}
+\usepackage{fullpage}
+\usepackage{lscape}
+\usepackage[authoryear]{natbib}
+\usepackage{setspace}
+    \doublespacing
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=cyan,
+    urlcolor=cyan
+}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{url}
+\usepackage{tikz}
+\usepackage{todonotes}
+\usepackage{verbatim}
+\usepackage{endnotes}
+\usepackage{graphicx}
+
+\usepackage{footmisc}
+\setlength{\footnotesep}{\baselineskip}
+\renewcommand{\footnotelayout}{\doublespacing\normalsize}
+
+\setlength{\belowcaptionskip}{0.5cm}
+
+%%%%%%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Supplementary Material: Two Sword Lengths Apart: Credible Commitment Problems and Physical Violence in Multi-party Elected National Legislatures}
+                
+\begin{document}
+
+\maketitle
+
+
+
+%%%%%%%%%%%%%%%% Run Analyses %%%%%%%%%%%%%%%%%%%%%%%%
+<<models, include=FALSE>>=
+    ## Load data ##
+    #URLMain <- "https://raw.github.com/christophergandrud/LegislativeViolence/master/Data/LegViolenceMain.csv"
+    #leg.raw <- repmis::source_GitHubData(URLMain)
+    
+    leg.raw <- read.csv("/git_repositories/LegislativeViolence/Data/LegViolenceMain.csv")
+
+    ## Keep variables of interest
+    vars <- c("country", "year", "violence", "system", "DemAge", "maj", "MajCat", "govfrac", "singleParty", "pr", "tenshort", "UDS", "polity2", "ethnicAlesina", "CWtrust", "higherTrust", "CWsurvSelfExpr", "legislature", "elect_legislature", "disproportionality", "gini", "GDPperCapita", "enps", "enpv", "federal", "immunity", "liec", "UNMurderRate","WomenInParl")
+    leg.raw <- leg.raw[vars]
+
+    ## Clean violence data for 2009
+    leg.raw$violence[is.na(leg.raw$violence)] <- 0  
+    
+    ## Label MajCat factor categories
+    leg.raw$MajCat <- factor(leg.raw$MajCat, labels = c("Minority", "Regular Maj.", "Strong Maj."))
+
+    ## Transform GDP/capita to thousands of USD
+    leg.raw$GDPperCapita <- leg.raw$GDPperCapita/1000 
+    
+    ## Create disproportionality threshold variable where 1 < 6
+    leg.raw$HighProp[leg.raw$disproportionality < 6] <- 1
+    leg.raw$HighProp[leg.raw$disproportionality >= 6] <- 0
+
+    ## Create disproportionality threshold variable where 1 < 3
+    leg.raw$VeryHighProp[leg.raw$disproportionality < 4] <- 1
+    leg.raw$VeryHighProp[leg.raw$disproportionality >= 4] <- 0
+    
+    ## Transform majority variable from a proportion to a percentage
+    leg.raw$maj = leg.raw$maj*100
+
+    ## Change the system variable's reference category to Parliamentary
+    leg.raw$system <- relevel(leg.raw$system, ref = "Parliamentary")
+    ## Only Countries with Legislatures
+    ## leg <- subset(leg.raw, legislature == 1)    
+
+    ## Only Countries with Elected Legislatures
+    #dem <- subset(leg.raw, elect_legislature == 1)
+    dem <- subset(leg.raw, liec > 5)
+
+    ## Only before 2010
+    dem <- subset(dem, year < 2010)
+
+    ## Only Countries with Elected Legislatures after 1989 (new sample 199)
+    dNew <- subset(dem, year > 1989)  
+
+    ## Analyses
+    ## Run the main analyses used for predicting quantities of interest and estimating regression coefficients.
+    # Run analysis
+    source("/git_repositories/LegislativeViolence/Analysis/leg.main.analyses3.R") 
+
+@
+
+
+\subsection*{Details on Prior Correction of the Rare Logistic Regression Models}
+
+For prior correction \citep[see][]{KingRareEventsPA2001} in the models with the full sample of elected multi-party legislatures I used the observed proportion of all observations with legislative violence up to 2010: i.e. 2.1 percent of observations up until 2010 had violence ($\tau = \frac{71}{3370} = 0.021$). There were \Sexpr{sum(dNew$violence, na.rm = TRUE)} observed incidences of violence and 2654 country-years from 1990 through 2009 in the sample, so: $\tau = \frac{63}{2654} = 0.024$.
+
+
+
+%%%%%%%% Elected Legislatures Results Table
+\begin{table}
+\caption{Legislative Violence Rare Events Logistic Regression Results (Multi-Party Elected Legislature 1981-2009)}
+\label{outputTable.dem}
+\begin{center}
+\scalebox{0.9}{
+<<OutTable1, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
+    library(texreg)
+
+    CoefNames <- c("(Intercept)", "Low Disproportionality", 
+                    "Dem. Age", "Majority Size",
+                    "Leg. Immunity", "PR Electoral System", "Single Party Gov.",
+                    "Self Expression", "Ethnic Frac.", "Perc. Women in Parl.", "Murder Rate", 
+                    "Federal", "Gov. Frac.",
+                    "No. of Parties by Seats", 
+                    "GINI", "GDP per Capita")
+    ModNamesA <- c("B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8")
+
+    texreg(list(D1, D2, D3, D4, D5, D6, D7, D8),
+        table = FALSE,
+        custom.coef.names = CoefNames,
+        custom.model.names = ModNamesA,
+        use.packages = FALSE)
+   
+@
+}
+\end{center}
+{\scriptsize{
+    Standard errors are in parentheses. All models use robust (WEAVE) standard errors. \\
+}}
+\end{table}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%% Figures Start %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%% Variable source summary table
+\begin{table}[!h]
+    \begin{center}
+    \caption{Variable Summary}
+    \label{var_summary}
+    \begin{tabular}{l m{7cm} m{3.5cm}}
+
+            \hline
+            Variable & Description & Source \\
+            \hline \hline
+            Disprop & Gallagher Index of Electoral Disproportionality & \cite{Gallagher2012} \& \cite{Carey2011} \\
+            ENPS & Effective number of parties by seats & \cite{Gallagher2012} \& \cite{Carey2011} \\
+            ENPV & Effective number of parties by votes & \cite{Gallagher2012} \& \cite{Carey2011} \\
+            Ethnic Fractionalization & Probability two randomly selected members of society are from the same ethnic group & \cite{Alesina2003} \\
+            Federal & Whether a country has a federal system or not & \cite{Carey2011}, updated from 2003 by the author \\           
+            GDP/Capita & GDP per capita in thousands of US dollars & \cite{WorldBank2011} \\
+            Gov. Fractionalization & Probability that two members of the Government will be from different parties & \cite{DPI2001} \\
+            Gini & Gini Coefficient of income inequality & \cite{UNU2008} \\
+            Immunity & Whether a legislators are immune from arrest and/or criminal prosecution or not & \cite{Fish2009} \\
+            LEIC & Legislative Indices of Electoral Competitiveness. Includes both the existence of a legislature and its level of electoral competitiveness. & \cite{DPI2001} \\
+            Majority & Percentage of legislature controlled by governing parties & \cite{DPI2001} \\
+            Murder Rate & Murders per 100,000 population & \cite{UNMurder2013} \\
+            Polity & Polity IV Score & \cite{Marshall2009} \\
+            PR & Whether a country uses a proportional representation electoral system or a plurality system & \cite{DPI2001} \\
+            Self Expression & WVS self-expression indicator averaged across country-survey waves & \cite{WVS2009} \\
+            System & Government system (parliamentary, presidential, or mixed & \cite{DPI2001} \\
+            Tenshort & Tenure of the shortest serving veto player & \cite{DPI2001} \\
+            Trust & Average of WVS responses where 1 $=$ most people can be trusted and 2 $=$ you can't be too careful & \cite{WVS2009} \\
+            UDS & Posterior Mean Unified Democracy Score & \cite{Pemstein2010} \\
+            Violence & Incidences of violence between legislators in the national parliamentary chamber & author \\
+            Perc. Women in Parl. & Percentage of parliamentary seats held by women & \cite{WomParCrossNat} \& \cite{IPU2013} \\
+            \hline
+
+    \end{tabular}
+    \end{center}
+    \begin{singlespace}
+        Please contact the author for detailed summary statistics. \\
+        All of the data from \cite{DPI2001} was updated through 2010.
+    \end{singlespace}
+\end{table}  
+
+%%%%%%%%%% Correlation matrix %%%%%%%%%% 
+\begin{landscape}
+\begin{figure}[t]
+    \caption{Correlation Matrix for Variables Included in the Analysis (Multi-Party Elected Legislatures)}
+    \label{corrmatrix}
+    \begin{center}
+    
+    \includegraphics[width = \textwidth]{corrScatter.pdf}  
+    %%% corScatter not created every compile to save time %%%
+%<<corScatter>>=
+
+%    library(corrgram)  
+
+%    ### Create data set with variables for corrgram
+%    vars.corrgram <- c("violence", "system", "DemAge", "maj", "MajCat", "govfrac", "singleParty", "pr", "tenshort", "UDS", "polity2", "ethnicAlesina", "CWtrust", "CWsurvSelfExpr", "disproportionality", "gini", "GDPperCapita", "enps", "enpv", "federal", "immunity", "UNMurderRate")
+
+%    # Subset elected legislature data
+%    dem.corrData <- dem[vars.corrgram]
+
+%    # Create corrgram
+%    dem.corrgram <- corrgram(dem.corrData, order = TRUE, upper.panel = NULL, diag.panel = panel.minmax)
+
+%@
+
+    \end{center}
+    \begin{singlespace}
+        {\scriptsize{Redder squares indicate stronger negative bi-variate correlations. \\
+        Bluer squares indicate stronger positive bi-variate correlations. \\
+        Numbers in the diagonal squares indicate the minimum and maximum observed values of the variables in the sample.
+        }}
+    \end{singlespace} 
+\end{figure}
+\end{landscape}
+
+%%%%%%%%%%%%%%%%%%%%%% Figures End %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{apsr}
+\bibliography{LegViolence}
+
+\end{document}
