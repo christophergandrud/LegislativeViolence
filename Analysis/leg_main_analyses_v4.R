@@ -6,7 +6,7 @@
 
 # Load package
 if (!('rio' %in% installed.packages()[, 1]))
-    devtools::install_github('leeper/rio', ref = 'fread')
+    devtools::install_github('leeper/rio')
 library(rio)
 library(Zelig)
 
@@ -34,7 +34,7 @@ vars.6 <- c("country", "year", "violence", "dem_age", "high_prop", "maj",
 vars.7 <- c("country", "year", "violence", "dem_age", "high_prop", "maj",
             "enps", "federal")
 vars.8 <- c("country", "year", "violence", "dem_age", "high_prop", "maj",
-            "gini", "gdp_per_capita")
+            "gdp_per_capita")
 
 dem.1.c <- dem[complete.cases(dem[vars.1]),]
 dNew.1.c <- dNew[complete.cases(dNew[vars.1]),]
@@ -56,6 +56,9 @@ dNew.6.c <- dNew[complete.cases(dNew[vars.6]),]
 
 dem.7.c <- dem[complete.cases(dem[vars.7]),]
 dNew.7.c <- dNew[complete.cases(dNew[vars.7]),]
+
+dem.8.c <- dem[complete.cases(dem[vars.8]),]
+dNew.8.c <- dNew[complete.cases(dNew[vars.8]),]
 
 ###########################
 ### Sample of countries with elected legislatures
@@ -86,13 +89,9 @@ D7 <- zelig(violence ~ high_prop + dem_age + maj + enps + federal,
             model = "relogit", data = dem.7.c, tau = tau_dem,
             robust = list(method = "weave"), cite = FALSE)
 
-D8 <- zelig(violence ~ high_prop + dem_age + maj + gini + gdp_per_capita,
+D8 <- zelig(violence ~ high_prop + dem_age + maj + gdp_per_capita,
             model = "relogit", data = dem.7.c, tau = tau_dem,
             robust = list(method = "weave"), cite = FALSE)
-
-#D6 <- zelig(violence ~ dem_age + VeryHighProp + maj + gini + gdp_per_capita, model = "relogit", data = dem.6.c, tau = 77/3830, robust = list(method = "weave"), cite = FALSE)
-
-#D7 <- zelig(violence ~ dem_age*VeryHighProp + maj + gini + gdp_per_capita, model = "relogit", data = dem.6.c, tau = 77/3830, robust = list(method = "weave"), cite = FALSE)
 
 ###########################
 ### Sample of countries with elected legislatures from 1990
@@ -124,10 +123,6 @@ DN7 <- zelig(violence ~ high_prop + dem_age + maj + enps + federal,
              model = "relogit", data = dNew.7.c, tau = 69/3347,
              robust = list(method = "weave"), cite = FALSE)
 
-DN8 <- zelig(violence ~ high_prop + dem_age + maj + gini + gdp_per_capita,
-             model = "relogit", data = dNew.8.c, tau = tau_dem,
+DN8 <- zelig(violence ~ high_prop + dem_age + maj + gdp_per_capita,
+             model = "relogit", data = dNew.7.c, tau = tau_dem,
              robust = list(method = "weave"), cite = FALSE)
-
-#DN6 <- zelig(violence ~ dem_age + VeryHighProp + maj + gini + gdp_per_capita, model = "relogit", data = dNew.6.c, tau = tau_dem, robust = list(method = "weave"), cite = FALSE)
-
-#DN7 <- zelig(violence ~ dem_age*VeryHighProp + maj + gini + gdp_per_capita, model = "relogit", data = dNew.6.c, tau = tau_dem, robust = list(method = "weave"), cite = FALSE)
