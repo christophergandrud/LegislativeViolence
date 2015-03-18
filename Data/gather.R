@@ -19,6 +19,7 @@ if (!('rio' %in% installed.packages()[, 1]))
 library(rio)
 library(foreign)
 library(tidyr)
+library(repmis)
 
 #### ----------------- Main Leg. Violence Data ---------------------------- ####
 main_violence <- import('data/raw/brawls_BG.csv') %>% select(iso2c, year)
@@ -104,12 +105,19 @@ polity$dem_age <- cum_nozero(x = 'democracy')
 polity <- polity %>% select(iso2c, year, polity2, dem_age, durable)
 
 #### ---------------------- Database of Political Institutions ------------ ####
-dpi <- DpiGet() %>% select(iso2c, year, maj, govfrac, allhouse, pr, liec)
+dpi <- DpiGet() %>% select(iso2c, year, maj, system, govfrac, pr, liec)
 
 for (i in names(dpi)) dpi[, i][dpi[, i] == -999] <- NA
 
 # Convert maj from a proportion to a percent
 dpi$maj <- dpi$maj * 100
+
+# Create single_party government variable if govfrac == 0
+dpi$single_party[!is.na(dpi$govfrac)] <- 0
+dpi$single_party[dpi$govfrac == 0] <- 1
+
+#### Only countries with elected legislatures
+dpi <- dpi %>% filter(liec > 5)
 
 #### ----------------- Dispoportionality ---------------------------------- ####
 disprop <- import('http://bit.ly/Ss6zDO', format = 'csv') %>% 
@@ -120,8 +128,21 @@ disprop <- import('http://bit.ly/Ss6zDO', format = 'csv') %>%
 disprop$high_prop <- 0
 disprop$high_prop[disprop$disproportionality < 6] <- 1
 
-#### Only countries with elected legislatures
-dpi <- dpi %>% filter(liec > 5)
+#### ----------------- Legislative Immunity ------------------------------- ####
+immunity <- import('Data/raw/fish_k_immunity.csv') %>% select(-year)
+
+#### ----------------- Ethnic Fractionalization---------------------------- ####
+ethnic_frac <- 'http://www.anderson.ucla.edu/faculty_pages/romain.wacziarg/downloads/fractionalization.xls' %>%
+                source_XlsxData(sheet = 1)
+ethnic_frac <- ethnic_frac[3:217, c(1, 4)]
+names(ethnic_frac) <- c('country', 'ethnic_alesina')
+ethnic_frac$ethnic_alesina[ethnic_frac$ethnic_alesina == '.'] <- NA
+ethnic_frac$ethnic_alesina <- ethnic_frac$ethnic_alesina %>% as.character %>%
+                              as.numeric
+
+ethnic_frac$iso2c <- countrycode(ethnic_frac$country, origin = 'country.name',
+                                 destination = 'iso2c')
+ethnic_frac <- select(ethnic_frac, iso2c, ethnic_alesina)
 
 #### ----------------- Merge together ------------------------------------- ####
 ## Merge dpi with disproportionality
@@ -148,6 +169,14 @@ comb <- merge(comb, wdi, by = c('iso2c', 'year'), all.x = T) %>%
 
 ## Merge in women
 comb <- merge(comb, women, by = c('iso2c', 'year'), all.x = T) %>%
+    arrange(iso2c, year)
+
+## Merge in immunity
+comb <- merge(comb, immunity, by = c('iso2c'), all.x = T) %>%
+    arrange(iso2c, year)
+
+## Merge ethic fractionalisation
+comb <- merge(comb, ethnic_frac, by = c('iso2c'), all.x = T) %>%
     arrange(iso2c, year)
 
 ## Final clean 
