@@ -251,13 +251,12 @@ This brief tour of descriptive statistics adds to the evidence from the previous
     ## leg <- subset(leg.raw, legislature == 1)
 
     ## Only Countries with Elected Legislatures
-    #dem <- subset(leg.raw, elect_legislature == 1)
     dem <- subset(leg.raw, liec > 5)
 
     ## Only before 2010
     dem <- subset(dem, year < 2010)
 
-    ## Only Countries with Elected Legislatures after 1989 (new sample 199)
+    ## Only Countries with Elected Legislatures after 1989 (new sample 1990)
     dNew <- subset(dem, year > 1989)
 
     ## Analyses
