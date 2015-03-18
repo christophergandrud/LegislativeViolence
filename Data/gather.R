@@ -17,15 +17,17 @@ library(DataCombine)
 if (!('rio' %in% installed.packages()[, 1]))
     devtools::install_github('leeper/rio', ref = 'fread')
 library(rio)
+library(foreign)
+library(tidyr)
 
-#### ----------------- Main Leg. Violence Data ------------------------------- #
+#### ----------------- Main Leg. Violence Data ---------------------------- ####
 main_violence <- import('data/raw/brawls_BG.csv') %>% select(iso2c, year)
 main_violence$violence <- 1
 
 main_violence <- main_violence %>% group_by(iso2c, year) %>%
                     mutate(violence_y_cum = sum(violence))
 
-#### ------------------ World Bank Development Indicators -------------------- #
+#### ------------------ World Bank Development Indicators ----------------- ####
 indicators_wdi <- c('SI.POV.GINI', 'NY.GDP.PCAP.KD', 'VC.IHR.PSRC.P5')
 wdi <- WDI(indicator = indicators_wdi, start = 1975, end = 2014, extra = T) %>%
         dplyr::rename(gini = SI.POV.GINI,
@@ -42,8 +44,31 @@ wdi <- wdi %>% arrange(iso2c, year) %>% group_by(iso2c) %>%
         mutate(gini = FillDown(Var = gini)) %>%
         as.data.frame
 
+#### --------------- Women in Parliament ---------------------------------- ####
+# From 1997 data from Inter-Parliamentary Union via World Bank Development 
+# Indicators 
+## WDI indicator ID: SG.GEN.PARL.ZS
+women <- WDI(indicator = "SG.GEN.PARL.ZS", start = 1997) %>% 
+            select(-country) %>% rename(women_in_parl = SG.GEN.PARL.ZS) %>%
+            select(iso2c, year, women_in_parl)
 
-#### --------------- Age of Democracy ---------------------------------------- #
+# Data from before 1997 from ICPSR: http://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/24340
+women_old <- read.dta('Data/raw/24340-0001-Data.dta')
+women_old<- women_old[, 5:64]
+
+women_old <- gather(women_old, year, women_in_parl, -COUNTRYN)
+women_old$year <- women_old$year %>% gsub('P', '', .) %>% as.numeric
+
+women_old$iso2c <- countrycode(women_old$COUNTRYN, origin = 'country.name',
+                               destination = 'iso2c')
+
+women_old <- women_old %>% select(iso2c, year, women_in_parl) %>%
+                arrange(iso2c, year) %>% filter(year >= 1980) %>% 
+                filter(year < 1997)
+
+women <- rbind(women_old, women) %>% arrange(iso2c, year)
+
+#### --------------- Age of Democracy ------------------------------------- ####
 polity <- PolityGet(url = 'http://www.systemicpeace.org/inscr/p4v2013.sav') %>%
             arrange(iso2c, year)
 
@@ -78,7 +103,7 @@ polity$dem_age <- cum_nozero(x = 'democracy')
 
 polity <- polity %>% select(iso2c, year, polity2, dem_age, durable)
 
-#### ---------------------- Database of Political Institutions --------------- #
+#### ---------------------- Database of Political Institutions ------------ ####
 dpi <- DpiGet() %>% select(iso2c, year, maj, govfrac, allhouse, pr, liec)
 
 for (i in names(dpi)) dpi[, i][dpi[, i] == -999] <- NA
@@ -86,19 +111,19 @@ for (i in names(dpi)) dpi[, i][dpi[, i] == -999] <- NA
 # Convert maj from a proportion to a percent
 dpi$maj <- dpi$maj * 100
 
-#### ----------------- Dispoportionality ------------------------------------- #
+#### ----------------- Dispoportionality ---------------------------------- ####
 disprop <- import('http://bit.ly/Ss6zDO', format = 'csv') %>% 
             select(iso2c, year, disproportionality) %>% filter(year >= 1980) %>%
-            filter(year <- 2012)
+            filter(year <= 2012)
 
 # Create disproportionality threshold variable where 1 < 6
 disprop$high_prop <- 0
-disprop$high_prop[disprop$disproportionality > 6] <- 1
+disprop$high_prop[disprop$disproportionality < 6] <- 1
 
 #### Only countries with elected legislatures
 dpi <- dpi %>% filter(liec > 5)
 
-#### ----------------- Merge together ---------------------------------------- #
+#### ----------------- Merge together ------------------------------------- ####
 ## Merge dpi with disproportionality
 comb <- merge(dpi, disprop, by = c('iso2c', 'year'), all = T) %>%
         arrange(iso2c, year)
@@ -113,9 +138,6 @@ comb <- comb %>% mutate(high_prop = FillDown(Var = high_prop)) %>%
 comb <- merge(main_violence, comb, by = c('iso2c', 'year'), all = T) %>%
         arrange(iso2c, year)
 
-# Convert NAs to missing
-for (i in c('violence', 'violence_y_cum')) comb[, i][is.na(comb[, i])] <- 0
-
 ## Merge in polity
 comb <- merge(comb, polity, by = c('iso2c', 'year'), all = T) %>%
     arrange(iso2c, year)
@@ -123,3 +145,22 @@ comb <- merge(comb, polity, by = c('iso2c', 'year'), all = T) %>%
 ## Merge wdi
 comb <- merge(comb, wdi, by = c('iso2c', 'year'), all.x = T) %>%
     arrange(iso2c, year)
+
+## Merge in women
+comb <- merge(comb, women, by = c('iso2c', 'year'), all.x = T) %>%
+    arrange(iso2c, year)
+
+## Final clean 
+# Convert NAs to missing
+for (i in c('violence', 'violence_y_cum')) comb[, i][is.na(comb[, i])] <- 0
+
+# Limit to 1980-2012
+comb <- comb %>% filter(year >= 1980) %>% filter(year <= 2012)
+
+# Add country names
+comb$country <- countrycode(comb$iso2c, origin = 'iso2c', 
+                            destination = 'country.name')
+comb <- MoveFront(comb, c('country', 'iso2c', 'year'))
+
+#### -------------------- Save -------------------------------------------- ####
+export(comb, 'Data/LegislativeViolenceMain.csv')
